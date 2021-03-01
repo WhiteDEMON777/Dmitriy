@@ -633,7 +633,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         18px,
         $breakpoint-to-fluid,
         $base-vw);
-        line-height: 36px;
+        @include fluid(line-height, 30px, 36px, $breakpoint-to-fluid, $base-vw);
         color: #fff;
     }
     &__headline {
