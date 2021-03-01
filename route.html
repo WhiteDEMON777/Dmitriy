@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <title>Поиск билетов</title>
+</head>
+
+<body>
+    <header class=tickets>
+        <div class="tickets__wrapper">
+            <div class="container">
+                <div class="header__navigation header__navigation--black">
+                    <a href=""><img src="./img/logo.svg" alt=""></a>
+                    <ul>
+                        <li><a class="header__nav-cur" href="">Главная</a></li>
+                        <li><a href="">О компании</a></li>
+                        <li><a href="">Служба поддержки</a></li>
+                        <li><a href="">Контакты автостанций</a></li>
+                        <li><a href="">Новости</a></li>
+                    </ul>
+                    <a href=""><span class="icon--147--pink"></span></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="routeTitle">
+        <div class="routeTitle__content">
+            <div class="container">
+                <div class="breadCrumbs">
+                    <a href="index.html" class="path">Главная</a>
+                    <div class="crumb"></div>Поиск билетов</div>
+                <div class="title__line">
+                    <div class="title title--route">Саратов - Красноармейск
+                    </div>
+                    <div class="infoPage__date infoPage__date--route">12 января 2021</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="waybill">
+        <div class="waybill__contentOffset">
+            <div class="waybill__content">
+                <div class="container">
+                    <div class="waybill__row">
+                        <div class="waybill__col">
+                            <div class="waybill__title">Маршрут</div>
+                            <div class="waybill__route">
+                                <div class="waybill__routeStart">
+                                    <div class="waybill__routeStartName"><span class="icon-Union"></span>
+                                        <div class="waybill__routeStartNameText">
+                                            <div class="waybill__routeTitle">Саратов</div>Стадион Волга, г. Саратов, пр. Энтузиастов, 1</div>
+                                    </div>
+                                    <div class="waybill__routeDate">
+                                        <div class="waybill__routeTime">16:00</div>10 января</div>
+                                </div>
+                                <div class="waybill__routePoint">
+                                    <div class="waybill__routePointName">
+                                        <div class="waybill__routePointNameCaption">
+                                            <div class="waybill__routePointDot"><img src="./img/icon/dot.svg" alt=""></div>
+                                            <div class="waybill__routePointNameBlock">
+                                                <div class="waybill__routePointNameTitle">Саратов</div>Стадион Волга, г. Саратов, пр. Энтузиастов, 1</div>
+                                        </div>
+                                    </div>
+                                    <div class="waybill__routePointNameText waybill__routePointNameText--date">
+                                        <div class="waybill__routePointNameTitle">15:30</div>10 января</div>
+                                </div>
+                                <div class="waybill__routeDestination">
+                                    <div class="waybill__routeStartName"><span class="icon-we"></span>
+                                        <div class="waybill__routeStartNameText">
+                                            <div class="waybill__routeTitle">Красноармейск</div>Стадион Волга, г. Саратов, пр. Энтузиастов, 1</div>
+                                    </div>
+                                    <div class="waybill__routeDate">
+                                        <div class="waybill__routeTime">16:00</div>10 января</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="waybill__col">
+                            <div class="waybill__routeInfo">
+                                <div class="waybill__routeInformation">
+                                    <div class="waybill__title">Информация о рейсе</div>
+                                    <div class="waybill__subtitle">Перевозчик: ООО "Трансагент"</div>
+                                    <div class="waybill__text">Транспорт</div>
+                                    <div class="waybill__subtitle">Ford Transit (17), A098CM 64RUS</div>
+                                    <div class="waybill__text">Перевозчик имеет право заменить транспортное средство, в случае его неисправности, аварии и других аналогичных случаев</div>
+                                </div>
+                                <div class="waybill__circs">
+                                    <div class="waybill__title">Условия</div>
+                                    <div class="waybill__circumstanta"><img src="./img/icon/passport.svg" alt="">Для посадки необходим паспорт</div>
+                                    <div class="waybill__circumstanta"><img src="./img/icon/calendar.svg" alt="">Регулярный рейс</div>
+                                    <a href="" class="return">Условия возврата</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="chooseSit">
+        <div class="chooseSit__content">
+            <div class="container">
+                <div class="title__line">
+                    <div class="title title--routeSit">Выберите места в автобусе
+                    </div>
+                </div>
+                <div class="infoPage__date ">Схема мест может отличатся, в случае замены транспортного средства перед рейсом.</div>
+                <div class="chooseSit__panel">
+                    <div class="scheme">
+                        <img class="scheme--wheel" src="./img/icon/wheel.svg" alt=""><img src="./img/icon/frontwindow.svg" alt="" class="scheme--front"><img src="./img/icon/backwindow.svg" alt="" class="scheme--back"><img src="./img/icon/stairs.svg" alt=""
+                            class="scheme--stairs-1">
+                        <img src="./img/icon/stairs.svg" alt="" class="scheme--stairs-2">
+                        <div class="scheme__Set">
+                            <div class="scheme__line">
+                                <div class="scheme__tileSet">
+                                    <div class="scheme__tile">1</div>
+                                    <div class="scheme__tile">2</div>
+                                </div>
+                                <div class="scheme__tileSet">
+                                    <div class="scheme__tile">3</div>
+                                    <div class="scheme__tile--busy">4</div>
+                                </div>
+
+
+                            </div>
+                            <div class="scheme__line">
+                                <div class="scheme__tileSet">
+                                    <div class="scheme__tile">5</div>
+                                    <div class="scheme__tile">6</div>
+                                </div>
+                                <div class="scheme__tileSet">
+                                    <div class="scheme__tile">7</div>
+                                    <div class="scheme__tile">8</div>
+                                </div>
+
+
+                            </div>
+                            <div class="scheme__line">
+                                <div class="scheme__tileSet">
+                                    <div class="scheme__tile">9</div>
+                                    <div class="scheme__tile">10</div>
+                                </div>
+                                <div class="scheme__tileSet">
+                                    <div class="scheme__tile">11</div>
+                                    <div class="scheme__tile">12</div>
+                                </div>
+
+
+                            </div>
+                            <div class="scheme__line">
+                                <div class="scheme__tileSet">
+                                    <div class="scheme__tile--busy">13</div>
+                                    <div class="scheme__tile--busy">14</div>
+                                </div>
+                                <div class="scheme__tileSet">
+                                    <div class="scheme__tile">15</div>
+                                    <div class="scheme__tile">16</div>
+                                </div>
+
+
+                            </div>
+                            <div class="scheme__line">
+                                <div class="scheme__tileSet">
+                                    <div class="scheme__tile">17</div>
+                                    <div class="scheme__tile">18</div>
+                                </div>
+                                <div class="scheme__tileSet">
+                                    <div class="scheme__tile">19</div>
+                                    <div class="scheme__tile">20</div>
+                                </div>
+
+
+                            </div>
+                            <div class="scheme__line">
+                                <div class="scheme__tileSet">
+                                    <div class="scheme__tile">21</div>
+                                    <div class="scheme__tile">22</div>
+                                </div>
+                                <div class="scheme__tileSet">
+                                    <div class="scheme__tile">23</div>
+                                    <div class="scheme__tile">24</div>
+                                </div>
+
+
+                            </div>
+                            <div class="scheme__line">
+                                <div class="scheme__tileSet">
+                                    <div class="scheme__tile--busy">25</div>
+                                    <div class="scheme__tile--busy">26</div>
+                                </div>
+                                <div class="scheme__tileSet">
+                                    <div class="scheme__tile--busy">27</div>
+                                    <div class="scheme__tile">28</div>
+                                </div>
+
+
+                            </div>
+                            <div class="scheme__line">
+                                <div class="scheme__tileSet">
+                                    <div class="scheme__tile">29</div>
+                                    <div class="scheme__tile">30</div>
+                                </div>
+                                <div class="scheme__tileSet">
+                                    <div class="scheme__tile">31</div>
+                                    <div class="scheme__tile">32</div>
+                                </div>
+
+
+                            </div>
+                            <div class="scheme__line">
+                                <div class="scheme__tileSet">
+                                    <div class="scheme__tile">33</div>
+                                    <div class="scheme__tile">34</div>
+                                </div>
+
+
+                            </div>
+                            <div class="scheme__line">
+                                <div class="scheme__tileSet">
+                                    <div class="scheme__tile">35</div>
+                                    <div class="scheme__tile">36</div>
+                                </div>
+
+
+                            </div>
+                            <div class="scheme__line">
+                                <div class="scheme__tileSet">
+                                    <div class="scheme__tile">37</div>
+                                    <div class="scheme__tile">38</div>
+                                </div>
+                                <div class="scheme__tileSet">
+                                    <div class="scheme__tile">39</div>
+                                    <div class="scheme__tile">40</div>
+                                </div>
+                                <div class="scheme__tileSet">
+                                    <div class="scheme__tile">41</div>
+                                    <div class="scheme__tile">42</div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chooseSit__passengersCount">
+                        <div class="chooseSit__markers">
+                            <div class="chooseSit__markerBlock">
+                                <div class="chooseSit__marker chooseSit__marker--grey"></div>свободно</div>
+                            <div class="chooseSit__markerBlock">
+                                <div class="chooseSit__marker chooseSit__marker--blue"></div>занято</div>
+                            <div class="chooseSit__markerBlock">
+                                <div class="chooseSit__marker chooseSit__marker--pink"></div>выбрано</div>
+                        </div>
+                        <div class="chooseSit__passengersCountText">
+                            <div class="chooseSit__passengersCountTitle">Выбор количества пассажиров</div>
+                            Вы можете оформить несколько билетов на всех участников поездки</div>
+                        <a href="" class="button button--route">Изменить число пассажиров</a>
+                    </div>
+                </div>
+                <div class="chooseSit__Total">
+                    <div class="chooseSit__TotalPrice">Общая стоимость
+                        <div class="chooseSit__TotalPriceNum">3 900 рублей</div>
+                    </div>
+                    <div class="chooseSit__TotalBlock">Мест
+                        <div class="chooseSit__TotalBlockNum">3</div>
+                    </div>
+                    <div class="chooseSit__TotalBlock">Взрослый
+                        <div class="chooseSit__TotalBlockNum">2</div>
+                    </div>
+                    <div class="chooseSit__TotalBlock">Детский
+                        <div class="chooseSit__TotalBlockNum">1</div>
+                    </div>
+                    <a href="" class="ticketOffer__buyDialogueBuy ticketOffer__buyDialogueBuy--route"><span class="ticketOffer__buyDialogueTicketNum">Купить 3 билета</span>
+                        <span class="ticketOffer__buyDialogueTicketMoney">за 3 900 рублей</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class=footer-alt>
+        <div class="footer__content">
+            <div class="container">
+                <div class="footer__row">
+                    <a href=""><img src="./img/logo.svg" alt=""></a>
+                    <div class="footer__navigation">
+                        <div class="footer__itemWrap"><a href="">Главная</a><a href="">О компании</a></div>
+                        <div class="footer__itemWrap"><a href="">Служба поддержки</a><a href="">Контакты автостанций</a></div>
+                        <div class="footer__itemWrap"><a href="">Новости</a><a href="">Покупателю</a></div>
+                    </div>
+
+                    <div class="footer__tel"><span class="icon--76"></span>
+                        <div class="footer__phones">
+                            <a href="">8 (8452) 91-31-61</a><a href="">8 (8452) 50-18-74</a></div>
+                    </div>
+                </div>
+                <div class="footer__row footer__row--spaceBetween">
+                    <div class="footer__paySystem"><img src="./img/icon/Visa-Logo-2006–2014.svg" alt=""><img src="./img/icon/1280px-Mastercard-logo.svg" alt=""><img src="./img/icon/1200px-Maestro_2016.svg" alt=""></div>
+                    <a class="footer__mail" href="">info@vlastelinauto.ru</a>
+                </div>
+                <div class="footer__row footer__row--flexEnd">
+                    <div class="footer__socials">
+                        <a href=""><img src="./img/icon/vk.svg" alt=""></a>
+                        <a href=""><img src="./img/icon/facebook.svg" alt=""></a>
+                        <a href=""><img src="./img/icon/inst.svg" alt=""></a>
+                    </div>
+                </div>
+
+                <div class="footer__row footer__row--last footer__row--spaceBetween text--lightBlue"><span class="footer_copyright">2021 © <span class="text--white">Властелин.</span> Все права защищены</span>
+                    <div class="footer__links">
+                        <div class="footer__caption text--lightBlue">Наше приложение</div>
+                        <a href="https://apps.apple.com/ru/app/vlastelin-%D0%B0%D0%B2%D1%82%D0%BE%D0%B1%D1%83%D1%81%D0%BD%D1%8B%D0%B5-%D0%B1%D0%B8%D0%BB%D0%B5%D1%82%D1%8B/id1531837805"><img src="./img/icon/Appstore--Dark.svg" alt=""></a>
+                        <a href="https://play.google.com/store/apps/details?id=ru.spaceapp.vlastelin.android"><img src="./img/icon/GooglePlay--Dark.svg" alt="">
+                        </a>
+                    </div><a class="footer__production text--lightBlue" href="">Работа над сайтом <img src="./img/icon/SpaceApp.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="modal none">
+        <form class="modal__passengers">
+            <span class="modal__title">
+                Пассажиры
+            </span>
+            <div class="modal__line">
+                <div class="modal__textWrap">
+                    <span class="modal__text">
+                        Взрослый
+                    </span>
+                </div>
+                <div class="modal__count">
+                    <span class="modal__countMinus">
+                        -
+                    </span>
+                    <input type="text" class="modal__countInp" value="1" adult="true">
+                    <span class="modal__countPlus">
+                        +
+                    </span>
+                </div>
+            </div>
+            <div class="modal__line">
+                <div class="modal__textWrap">
+                    <span class="modal__text">
+                        Детский
+                    </span>
+                    <span class="modal__subtext">
+                        до 14 лет
+                    </span>
+                </div>
+                <div class="modal__count">
+                    <span class="modal__countMinus">
+                        -
+                    </span>
+                    <input type="text" class="modal__countInp" value="0" children="true">
+                    <span class="modal__countPlus">
+                        +
+                    </span>
+                </div>
+            </div>
+            <div class="modal__children">
+                <span class="modal__title">
+                    Возраст детей на момент поездки
+                </span>
+                <div class="modal__line">
+                    <select class="modal__select" name="age[]">
+                        <option value="1">1 год</option>
+                        <option value="2">2 года</option>
+                        <option value="3">3 года</option>
+                        <option value="4">4 года</option>
+                        <option value="5">5 лет</option>
+                        <option value="6">6 лет</option>
+                        <option value="7">7 лет</option>
+                        <option value="8">8 лет</option>
+                        <option value="9">9 лет</option>
+                        <option value="10">10 лет</option>
+                        <option value="11">11 лет</option>
+                        <option value="12">12 лет</option>
+                        <option value="13">13 лет</option>
+                    </select>
+                    <input type="checkbox" name="seat[]" id="seat1">
+                    <label class="modal__checkbox" for="seat1">
+                        С местом
+                    </label>
+                </div>
+            </div>
+            <a href="#" class="modal__button">
+                Сохранить и продолжить
+            </a>
+        </form>
+    </div>
+    <script>
+    </script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

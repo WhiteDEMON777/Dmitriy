@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="./img/icon/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="./img/icon/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./plugins/datepicker/dist/css/datepicker.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./js/selectize.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/selectize.css"/>
+    <script>
+        $(function() {
+            $('select').selectize(options);
+        });
+    </script>
+    <title>Властелин</title>
+</head>
+
+<body>
+    <header class=main>
+        <div class="container">
+            <div class="header__mobileMenu none">
+                <a href=""><img src="./img/logo.svg" alt=""></a>
+                <div class="menu">
+                    <div class="menu__burger">
+                        <span class="menu__burger-icon"></span>
+                    </div>
+                    <ul class="menu__list">
+                        <li><a href="./route.html" class="menu__list-link scroll close-menu">Главная</a></li>
+                        <li><a href="" class="menu__list-link scroll close-menu">О компании</a></li>
+                        <li><a href="" class="menu__list-link scroll close-menu">Служба поддержки</a></li>
+                        <li><a href="" class="menu__list-link scroll close-menu">Контакты автостанций</a></li>
+                        <li><a href="" class="menu__list-link scroll close-menu">Новости</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header__navigation">
+                <a href="" class="header__navigation-logo"><img src="./img/logo.svg" alt=""></a>
+                <ul>
+                    <li><a href="./route.html">Главная</a></li>
+                    <li><a href="">О компании</a></li>
+                    <li><a href="">Служба поддержки</a></li>
+                    <li><a href="">Контакты автостанций</a></li>
+                    <li><a href="">Новости</a></li>
+                </ul>
+                <a href=""><span class="icon--147"></span></a>
+
+            </div>
+            <div class="header__headline">
+                <div class="header__title">Билеты на автобус по всей России</div>
+                <div class="header__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+            </div>
+            <div class="header__buyTicket">
+
+                <div class="header__ticket">
+                    <div class="header__from">
+                        <div class="header__fromInputWrapper"><span class="icon-Union"></span>
+                            <div class="header__fromInputBlock">Откуда
+                                <input class="header__fromInput" type="select" placeholder="Саратов"></div>
+                        </div>
+
+                        <img src="./img/icon/arrows.svg" alt="">
+                    </div>
+                    <div class="header__where">
+                        <div class="header__whereInputWrapper"><span class="icon-we"></span>
+                            <div class="header__whereInputBlock">Куда
+                                <input class="header__whereInput" type="select" placeholder="Казань"></div>
+                        </div>
+                    </div>
+                    <div class="header__date">
+                        <div class="header__dateInputWrapper"><span class="icon-Vector1"></span>
+                            <div class="header__dateInputBlock">Дата поездки
+                                <input class="header__dateInput" type="text" name=" " id="dateRide" placeholder="дд мм гггг"></div>
+                        </div>
+                    </div>
+                    <a href=" " class="button button--buyTicket ">Найти билеты</a>
+                </div>
+                <span class="header__tomorrow ">3автра</span>
+                <span class="header__AfterTomorrow ">Послезавтра</span>
+            </div>
+        </div>
+    </header>
+    <div class="advantages ">
+        <div class="advantages__content ">
+            <div class="advantages__contentOffset ">
+                <div class="container ">
+                    <div class="title__line ">
+                        <div class="title title--advantages ">Почему выбирают Vlastelin
+                        </div>
+                    </div>
+                    <div class="advantages__points ">
+                        <div class="advantages__point ">
+                            <div class="advantages__Img "><span class="icon-Group-59 "><span class="path1 "></span><span class="path2 "></span></span>
+                            </div>
+                            <div class="advantages__pointTitle ">
+                                Без печати билета
+                            </div>
+                            <div class="advantages__pointText ">При посадке просто покажите билет на экране вашего телефона, распечатывать необязательно</div>
+                        </div>
+                        <div class="advantages__point ">
+                            <div class="advantages__Img "><span class="icon-Group-60 "><span class="path1 "></span><span class="path2 "></span></span>
+                            </div>
+                            <div class="advantages__pointTitle ">Выбирайте удобные места
+                            </div>
+                            <div class="advantages__pointText ">Вы можете выбрать любые свободные подходящие для вас места на конкретном рейсе</div>
+                        </div>
+                        <div class="advantages__point ">
+                            <div class="advantages__Img "><span class="icon-Group-68 "><span class="path1 "></span><span class="path2 "></span></span>
+                            </div>
+                            <div class="advantages__pointTitle ">Безопасная оплата
+                            </div>
+                            <div class="advantages__pointText ">Стандарты безопасности PCI DSS для защиты платежных данных</div>
+                        </div>
+                        <div class="advantages__point ">
+                            <div class="advantages__Img "><span class="icon-Group-69 "><span class="path1 "></span><span class="path2 "></span></span>
+                            </div>
+                            <div class="advantages__pointTitle ">Возврат билета
+                            </div>
+                            <div class="advantages__pointText ">Укажите корректную причину возврата билета и подтвердите заявление</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popDirections ">
+        <div class="popDirections__content ">
+            <div class="container ">
+                <div class="title__line ">
+                    <div class="title title--popDirections ">Популярные направления
+                    </div>
+                    <div class="title__link "><a href=" ">Посмотреть все<img src="./img/icon/longArrow.svg " alt=" "></a></div>
+
+                </div>
+                <div class="popDirections__cards ">
+                    <div class="popDirections__cardsRow ">
+                        <div class="popDirections__card "><img src="./img/picture/pop--1.png " alt=" ">
+                            <div class="popDirections__Way ">Саратов - Москва</div>
+                            <div class="popDirections__discription ">
+                                <div class="popDirections__Price ">
+                                    Цена от
+                                    <div class="popDirections__PriceNum ">1500 руб.</div>
+                                </div>
+                                <a href=" " class="goButton ">
+                                    <img src="./img/icon/arrow-right.svg " alt=" ">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="popDirections__card "><img src="./img/picture/pop--2.png " alt=" ">
+                            <div class="popDirections__Way ">Саратов - Москва</div>
+                            <div class="popDirections__discription ">
+                                <div class="popDirections__Price ">
+                                    Цена от
+                                    <div class="popDirections__PriceNum ">1500 руб.</div>
+                                </div>
+                                <a href=" " class="goButton ">
+                                    <img src="./img/icon/arrow-right.svg " alt=" ">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="popDirections__card "><img src="./img/picture/pop--3.png " alt=" ">
+                            <div class="popDirections__Way ">Саратов - Москва</div>
+                            <div class="popDirections__discription ">
+                                <div class="popDirections__Price ">
+                                    Цена от
+                                    <div class="popDirections__PriceNum ">1500 руб.</div>
+                                </div>
+                                <a href=" " class="goButton ">
+                                    <img src="./img/icon/arrow-right.svg " alt=" ">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popDirections__cardsRow ">
+                        <div class="popDirections__card "><img src="./img/picture/pop--4.png " alt=" ">
+                            <div class="popDirections__Way ">Саратов - Москва</div>
+                            <div class="popDirections__discription ">
+                                <div class="popDirections__Price ">
+                                    Цена от
+                                    <div class="popDirections__PriceNum ">1500 руб.</div>
+                                </div>
+                                <a href=" " class="goButton ">
+                                    <img src="./img/icon/arrow-right.svg " alt=" ">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="popDirections__card "><img src="./img/picture/pop--5.png " alt=" ">
+                            <div class="popDirections__Way ">Саратов - Москва</div>
+                            <div class="popDirections__discription ">
+                                <div class="popDirections__Price ">
+                                    Цена от
+                                    <div class="popDirections__PriceNum ">1500 руб.</div>
+                                </div>
+                                <a href=" " class="goButton ">
+                                    <img src="./img/icon/arrow-right.svg " alt=" ">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- <div class="popDirections__card "><img src="./img/picture/pop--6.png " alt=" ">
+                            <div class="popDirections__Way ">Саратов - Москва</div>
+                            <div class="popDirections__discription ">
+                                <div class="popDirections__Price ">
+                                    Цена от
+                                    <div class="popDirections__PriceNum ">1500 руб.</div>
+                                </div>
+                                <a href=" " class="goButton ">
+                                    <img src="./img/icon/arrow-right.svg " alt=" ">
+                                </a>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="market ">
+        <div class="market__content ">
+            <div class="market__contentOffset ">
+                <div class="container ">
+                    <div class="market__wrapper ">
+                        <div class="market__discription ">
+                            <div class="title__line ">
+                                <div class="title title--market ">Сервис заказа билетов
+                                </div>
+                            </div>
+                            <div class="market__text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                            <div class="market__links ">
+                                <a href="https://apps.apple.com/ru/app/vlastelin-%D0%B0%D0%B2%D1%82%D0%BE%D0%B1%D1%83%D1%81%D0%BD%D1%8B%D0%B5-%D0%B1%D0%B8%D0%BB%D0%B5%D1%82%D1%8B/id1531837805 "><img src="./img/icon/AppStore.svg " alt=" "></a>
+                                <a href="https://play.google.com/store/apps/details?id=ru.spaceapp.vlastelin.android "><img src="./img/icon/GooglePlay.svg " alt=" "></a>
+                            </div>
+                        </div>
+                        <img src="./img/picture/market.png " alt=" ">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="news ">
+        <div class="news__content ">
+            <div class="container ">
+                <div class="news__headline ">
+                    <div class="title__line ">
+                        <div class="title title--newsMain ">Последние новости
+                        </div>
+                        <div class="title__link "><a href=" ">Все новости<img src="./img/icon/longArrow.svg " alt=" "></a></div>
+                    </div>
+
+                </div>
+                <div class="news__cards ">
+                    <div class="news__cardsRow ">
+
+                        <div class="news__card "><img src="./img/picture/news--1.png " alt=" ">
+                            <div class="news__description ">
+                                <div class="news__title ">Заголовок новости</div>
+                                <div class="news__date ">12 января 2021</div>
+                                <div class="news__text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                </div>
+                            </div>
+                            <a href=" " class="news__readmore ">Читать
+                            </a>
+                        </div>
+                        <div class="news__card "><img src="./img/picture/news--2.png " alt=" ">
+                            <div class="news__description ">
+                                <div class="news__title ">Заголовок новости</div>
+                                <div class="news__date ">12 января 2021</div>
+                                <div class="news__text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                </div>
+                            </div>
+                            <a href=" " class="news__readmore ">Читать
+                            </a>
+                        </div>
+                        <div class="news__card "><img src="./img/picture/news--3.png " alt=" ">
+                            <div class="news__description ">
+                                <div class="news__title ">Заголовок новости</div>
+                                <div class="news__date ">12 января 2021</div>
+                                <div class="news__text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                </div>
+                            </div>
+                            <a href=" " class="news__readmore ">Читать
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class=footer-usual>
+        <div class="footer__content ">
+            <div class="container ">
+                <div class="footer__row ">
+                    <a class="footer__logo" href=" "><img src="./img/logo.svg " alt=" "></a>
+                    <div class="footer__navigation ">
+                        <div class="footer__itemWrap "><a href=" ">Главная</a><a href=" ">О компании</a></div>
+                        <div class="footer__itemWrap "><a href=" ">Служба поддержки</a><a href=" ">Контакты автостанций</a></div>
+                        <div class="footer__itemWrap "><a href=" ">Новости</a><a href=" ">Покупателю</a></div>
+                    </div>
+
+                    <div class="footer__tel "><span class="icon--76 "></span>
+                        <div class="footer__phones ">
+                            <a href=" ">8 (8452) 91-31-61</a><a href=" ">8 (8452) 50-18-74</a></div>
+                    </div>
+                </div>
+                <div class="footer__row footer__row--spaceBetween ">
+                    <div class="footer__paySystem"><img src="./img/icon/Visa-Logo-2006–2014.svg" alt=""><img src="./img/icon/1280px-Mastercard-logo.svg" alt=""><img src="./img/icon/1200px-Maestro_2016.svg" alt=""></div>
+                    <a class="footer__mail " href=" ">info@vlastelinauto.ru</a>
+                </div>
+                <div class="footer__row footer__row--flexEnd ">
+                    <div class="footer__socials "><a href=" "><span class="icon-vk "></span></a><a href=" "><span class="icon-facebook "></span></a><a href=" "><span class="icon-inst "></span></a></div>
+                </div>
+
+                <div class="footer__row footer__row--last footer__row--spaceBetween text--lightBlue "><span class="footer__copyright ">2021 © <span class="text--white ">Властелин.</span> Все права защищены</span>
+                    <div class="footer__links ">
+                        <div class="footer__caption text--lightBlue ">Наше приложение</div>
+                        <a href="https://apps.apple.com/ru/app/vlastelin-%D0%B0%D0%B2%D1%82%D0%BE%D0%B1%D1%83%D1%81%D0%BD%D1%8B%D0%B5-%D0%B1%D0%B8%D0%BB%D0%B5%D1%82%D1%8B/id1531837805 "><img src="./img/icon/Appstore--Dark.svg " alt=" "></a>
+                        <a href="https://play.google.com/store/apps/details?id=ru.spaceapp.vlastelin.android "><img src="./img/icon/GooglePlay--Dark.svg " alt=" ">
+                        </a>
+                    </div><a class="footer__production text--lightBlue " href=" ">Работа над сайтом <img src="./img/icon/SpaceApp.svg " alt=" "></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/script.js "></script>
+	<script src="./plugins/datepicker/dist/js/datepicker.min.js"></script>
+</body>
+
+</html>
