@@ -637,8 +637,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         color: #fff;
     }
     &__headline {
-        @include up-vw(margin-top,
-        195px);
+        @include fluid(margin-top, 50px, 195px, $breakpoint-to-fluid, $base-vw);
         position: relative;
         @include up-vw(padding-left,
         50px);
