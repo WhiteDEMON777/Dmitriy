@@ -1085,10 +1085,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             @include border-radius-vw(20px);
         }
         &:nth-child(even) {
-            @include up-vw(margin-left,
-            30px);
-            @include up-vw(margin-right,
-            30px);
+            margin-left: 30px;
+            margin-right: 30px;
         }
         &:hover {
             transform: translateY(-20px);
