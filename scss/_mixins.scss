@@ -119,16 +119,16 @@
     }
 }
 
-@mixin fluidLineHeight($f-min, $f-max, $w-min, $w-max, $fallback: false) {
-    line-height: $f-min;
+@mixin fluid($property, $f-min, $f-max, $w-min, $w-max, $fallback: false) {
+    #{$property}: $f-min;
     @media (min-width: $w-min) {
         @if ($fallback) {
-            line-height: $fallback;
+            #{$property}: $fallback;
         }
-        line-height: calcFluidFontSize($f-min, $f-max, $w-min, $w-max, px);
+        #{$property}: calcFluidFontSize($f-min, $f-max, $w-min, $w-max, px);
     }
     @media (min-width: $w-max) {
-        line-height: $f-max;
+        #{$property}: $f-max;
     }
 }
 
