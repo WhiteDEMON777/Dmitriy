@@ -553,8 +553,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         align-items: center;
         &-logo {
             img {
-                @include up-vw(width, 285px);
-                @include up-vw(height, 49px);
+                @include up-vw(width,
+                285px);
+                @include up-vw(height,
+                49px);
                 object-fit: contain;
             }
         }
@@ -574,11 +576,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
                     width: 0%;
                     display: block;
                     position: absolute;
-                    transition:all 0.3s ease-in-out;
-                    @include up-vw(height,4px);
+                    transition: all 0.3s ease-in-out;
+                    @include up-vw(height,
+                    4px);
                     border-radius: 2px;
                     background-color: #e5097f;
-                    @include up-vw(margin-top, 42px);
+                    @include up-vw(margin-top,
+                    42px);
                 }
                 &:hover {
                     &::after {
@@ -590,7 +594,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         a {
             color: #fff;
             span {
-                @include fluidFontSize(20px, 24px, $breakpoint-to-fluid, $base-vw);
+                @include fluidFontSize(20px,
+                24px,
+                $breakpoint-to-fluid,
+                $base-vw);
                 &::before {
                     transition: 0.3s;
                 }
@@ -610,7 +617,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     &__title {
         @include up-vw(width,
         886px);
-        @include fluidFontSize(42px, 84px, $breakpoint-to-fluid, $base-vw);
+        @include fluidFontSize(42px,
+        84px,
+        $breakpoint-to-fluid,
+        $base-vw);
         color: #fff;
         font-weight: 800;
     }
@@ -690,8 +700,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         30px);
         align-items: center;
         img {
-            @include fluidWidth(25px, 30px, $breakpoint-to-fluid, $base-vw);
-            @include fluidHeight(25px, 30px, $breakpoint-to-fluid, $base-vw);
+            @include fluidWidth(25px,
+            30px,
+            $breakpoint-to-fluid,
+            $base-vw);
+            @include fluidHeight(25px,
+            30px,
+            $breakpoint-to-fluid,
+            $base-vw);
         }
         &InputWrapper {
             display: flex;
@@ -735,14 +751,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         &InputWrapper {
             display: flex;
             span {
-                @include up-vw(margin-right, 25px);
+                @include up-vw(margin-right,
+                25px);
             }
         }
         &Input {
             width: 100%;
             color: #666666;
             font-family: "Open Sans";
-            @include fluidFontSize(16px, 20px, $breakpoint-to-fluid, $base-vw);
+            @include fluidFontSize(16px,
+            20px,
+            $breakpoint-to-fluid,
+            $base-vw);
             font-weight: 600;
             &::placeholder {
                 color: #666;
@@ -753,7 +773,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             flex-direction: column;
         }
         span {
-            @include fluidFontSize(20px, 24px, $breakpoint-to-fluid, $base-vw);
+            @include fluidFontSize(20px,
+            24px,
+            $breakpoint-to-fluid,
+            $base-vw);
         }
     }
     &__where {
@@ -776,12 +799,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         &Input {
             width: 100%;
             font-weight: 500;
-            @include fluidFontSize(18px, 20px, $breakpoint-to-fluid, $base-vw);
+            @include fluidFontSize(18px,
+            20px,
+            $breakpoint-to-fluid,
+            $base-vw);
             color: #666;
             margin-top: 5px;
             &::placeholder {
                 font-weight: 500;
-                @include fluidFontSize(18px, 20px, $breakpoint-to-fluid, $base-vw);
+                @include fluidFontSize(18px,
+                20px,
+                $breakpoint-to-fluid,
+                $base-vw);
                 color: #666;
             }
         }
@@ -790,7 +819,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             flex-direction: column;
         }
         span {
-            @include fluidFontSize(20px, 24px, $breakpoint-to-fluid, $base-vw);
+            @include fluidFontSize(20px,
+            24px,
+            $breakpoint-to-fluid,
+            $base-vw);
         }
     }
 }

@@ -77,7 +77,6 @@ $(document).ready(function() {
 $(".scheme__tile").on("click", function() {
     this.classList.toggle("scheme__tile--selected");
 });
-$('select').selectize(options);
 $('.menu__burger').on('click', function() {
     $('.menu').toggleClass('menu--open');
     $('body').toggleClass('overflow');
