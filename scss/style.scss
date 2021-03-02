@@ -715,7 +715,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         &InputBlock {
             display: flex;
             flex-direction: column;
-            
+
         }
         span {
             @include fluidFontSize(20px,
