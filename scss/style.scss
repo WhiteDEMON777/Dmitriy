@@ -1304,9 +1304,23 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
     &__wrapper {
         width: 810px;
+
+        input[type=radio], input[type=checkbox] {
+            display: none;
+            &:checked {
+                &+.ticketOffer {
+                    &__passengerCheck {
+                        &::before {
+                            background-color: #393185;
+                            background-image: url('/img/icon/checkbox__check.svg');
+                        }
+                    }
+                }
+            }
+        }
     }
     &__passengers {
-        @include fluid(padding-left, 0, 48px,$breakpoint-to-fluid, $base-vw);
+        @include fluid(padding-left, 0, 48px, $breakpoint-to-fluid, $base-vw);
     }
     &__passengerCard {
         margin-top: 48px;
@@ -1332,13 +1346,34 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         margin: 30px 0px;
         font-size: 14px;
         color: #333;
+        display: flex;
+        align-items: center;
     }
     &__passengerCheck {
         &--MarginTop {
             margin-top: 30px;
             margin-left: 0px;
         }
+        &--border {
+            &::before {
+                border: 1px solid #ccc;
+            }
+        }
         margin-left: 35px;
+        display: flex;
+        align-items: center;
+        &::before {
+            content: '';
+            width: 24px;
+            height: 24px;
+            background-color: #fff;
+            border-radius: 5px;
+            margin-right: 10px;
+            transition: background-color .2s ease-in-out;
+            background-position: center;
+            background-size: 50%;
+            background-repeat: no-repeat;
+        }        
     }
     &__buyerInfo {
         padding: 40px 48px;
