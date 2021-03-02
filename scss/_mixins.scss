@@ -119,7 +119,7 @@
     }
 }
 
-@mixin fluid($property, $f-min, $f-max, $w-min, $w-max, $fallback: false) {
+@mixin fluid($property, $f-min, $f-max, $w-min: $breakpoint-to-fluid, $w-max: $base-vw, $fallback: false) {
     #{$property}: $f-min;
     @media (min-width: $w-min) {
         @if ($fallback) {
