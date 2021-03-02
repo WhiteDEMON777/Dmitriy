@@ -58,8 +58,14 @@
                                     </div>
                                     <div class="ticketOffer__passengerSex">
                                         Пол
-                                        <input class="ticketOffer__passengerCheck" type="checkbox" name="sex" id="seat1"> Мужской
-                                        <input class="ticketOffer__passengerCheck" type="checkbox" name="sex" id="seat1"> Женский
+                                        <input type="radio" name="sex1" id="seat1--male" required="true">
+                                        <label for="seat1--male" class="ticketOffer__passengerCheck">
+                                            Мужской
+                                        </label>
+                                        <input type="radio" name="sex1" id="seat1--female" required="true">
+                                        <label for="seat1--female" class="ticketOffer__passengerCheck">
+                                            Женский
+                                        </label>
                                     </div>
                                     <div class="ticketOffer__passengerContainer">
                                         <input type="select" class="input" placeholder="Документ">
@@ -78,8 +84,14 @@
                                     </div>
                                     <div class="ticketOffer__passengerSex">
                                         Пол
-                                        <input class="ticketOffer__passengerCheck" type="checkbox" name="sex" id="seat1"> Мужской
-                                        <input class="ticketOffer__passengerCheck" type="checkbox" name="sex" id="seat1"> Женский
+                                        <input type="radio" name="sex2" id="seat2--male" required="true">
+                                        <label for="seat2--male" class="ticketOffer__passengerCheck">
+                                            Мужской
+                                        </label>
+                                        <input type="radio" name="sex2" id="seat2--female" required="true">
+                                        <label for="seat2--female" class="ticketOffer__passengerCheck">
+                                            Женский
+                                        </label>
                                     </div>
                                     <div class="ticketOffer__passengerContainer">
                                         <input type="select" class="input" placeholder="Документ">
@@ -98,8 +110,14 @@
                                     </div>
                                     <div class="ticketOffer__passengerSex">
                                         Пол
-                                        <input class="ticketOffer__passengerCheck" type="checkbox" name="sex" id="seat1"> Мужской
-                                        <input class="ticketOffer__passengerCheck" type="checkbox" name="sex" id="seat1"> Женский
+                                        <input type="radio" name="sex3" id="seat3--male" required="true">
+                                        <label for="seat3--male" class="ticketOffer__passengerCheck">
+                                            Мужской
+                                        </label>
+                                        <input type="radio" name="sex3" id="seat3--female" required="true">
+                                        <label for="seat3--female" class="ticketOffer__passengerCheck">
+                                            Женский
+                                        </label>
                                     </div>
                                     <div class="ticketOffer__passengerContainer">
                                         <input type="select" class="input" placeholder="Документ">
@@ -115,10 +133,12 @@
                                     <input type="email" class="input input--border" placeholder="E-mail">
                                     <input type="text" class="input input--border" placeholder="Телефон">
                                 </div>
-                                <input class="ticketOffer__passengerCheck ticketOffer__passengerCheck--MarginTop" type="checkbox" name="sex" id="seat1"> Присылайте мне скидки и идеи бюджетных путешествий
-
+                                    <input type="checkbox" name="sex" id="returnCond" required="true">
+                                    <label for="returnCond" class="ticketOffer__passengerCheck ticketOffer__passengerCheck--MarginTop ticketOffer__passengerCheck--border">
+                                        Присылайте мне скидки и идеи бюджетных путешествий
+                                    </label>
                             </div>
-                            <a href="" class="return">Условия возврата</a>
+                            <a href="#" class="return">Условия возврата</a>
                         </div>
                     </div>
                     <div class="ticketOffer__buyDialogue">
