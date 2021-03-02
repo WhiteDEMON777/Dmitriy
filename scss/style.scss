@@ -206,20 +206,13 @@ iframe {
     border-radius: 20px;
 }
 
-html {
-    @include fluidFontSize(12px,
-    16px,
-    $breakpoint-to-fluid,
-    $base-vw);
-}
 
 body {
     background-color: #ffffff;
     color: #333333;
     font-family: "Open Sans";
-    @include fontSize(14px,
-    14px);
-    // font-size: 14px;
+    @include fluid(font-size, 12px,
+    16px);
     font-weight: normal;
     font-style: normal;
     line-height: normal;
@@ -363,8 +356,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .main {
     background-image: url("./../img/banner.png");
     background-color: #fff;
-    @include fluid(border-bottom-left-radius, 50px, 260px, $breakpoint-to-fluid, $base-vw);
-    @include fluid(padding-bottom, 50px, 225px, $breakpoint-to-fluid, $base-vw);
+    @include fluid(border-bottom-left-radius, 50px, 260px);
+    @include fluid(padding-bottom, 50px, 225px);
     background-position: center;
     background-size: cover;
 }
@@ -539,14 +532,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         justify-content: space-between;
         display: flex;
         align-items: center;
-        @include fluid(padding-top, 15px, 40px, $breakpoint-to-fluid, $base-vw);
-        @include fluid(padding-bottom, 15px, 30px, $breakpoint-to-fluid, $base-vw);
+        @include fluid(padding-top, 15px, 40px);
+        @include fluid(padding-bottom, 15px, 30px);
         &-logo {
             img {
-                @include up-vw(width,
-                285px);
-                @include up-vw(height,
-                49px);
+                @include fluid(width, 180px, 285px);
+                @include fluid(height, 30x, 49px);
                 object-fit: contain;
             }
         }
@@ -554,25 +545,21 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             position: relative;
             display: flex;
             li {
-                @include margin-vw(0px,
-                45px,
-                0px,
-                0px);
+                @include fluid(margin-right, 15px, 45px);
                 position: relative;
                 display: flex;
                 justify-content: center;
+                @include fluid(padding-bottom, 10px, 20px);
                 &::after {
                     content: "";
                     width: 0%;
                     display: block;
                     position: absolute;
                     transition: all 0.3s ease-in-out;
-                    @include up-vw(height,
-                    4px);
+                    @include fluid(height, 2px, 4px);
+                    bottom: 0;
                     border-radius: 2px;
                     background-color: #e5097f;
-                    @include up-vw(margin-top,
-                    42px);
                 }
                 &:hover {
                     &::after {
@@ -582,12 +569,16 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             }
         }
         a {
+            @include fluid(font-size, 14px,
+                16px);
             color: #fff;
             span {
-                @include fluidFontSize(20px,
-                24px,
-                $breakpoint-to-fluid,
-                $base-vw);
+                position: relative;
+                @include fluid(top , -3px,
+                -8px);
+                top: -8px;
+                @include fluid(font-size, 20px,
+                24px);
                 &::before {
                     transition: 0.3s;
                 }
@@ -605,39 +596,28 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         }
     }
     &__title {
-        @include up-vw(width,
-        886px);
-        @include fluidFontSize(42px,
-        84px,
-        $breakpoint-to-fluid,
-        $base-vw);
+        @include fluid(font-size, 32px, 84px);
+        @include fluid(width, 375px, 887px);
         color: #fff;
         font-weight: 800;
     }
     &__subtitle {
-        @include up-vw(margin-top,
-        17px);
-        @include up-vw(width,
-        846px);
-        @include fluidFontSize(14px,
-        18px,
-        $breakpoint-to-fluid,
-        $base-vw);
-        @include fluid(line-height, 30px, 36px, $breakpoint-to-fluid, $base-vw);
+        @include fluid(margin-top, 10px, 20px);
+        @include fluid(width, 590px, 875px);
+        @include fluid(font-size, 16px, 18px);
+        @include fluid(line-height, 28px, 36px);
         color: #fff;
     }
     &__headline {
-        @include fluid(margin-top, 50px, 195px, $breakpoint-to-fluid, $base-vw);
+        @include fluid(margin-top, 30px, 195px);
         position: relative;
-        @include up-vw(padding-left,
-        50px);
+        @include fluid(padding-left, 20px, 50px);
         &::before {
             content: "";
             left: 0px;
-            @include up-vw(width,
-            12px);
+            @include fluid(width, 6px, 12px);
             height: 100%;
-            @include border-radius-vw(6px);
+            @include fluid(border-radius, 3px, 6px);
             background: linear-gradient(#ff45a9 0%, #eb1487 99.99%, #fd2498 100%);
             position: absolute;
         }
@@ -2507,418 +2487,418 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
 }
 
-@media screen and (max-width: 1024px) {
-    html {
-        font-size: 12px;
-        overflow-x: hidden;
-    }
-    body {
-        overflow-x: hidden;
-    }
-    .header {
-        &__ticket {
-            width: 100%;
-        }
-        &__navigation ul li {
-            margin-right: 20px;
-            &::after {
-                margin-top: 25px;
-            }
-        }
-        &__ticket {
-            padding: 10px;
-            margin-top: 100px;
-        }
-        &__subtitle {
-            margin-top: 15px;
-        }
-        &__navigation a img {
-            width: 90%;
-        }
-        &__title {
-            margin-top: 100px;
-        }
-        &__where,
-        &__date {
-            padding-left: 20px;
-            margin-left: 10px;
-        }
-        &__headline {
-            padding-left: 20px;
-            &::before {
-                width: 8px;
-                border-radius: 10px;
-            }
-        }
-    }
-    .advantages {
-        &__points {
-            flex-wrap: wrap;
-            margin-top: 50px;
-        }
-        &__point {
-            width: 40%;
-            margin-top: 20px;
-        }
-        &__Img {
-            width: 75px;
-            height: 75px;
-            -webkit-filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.05));
-            filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.05));
-        }
-        &__Img span {
-            @include fontSize(60px,
-            60px);
-        }
-    }
-    .main {
-        padding: 15px;
-        padding-bottom: 50px;
-    }
-    .button--buyTicket {
-        padding: 10px;
-    }
-    .button--buyTicket,
-    .header__ticket {
-        border-radius: 10px;
-    }
-    .container {
-        padding: 0px 40px;
-    }
-    .advantages__content,
-    .market__content,
-    .news__content,
-    .popDirections__content {
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-    .popDirections {
-        img {
-            border-radius: 10px;
-        }
-        &__card {
-            padding: 10px;
-            border-radius: 10px;
-            max-width: calc(33% - 25px);
-            &:hover {
-                .goButton {
-                    width: 100px;
-                    height: 35px;
-                    border-radius: 9px;
-                }
-            }
-        }
-        &__cards {
-            margin-top: 25px;
-        }
-    }
-    .footer {
-        &__content {
-            padding-top: 50px;
-            padding-bottom: 20px;
-        }
-        &__itemWrap {
-            line-height: 20px;
-            width: fit-content;
-            &:nth-child(1) {
-                margin-right: 40px;
-            }
-            &:nth-child(2) {
-                margin-right: 20px;
-            }
-        }
-    }
-    .market__wrapper>img {
-        width: 58%;
-    }
-    .news {
-        &__card {
-            padding: 10px;
-            border-radius: 10px;
-            &__text {
-                margin-top: 10px 0px;
-            }
-            &__PriceNum {
-                margin-top: 5px;
-            }
-            &__discription {
-                padding: 10px;
-            }
-        }
-        &__card img {
-            border-radius: 10px;
-        }
-        &__cards {
-            margin-top: 25px;
-        }
-    }
-    .goButton {
-        width: 22px;
-        height: 22px;
-    }
-    .point__text {
-        width: 30%;
-    }
-    .point__title {
-        width: 10%;
-    }
-    .market__links,
-    .market__text {
-        margin-top: 25px;
-    }
-    .footer__row>a>img {
-        width: 70%;
-    }
-    .footer__row--last>a>img {
-        margin-left: 10px;
-        width: 20%;
-    }
-    .footer__navigation {
-        min-width: auto;
-    }
-    .footer__tel {
-        a {
-            font-size: 14px;
-        }
-    }
-    .title__line {
-        padding-left: 20px;
-        &::before {
-            width: 6px;
-            border-radius: 10px;
-        }
-    }
-    .title__link {
-        img {
-            width: 25%;
-            margin-left: 10px;
-        }
-    }
-    .footer__caption {
-        margin-bottom: 7px;
-    }
-    .footer__links a {
-        img {
-            width: 30%;
-        }
-    }
-    .footer__row {
-        &:nth-child(2) {
-            margin-top: 15px;
-        }
-        &:nth-child(3) {
-            margin-top: 7px;
-        }
-        &:nth-child(4) {
-            margin-top: 7px;
-        }
-    }
-    .footer__paySystem {
-        img {
-            width: 20%;
-            margin-right: 10px;
-        }
-    }
-    .footer__production {
-        justify-content: flex-end;
-    }
-}
+// @media screen and (max-width: 1024px) {
+//     html {
+//         font-size: 12px;
+//         overflow-x: hidden;
+//     }
+//     body {
+//         overflow-x: hidden;
+//     }
+//     .header {
+//         &__ticket {
+//             width: 100%;
+//         }
+//         &__navigation ul li {
+//             margin-right: 20px;
+//             &::after {
+//                 margin-top: 25px;
+//             }
+//         }
+//         &__ticket {
+//             padding: 10px;
+//             margin-top: 100px;
+//         }
+//         &__subtitle {
+//             margin-top: 15px;
+//         }
+//         &__navigation a img {
+//             width: 90%;
+//         }
+//         &__title {
+//             margin-top: 100px;
+//         }
+//         &__where,
+//         &__date {
+//             padding-left: 20px;
+//             margin-left: 10px;
+//         }
+//         &__headline {
+//             padding-left: 20px;
+//             &::before {
+//                 width: 8px;
+//                 border-radius: 10px;
+//             }
+//         }
+//     }
+//     .advantages {
+//         &__points {
+//             flex-wrap: wrap;
+//             margin-top: 50px;
+//         }
+//         &__point {
+//             width: 40%;
+//             margin-top: 20px;
+//         }
+//         &__Img {
+//             width: 75px;
+//             height: 75px;
+//             -webkit-filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.05));
+//             filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.05));
+//         }
+//         &__Img span {
+//             @include fontSize(60px,
+//             60px);
+//         }
+//     }
+//     .main {
+//         padding: 15px;
+//         padding-bottom: 50px;
+//     }
+//     .button--buyTicket {
+//         padding: 10px;
+//     }
+//     .button--buyTicket,
+//     .header__ticket {
+//         border-radius: 10px;
+//     }
+//     .container {
+//         padding: 0px 40px;
+//     }
+//     .advantages__content,
+//     .market__content,
+//     .news__content,
+//     .popDirections__content {
+//         padding-top: 50px;
+//         padding-bottom: 50px;
+//     }
+//     .popDirections {
+//         img {
+//             border-radius: 10px;
+//         }
+//         &__card {
+//             padding: 10px;
+//             border-radius: 10px;
+//             max-width: calc(33% - 25px);
+//             &:hover {
+//                 .goButton {
+//                     width: 100px;
+//                     height: 35px;
+//                     border-radius: 9px;
+//                 }
+//             }
+//         }
+//         &__cards {
+//             margin-top: 25px;
+//         }
+//     }
+//     .footer {
+//         &__content {
+//             padding-top: 50px;
+//             padding-bottom: 20px;
+//         }
+//         &__itemWrap {
+//             line-height: 20px;
+//             width: fit-content;
+//             &:nth-child(1) {
+//                 margin-right: 40px;
+//             }
+//             &:nth-child(2) {
+//                 margin-right: 20px;
+//             }
+//         }
+//     }
+//     .market__wrapper>img {
+//         width: 58%;
+//     }
+//     .news {
+//         &__card {
+//             padding: 10px;
+//             border-radius: 10px;
+//             &__text {
+//                 margin-top: 10px 0px;
+//             }
+//             &__PriceNum {
+//                 margin-top: 5px;
+//             }
+//             &__discription {
+//                 padding: 10px;
+//             }
+//         }
+//         &__card img {
+//             border-radius: 10px;
+//         }
+//         &__cards {
+//             margin-top: 25px;
+//         }
+//     }
+//     .goButton {
+//         width: 22px;
+//         height: 22px;
+//     }
+//     .point__text {
+//         width: 30%;
+//     }
+//     .point__title {
+//         width: 10%;
+//     }
+//     .market__links,
+//     .market__text {
+//         margin-top: 25px;
+//     }
+//     .footer__row>a>img {
+//         width: 70%;
+//     }
+//     .footer__row--last>a>img {
+//         margin-left: 10px;
+//         width: 20%;
+//     }
+//     .footer__navigation {
+//         min-width: auto;
+//     }
+//     .footer__tel {
+//         a {
+//             font-size: 14px;
+//         }
+//     }
+//     .title__line {
+//         padding-left: 20px;
+//         &::before {
+//             width: 6px;
+//             border-radius: 10px;
+//         }
+//     }
+//     .title__link {
+//         img {
+//             width: 25%;
+//             margin-left: 10px;
+//         }
+//     }
+//     .footer__caption {
+//         margin-bottom: 7px;
+//     }
+//     .footer__links a {
+//         img {
+//             width: 30%;
+//         }
+//     }
+//     .footer__row {
+//         &:nth-child(2) {
+//             margin-top: 15px;
+//         }
+//         &:nth-child(3) {
+//             margin-top: 7px;
+//         }
+//         &:nth-child(4) {
+//             margin-top: 7px;
+//         }
+//     }
+//     .footer__paySystem {
+//         img {
+//             width: 20%;
+//             margin-right: 10px;
+//         }
+//     }
+//     .footer__production {
+//         justify-content: flex-end;
+//     }
+// }
 
-@media screen and (max-width: 892px) {
-    html {
-        font-size: 14px;
-        overflow-x: hidden;
-    }
-    body {
-        overflow-x: hidden;
-    }
-    .header__navigation a {
-        img {
-            width: 90%;
-        }
-    }
-    .header__navigation ul {
-        min-width: 550px;
-    }
-    .header__navigation ul li {
-        &::after {
-            margin-top: 20px;
-            height: 2px;
-        }
-        a {
-            font-size: 12px;
-        }
-    }
-    .market__wrapper>img {
-        width: 37%;
-    }
-    .advantages__pointText {
-        width: 260px;
-    }
-    .footer__tel {
-        width: 30%;
-        justify-content: flex-end;
-    }
-    .footer__navigation {
-        min-width: 50%;
-    }
-    .footer__phones {
-        span {
-            &::before {
-                font-size: 12px;
-            }
-        }
-        a {
-            font-size: 12px;
-        }
-    }
-    .header__title {
-        font-size: 60px;
-    }
-    .popDirections__card {
-        max-width: calc(33% - 15px);
-        &:nth-child(even) {
-            margin-left: 15px;
-            margin-right: 15px;
-        }
-    }
-    .popDirections__PriceNum {
-        font-size: 14px;
-    }
-}
+// @media screen and (max-width: 892px) {
+//     html {
+//         font-size: 14px;
+//         overflow-x: hidden;
+//     }
+//     body {
+//         overflow-x: hidden;
+//     }
+//     .header__navigation a {
+//         img {
+//             width: 90%;
+//         }
+//     }
+//     .header__navigation ul {
+//         min-width: 550px;
+//     }
+//     .header__navigation ul li {
+//         &::after {
+//             margin-top: 20px;
+//             height: 2px;
+//         }
+//         a {
+//             font-size: 12px;
+//         }
+//     }
+//     .market__wrapper>img {
+//         width: 37%;
+//     }
+//     .advantages__pointText {
+//         width: 260px;
+//     }
+//     .footer__tel {
+//         width: 30%;
+//         justify-content: flex-end;
+//     }
+//     .footer__navigation {
+//         min-width: 50%;
+//     }
+//     .footer__phones {
+//         span {
+//             &::before {
+//                 font-size: 12px;
+//             }
+//         }
+//         a {
+//             font-size: 12px;
+//         }
+//     }
+//     .header__title {
+//         font-size: 60px;
+//     }
+//     .popDirections__card {
+//         max-width: calc(33% - 15px);
+//         &:nth-child(even) {
+//             margin-left: 15px;
+//             margin-right: 15px;
+//         }
+//     }
+//     .popDirections__PriceNum {
+//         font-size: 14px;
+//     }
+// }
 
-@media screen and (max-width: 768px) {
-    html {
-        font-size: 14px;
-        overflow-x: hidden;
-    }
-    .news__card {
-        &:hover {
-            transform: none;
-        }
-    }
-    body {
-        overflow-x: hidden;
-    }
-    .header__navigation {
-        display: none;
-    }
-    .header__mobileMenu {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 20px;
-        a {
-            img {
-                max-width: 100%;
-            }
-        }
-    }
-    .advantages {
-        &__point {
-            width: 51%;
-        }
-    }
-    .popDirections {
-        &__cardsRow {
-            flex-direction: column;
-            &:nth-child(n+2) {
-                margin-top: 0;
-            }
-        }
-        &__cards {
-            margin-top: 25px;
-        }
-        &__card {
-            max-width: calc(61% - 15px);
-            margin-top: 20px;
-        }
-    }
-    .title__link {
-        text-decoration: underline;
-        width: 30%;
-        text-align: right;
-        img {
-            display: none;
-        }
-    }
-    .footer {
-        &__logo {
-            justify-content: center;
-            display: flex;
-        }
-        &__production {
-            margin-top: 20px;
-        }
-        &__row {
-            &:first-child {
-                a {
-                    img {
-                        width: 50%;
-                    }
-                }
-            }
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            .footer__navigation {
-                display: none;
-            }
-            &:last-child {
-                flex-direction: column;
-                align-items: center;
-                .footer__links {
-                    display: none;
-                }
-            }
-        }
-        &__tel {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0;
-            width: 100%;
-        }
-        &__phones {
-            display: flex;
-            a {
-                margin-right: 10px;
-            }
-        }
-        &__paySystem {
-            display: none;
-        }
-        &__socials {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            padding: 0px 80px;
-            a {
-                margin-left: 0;
-            }
-        }
-    }
-    .news {
-        &__cardsRow {
-            flex-direction: column;
-            align-items: center;
-        }
-        &__card {
-            max-width: 100%;
-            &:nth-child(even) {
-                margin: 0;
-                margin-bottom: 15px;
-            }
-            margin-bottom: 15px;
-        }
-    }
-}
+// @media screen and (max-width: 768px) {
+//     html {
+//         font-size: 14px;
+//         overflow-x: hidden;
+//     }
+//     .news__card {
+//         &:hover {
+//             transform: none;
+//         }
+//     }
+//     body {
+//         overflow-x: hidden;
+//     }
+//     .header__navigation {
+//         display: none;
+//     }
+//     .header__mobileMenu {
+//         display: flex;
+//         justify-content: space-between;
+//         margin-top: 20px;
+//         a {
+//             img {
+//                 max-width: 100%;
+//             }
+//         }
+//     }
+//     .advantages {
+//         &__point {
+//             width: 51%;
+//         }
+//     }
+//     .popDirections {
+//         &__cardsRow {
+//             flex-direction: column;
+//             &:nth-child(n+2) {
+//                 margin-top: 0;
+//             }
+//         }
+//         &__cards {
+//             margin-top: 25px;
+//         }
+//         &__card {
+//             max-width: calc(61% - 15px);
+//             margin-top: 20px;
+//         }
+//     }
+//     .title__link {
+//         text-decoration: underline;
+//         width: 30%;
+//         text-align: right;
+//         img {
+//             display: none;
+//         }
+//     }
+//     .footer {
+//         &__logo {
+//             justify-content: center;
+//             display: flex;
+//         }
+//         &__production {
+//             margin-top: 20px;
+//         }
+//         &__row {
+//             &:first-child {
+//                 a {
+//                     img {
+//                         width: 50%;
+//                     }
+//                 }
+//             }
+//             flex-direction: column;
+//             justify-content: center;
+//             align-items: center;
+//             .footer__navigation {
+//                 display: none;
+//             }
+//             &:last-child {
+//                 flex-direction: column;
+//                 align-items: center;
+//                 .footer__links {
+//                     display: none;
+//                 }
+//             }
+//         }
+//         &__tel {
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+//             margin: 0;
+//             width: 100%;
+//         }
+//         &__phones {
+//             display: flex;
+//             a {
+//                 margin-right: 10px;
+//             }
+//         }
+//         &__paySystem {
+//             display: none;
+//         }
+//         &__socials {
+//             width: 100%;
+//             display: flex;
+//             justify-content: space-between;
+//             padding: 0px 80px;
+//             a {
+//                 margin-left: 0;
+//             }
+//         }
+//     }
+//     .news {
+//         &__cardsRow {
+//             flex-direction: column;
+//             align-items: center;
+//         }
+//         &__card {
+//             max-width: 100%;
+//             &:nth-child(even) {
+//                 margin: 0;
+//                 margin-bottom: 15px;
+//             }
+//             margin-bottom: 15px;
+//         }
+//     }
+// }
 
-@media screen and (max-width: 350px) {
-    html {
-        font-size: 14px;
-        overflow-x: hidden;
-    }
-    body {
-        overflow-x: hidden;
-    }
-}
+// @media screen and (max-width: 350px) {
+//     html {
+//         font-size: 14px;
+//         overflow-x: hidden;
+//     }
+//     body {
+//         overflow-x: hidden;
+//     }
+// }
