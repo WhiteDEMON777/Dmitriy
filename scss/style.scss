@@ -509,11 +509,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .breadCrumbs {
     display: flex;
-    @include padding-vw(0px,
-    0,
-    80px,
-    0);
-    font-size: 16px;
+    padding-bottom:6px;
+    @include fluid(font-size,14px,16px);
     color: #333;
     align-items: center;
 }
@@ -525,12 +522,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .crumb {
     background-color: #e5097f;
     display: block;
-    @include margin-vw(0px,
-    30px);
-    width: 6px;
+    @include fluid(margin-left,15px,30px);
+    @include fluid(margin-right,15px,30px);
+    @include fluid(width,3px,6px);
+    @include fluid(height,3px,6px);
     display: block;
     border-radius: 50%;
-    height: 6px;
 }
 
 .header {
@@ -1210,18 +1207,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .infoPage {
-    &__img {
-        width: 705px;
-        height: 407px;
-        display: flex;
-        border-radius: 20px;
-    }
     &__date {
-        font-size: 16px;
-        line-height: 32px;
+        @include fluid(font-size,14px,16px);
+        @include fluid(line-height,28px,32px);
         color: #999;
-        margin-left: 40px;
-        margin-top: 20px;
+        @include fluid(margin-left,20px,40px);
+        @include fluid(margin-top,10px,20px);
         &--route {
             margin-left: 0px;
             margin-top: 0px;
@@ -1243,28 +1234,43 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     &__Span {
         display: flex;
         width: 100%;
-        font-size: 16px;
-        line-height: 32px;
+        @include fluid(font-size,14px,16px);
+        @include fluid(line-height,24px,32px);
         color: #666;
         &:nth-child(n+1) {
-            margin-top: 40px;
+            @include fluid(margin-top,20px,40px);
         }
     }
     &__ImgRow {
         align-items: center;
         display: flex;
-        margin-bottom: 60px;
+        @include fluid(margin-bottom,30px,60px);
         img {
             float: left;
-            margin-right: 60px;
+            @include fluid(border-radius,10px,20px);
+            @include fluid(margin-right,30px,60px);
+            @include fluid(margin-bottom,10px,25px);
+            @include fluid(height,200px,420px);
+            object-fit: cover;
+            width: 50%;
         }
         &--about {
-            margin-top: 80px;
+            @include fluid(margin-right,40px,80px);
             align-items: center;
             display: flex;
-            margin-bottom: 60px;
+            @include fluid(margin-bottom,30px,60px);
+            img {
+                float: right;
+                @include fluid(border-radius,10px,20px);
+                @include fluid(margin-right,30px,60px);
+                @include fluid(margin-bottom,10px,25px);
+                @include fluid(height,200px,420px);
+                object-fit: cover;
+                width: 50%;
+            }
         }
     }
+    
 }
 
 .ticketOffer {
@@ -1950,14 +1956,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         260px,
         0);
         &--alt {
-            padding-top: 100px;
-            padding-bottom: 100px;
+            @include fluid(padding-top,50px,100px);
+            @include fluid(padding-bottom,50px,100px);
             width: 100%;
             background-color: #EFEFEF;
-            @include border-radius-vw(260px,
-            0,
-            260px,
-            0);
+            @include border-radius-vw(260px,0,260px,0);
         }
     }
     &__headline {}
@@ -2514,6 +2517,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
     body {
         overflow-x: hidden;
+    }
+    .infoPage__ImgRow--about{
+        display: unset;
     }
     .header {
         &__ticket {
