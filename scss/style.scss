@@ -1070,7 +1070,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         text-align: left;
         color: #333;
     }
-    &__Price {
+    &__PriceText {
         @include fontSize(16px,
         22px);
         text-align: left;
@@ -1415,7 +1415,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         &Total {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 40px;
+            @include fluid(margin-bottom,20px,40px);
         }
         &Buy {
             width: 100%;
