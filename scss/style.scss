@@ -502,11 +502,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .breadCrumbs {
     display: flex;
-    @include padding-vw(0px,
-    0,
-    80px,
-    0);
-    font-size: 16px;
+    padding-bottom:6px;
+    @include fluid(font-size,14px,16px);
     color: #333;
     align-items: center;
 }
@@ -518,12 +515,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .crumb {
     background-color: #e5097f;
     display: block;
-    @include margin-vw(0px,
-    30px);
-    width: 6px;
+    @include fluid(margin-left,15px,30px);
+    @include fluid(margin-right,15px,30px);
+    @include fluid(width,3px,6px);
+    @include fluid(height,3px,6px);
     display: block;
     border-radius: 50%;
-    height: 6px;
 }
 
 .header {
@@ -1190,18 +1187,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .infoPage {
-    &__img {
-        width: 705px;
-        height: 407px;
-        display: flex;
-        border-radius: 20px;
-    }
     &__date {
-        font-size: 16px;
-        line-height: 32px;
+        @include fluid(font-size,14px,16px);
+        @include fluid(line-height,28px,32px);
         color: #999;
-        margin-left: 40px;
-        margin-top: 20px;
+        @include fluid(margin-left,20px,40px);
+        @include fluid(margin-top,10px,20px);
         &--route {
             margin-left: 0px;
             margin-top: 0px;
@@ -1223,28 +1214,43 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     &__Span {
         display: flex;
         width: 100%;
-        font-size: 16px;
-        line-height: 32px;
+        @include fluid(font-size,14px,16px);
+        @include fluid(line-height,24px,32px);
         color: #666;
         &:nth-child(n+1) {
-            margin-top: 40px;
+            @include fluid(margin-top,20px,40px);
         }
     }
     &__ImgRow {
         align-items: center;
         display: flex;
-        margin-bottom: 60px;
+        @include fluid(margin-bottom,30px,60px);
         img {
             float: left;
-            margin-right: 60px;
+            @include fluid(border-radius,10px,20px);
+            @include fluid(margin-right,30px,60px);
+            @include fluid(margin-bottom,10px,25px);
+            @include fluid(height,200px,420px);
+            object-fit: cover;
+            width: 50%;
         }
         &--about {
-            margin-top: 80px;
+            @include fluid(margin-right,40px,80px);
             align-items: center;
             display: flex;
-            margin-bottom: 60px;
+            @include fluid(margin-bottom,30px,60px);
+            img {
+                float: right;
+                @include fluid(border-radius,10px,20px);
+                @include fluid(margin-right,30px,60px);
+                @include fluid(margin-bottom,10px,25px);
+                @include fluid(height,200px,420px);
+                object-fit: cover;
+                width: 50%;
+            }
         }
     }
+    
 }
 
 .ticketOffer {
@@ -1278,9 +1284,23 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
     &__wrapper {
         width: 810px;
+
+        input[type=radio], input[type=checkbox] {
+            display: none;
+            &:checked {
+                &+.ticketOffer {
+                    &__passengerCheck {
+                        &::before {
+                            background-color: #393185;
+                            background-image: url('/img/icon/checkbox__check.svg');
+                        }
+                    }
+                }
+            }
+        }
     }
     &__passengers {
-        @include fluid(padding-left, 0, 48px,$breakpoint-to-fluid, $base-vw);
+        @include fluid(padding-left, 0, 48px, $breakpoint-to-fluid, $base-vw);
     }
     &__passengerCard {
         margin-top: 48px;
@@ -1306,13 +1326,34 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         margin: 30px 0px;
         font-size: 14px;
         color: #333;
+        display: flex;
+        align-items: center;
     }
     &__passengerCheck {
         &--MarginTop {
             margin-top: 30px;
             margin-left: 0px;
         }
+        &--border {
+            &::before {
+                border: 1px solid #ccc;
+            }
+        }
         margin-left: 35px;
+        display: flex;
+        align-items: center;
+        &::before {
+            content: '';
+            width: 24px;
+            height: 24px;
+            background-color: #fff;
+            border-radius: 5px;
+            margin-right: 10px;
+            transition: background-color .2s ease-in-out;
+            background-position: center;
+            background-size: 50%;
+            background-repeat: no-repeat;
+        }        
     }
     &__buyerInfo {
         padding: 40px 48px;
@@ -1930,14 +1971,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         260px,
         0);
         &--alt {
-            padding-top: 100px;
-            padding-bottom: 100px;
+            @include fluid(padding-top,50px,100px);
+            @include fluid(padding-bottom,50px,100px);
             width: 100%;
             background-color: #EFEFEF;
-            @include border-radius-vw(260px,
-            0,
-            260px,
-            0);
+            @include border-radius-vw(260px,0,260px,0);
         }
     }
     &__headline {}
@@ -2487,6 +2525,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
 }
 
+<<<<<<< HEAD
 // @media screen and (max-width: 1024px) {
 //     html {
 //         font-size: 12px;
@@ -2902,3 +2941,423 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 //         overflow-x: hidden;
 //     }
 // }
+=======
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 12px;
+        overflow-x: hidden;
+    }
+    body {
+        overflow-x: hidden;
+    }
+    .infoPage__ImgRow--about{
+        display: unset;
+    }
+    .header {
+        &__ticket {
+            width: 100%;
+        }
+        &__navigation ul li {
+            margin-right: 20px;
+            &::after {
+                margin-top: 25px;
+            }
+        }
+        &__ticket {
+            padding: 10px;
+            margin-top: 100px;
+        }
+        &__subtitle {
+            margin-top: 15px;
+        }
+        &__navigation a img {
+            width: 90%;
+        }
+        &__title {
+            margin-top: 100px;
+        }
+        &__where,
+        &__date {
+            padding-left: 20px;
+            margin-left: 10px;
+        }
+        &__headline {
+            padding-left: 20px;
+            &::before {
+                width: 8px;
+                border-radius: 10px;
+            }
+        }
+    }
+    .advantages {
+        &__points {
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+        &__point {
+            width: 40%;
+            margin-top: 20px;
+        }
+        &__Img {
+            width: 75px;
+            height: 75px;
+            -webkit-filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.05));
+            filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.05));
+        }
+        &__Img span {
+            @include fontSize(60px,
+            60px);
+        }
+    }
+    .main {
+        padding: 15px;
+        padding-bottom: 50px;
+    }
+    .button--buyTicket {
+        padding: 10px;
+    }
+    .button--buyTicket,
+    .header__ticket {
+        border-radius: 10px;
+    }
+    .container {
+        padding: 0px 40px;
+    }
+    .advantages__content,
+    .market__content,
+    .news__content,
+    .popDirections__content {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .popDirections {
+        img {
+            border-radius: 10px;
+        }
+        &__card {
+            padding: 10px;
+            border-radius: 10px;
+            max-width: calc(33% - 25px);
+            &:hover {
+                .goButton {
+                    width: 100px;
+                    height: 35px;
+                    border-radius: 9px;
+                }
+            }
+        }
+        &__cards {
+            margin-top: 25px;
+        }
+    }
+    .footer {
+        &__content {
+            padding-top: 50px;
+            padding-bottom: 20px;
+        }
+        &__itemWrap {
+            line-height: 20px;
+            width: fit-content;
+            &:nth-child(1) {
+                margin-right: 40px;
+            }
+            &:nth-child(2) {
+                margin-right: 20px;
+            }
+        }
+    }
+    .market__wrapper>img {
+        width: 58%;
+    }
+    .news {
+        &__card {
+            padding: 10px;
+            border-radius: 10px;
+            &__text {
+                margin-top: 10px 0px;
+            }
+            &__PriceNum {
+                margin-top: 5px;
+            }
+            &__discription {
+                padding: 10px;
+            }
+        }
+        &__card img {
+            border-radius: 10px;
+        }
+        &__cards {
+            margin-top: 25px;
+        }
+    }
+    .goButton {
+        width: 22px;
+        height: 22px;
+    }
+    .point__text {
+        width: 30%;
+    }
+    .point__title {
+        width: 10%;
+    }
+    .market__links,
+    .market__text {
+        margin-top: 25px;
+    }
+    .footer__row>a>img {
+        width: 70%;
+    }
+    .footer__row--last>a>img {
+        margin-left: 10px;
+        width: 20%;
+    }
+    .footer__navigation {
+        min-width: auto;
+    }
+    .footer__tel {
+        a {
+            font-size: 14px;
+        }
+    }
+    .title__line {
+        padding-left: 20px;
+        &::before {
+            width: 6px;
+            border-radius: 10px;
+        }
+    }
+    .title__link {
+        img {
+            width: 25%;
+            margin-left: 10px;
+        }
+    }
+    .footer__caption {
+        margin-bottom: 7px;
+    }
+    .footer__links a {
+        img {
+            width: 30%;
+        }
+    }
+    .footer__row {
+        &:nth-child(2) {
+            margin-top: 15px;
+        }
+        &:nth-child(3) {
+            margin-top: 7px;
+        }
+        &:nth-child(4) {
+            margin-top: 7px;
+        }
+    }
+    .footer__paySystem {
+        img {
+            width: 20%;
+            margin-right: 10px;
+        }
+    }
+    .footer__production {
+        justify-content: flex-end;
+    }
+}
+
+@media screen and (max-width: 892px) {
+    html {
+        font-size: 14px;
+        overflow-x: hidden;
+    }
+    body {
+        overflow-x: hidden;
+    }
+    .header__navigation a {
+        img {
+            width: 90%;
+        }
+    }
+    .header__navigation ul {
+        min-width: 550px;
+    }
+    .header__navigation ul li {
+        &::after {
+            margin-top: 20px;
+            height: 2px;
+        }
+        a {
+            font-size: 12px;
+        }
+    }
+    .market__wrapper>img {
+        width: 37%;
+    }
+    .advantages__pointText {
+        width: 260px;
+    }
+    .footer__tel {
+        width: 30%;
+        justify-content: flex-end;
+    }
+    .footer__navigation {
+        min-width: 50%;
+    }
+    .footer__phones {
+        span {
+            &::before {
+                font-size: 12px;
+            }
+        }
+        a {
+            font-size: 12px;
+        }
+    }
+    .header__title {
+        font-size: 60px;
+    }
+    .popDirections__card {
+        max-width: calc(33% - 15px);
+        &:nth-child(even) {
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+    }
+    .popDirections__PriceNum {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 14px;
+        overflow-x: hidden;
+    }
+    .news__card {
+        &:hover {
+            transform: none;
+        }
+    }
+    body {
+        overflow-x: hidden;
+    }
+    .header__navigation {
+        display: none;
+    }
+    .header__mobileMenu {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        a {
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+    .advantages {
+        &__point {
+            width: 51%;
+        }
+    }
+    .popDirections {
+        &__cardsRow {
+            flex-direction: column;
+            &:nth-child(n+2) {
+                margin-top: 0;
+            }
+        }
+        &__cards {
+            margin-top: 25px;
+        }
+        &__card {
+            max-width: calc(61% - 15px);
+            margin-top: 20px;
+        }
+    }
+    .title__link {
+        text-decoration: underline;
+        width: 30%;
+        text-align: right;
+        img {
+            display: none;
+        }
+    }
+    .footer {
+        &__logo {
+            justify-content: center;
+            display: flex;
+        }
+        &__production {
+            margin-top: 20px;
+        }
+        &__row {
+            &:first-child {
+                a {
+                    img {
+                        width: 50%;
+                    }
+                }
+            }
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .footer__navigation {
+                display: none;
+            }
+            &:last-child {
+                flex-direction: column;
+                align-items: center;
+                .footer__links {
+                    display: none;
+                }
+            }
+        }
+        &__tel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            width: 100%;
+        }
+        &__phones {
+            display: flex;
+            a {
+                margin-right: 10px;
+            }
+        }
+        &__paySystem {
+            display: none;
+        }
+        &__socials {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 80px;
+            a {
+                margin-left: 0;
+            }
+        }
+    }
+    .news {
+        &__cardsRow {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__card {
+            max-width: 100%;
+            &:nth-child(even) {
+                margin: 0;
+                margin-bottom: 15px;
+            }
+            margin-bottom: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 350px) {
+    html {
+        font-size: 14px;
+        overflow-x: hidden;
+    }
+    body {
+        overflow-x: hidden;
+    }
+}
+>>>>>>> ca10fc1a1a5fb15dbed7bcded3cdb53db120dc0c
