@@ -363,16 +363,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .main {
     background-image: url("./../img/banner.png");
     background-color: #fff;
-    @include border-radius-vw(0px,
-    0,
-    0,
-    260px);
+    @include fluid(border-bottom-left-radius, 50px, 260px, $breakpoint-to-fluid, $base-vw);
+    @include fluid(padding-bottom, 50px, 225px, $breakpoint-to-fluid, $base-vw);
     background-position: center;
     background-size: cover;
-    @include padding-vw( 40px,
-    0px,
-    225px,
-    0px);
 }
 
 .tickets {
@@ -545,6 +539,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         justify-content: space-between;
         display: flex;
         align-items: center;
+        @include fluid(padding-top, 15px, 40px, $breakpoint-to-fluid, $base-vw);
+        @include fluid(padding-bottom, 15px, 30px, $breakpoint-to-fluid, $base-vw);
         &-logo {
             img {
                 @include up-vw(width,
