@@ -1300,7 +1300,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         width: 810px;
     }
     &__passengers {
-        padding: 0 48px;
+        @include fluid(padding-left, 0, 48px,$breakpoint-to-fluid, $base-vw);
     }
     &__passengerCard {
         margin-top: 48px;
