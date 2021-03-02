@@ -58,8 +58,9 @@
                     <div class="header__from">
                         <div class="header__fromInputWrapper"><span class="icon-Union"></span>
                             <div class="header__fromInputBlock">Откуда
-                                <select id="select-gear" class="header__fromInput">
-
+                                <select id="select-gear" >
+                                    <option value="1">Hey1</option>
+                                    <option value="2">Hey2</option>
                                 </select>
                                 <!-- <input class="header__fromInput" type="select" placeholder="Саратов"></div> -->
                             </div>
@@ -359,29 +360,7 @@
     <script src="./js/script.js "></script>
     <script src="./plugins/datepicker/dist/js/datepicker.min.js"></script>
     <script>
-        $('select').selectize({
-            options: [
-                { email: 'brian@thirdroute.com', name: 'Brian Reavis' },
-                { email: 'nikola@tesla.com', name: 'Nikola Tesla' },
-                { email: 'someone@gmail.com' }
-            ],
-            render: {
-                item: function (item, escape) {
-                    return '<div>' +
-                        (item.name ? '<span class="name">' + escape(item.name) + '</span>' : '') +
-                        (item.email ? '<span class="email">' + escape(item.email) + '</span>' : '') +
-                        '</div>';
-                },
-                option: function (item, escape) {
-                    var label = item.name || item.email;
-                    var caption = item.name ? item.email : null;
-                    return '<div>' +
-                        '<span class="label">' + escape(label) + '</span>' +
-                        (caption ? '<span class="caption">' + escape(caption) + '</span>' : '') +
-                        '</div>';
-                }
-            }
-        });
+        $('#select-gear').selectize();
     </script>
 </body>
 
