@@ -1523,12 +1523,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             font-size: 24px;
             color: #393185;
             margin-bottom: 5px;
-            &Address{
-
-            }
         }
     }
-    &__routeInformation {}
     &__title {
         font-size: 24px;
         color: #999;
@@ -1769,14 +1765,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background-image: linear-gradient(to bottom,#ffffff 50%,#1E1B36 50%);
     width: 100%;
     &--home {
-<<<<<<< HEAD
-        background-image: linear-gradient(to bottom,#EFEFEF 50%,#1E1B36 50%);
-    width: 100%;
-=======
         background-image: linear-gradient(to bottom,
     #EFEFEF 50%,
     #1E1B36 50%);
->>>>>>> 15f63e2c186cae52fbcee40d7c33eda2efaf4742
     }
     &__content {
         @include fluid(padding-top, 30px, 100px);
@@ -1806,22 +1797,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         position: relative;
         transition: 0.3s;
         box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.05);
-<<<<<<< HEAD
-        overflow: hidden;
-        @include border-radius-vw(30px);
-        @include padding-vw(15px,10px,25px,10px);
-        img {
-            width: 100%;
-            height: auto;
-            @include border-radius-vw(20px);
-=======
         @include fluid(border-radius, 15px, 30px);
         @include fluid(padding, 5px, 10px);
         @include fluid(padding-bottom, 15px, 30px);
         @include fluid(margin-right, 20px, 30px);
         &:hover {
             top: -20px;
->>>>>>> 15f63e2c186cae52fbcee40d7c33eda2efaf4742
         }
         &:nth-child(3n) {
             margin-right: 0;
@@ -1836,23 +1817,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     &__title {
         @include fluid(font-size, 16px, 18px);
         font-weight: 700;
-<<<<<<< HEAD
-        @include fontSize(18px,32px);
-        text-align: left;
-        color: #393185;
-    }
-    &__text {
-        @include up-vw(margin-top,20px);
-        text-align: left;
-        @include fontSize(16px,24px);
-        color: #333;
-        @include up-vw(margin-bottom,20px);
-    }
-    &__date {
-        @include up-vw(margin-top,10px);
-        @include fontSize(14px,19px);
-        text-align: left;
-=======
         color: #393185;
     }
     &__text {
@@ -1866,7 +1830,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     &__date {
         @include fluid(margin-top, 5px, 10px);
         @include fluid(font-size, 12px, 14px);
->>>>>>> 15f63e2c186cae52fbcee40d7c33eda2efaf4742
         color: #999;
     }
     &__readmore {
@@ -1878,16 +1841,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         text-align: right;
     }
     &__description {
-<<<<<<< HEAD
-        text-align: right;
-        @include up-vw(margin-top,30px);
-        @include up-vw(padding-left,30px);
-        @include up-vw(padding-right,30px);
-=======
         @include fluid(margin-top, 15px, 25px);
         @include fluid(padding-left, 10px, 20px);
         @include fluid(padding-right, 10px, 20px);
->>>>>>> 15f63e2c186cae52fbcee40d7c33eda2efaf4742
     }
 }
 
@@ -1898,18 +1854,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         background-color: #4F3D8E;
     }
     &__content {
-<<<<<<< HEAD
-        @include padding-vw(100px,0px,40px,0px);
-        width: 100%;
-        background-color: #1E1B36;
-        @include border-radius-vw(260px,0,0,0);
-=======
         @include fluid(padding-top, 30px, 100px);
         @include fluid(padding-bottom, 30px, 50px);
         width: 100%;
         background-color: #1E1B36;
         @include fluid(border-top-left-radius, 30px, 260px);
->>>>>>> 15f63e2c186cae52fbcee40d7c33eda2efaf4742
     }
     &__container {
         display: flex;
@@ -1922,83 +1871,16 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
     &__payment {
         display: flex;
-<<<<<<< HEAD
-        align-items: flex-start;
-        flex-wrap: wrap;
-        a {
-            display: flex;
-            color: #fff;
-        }
-    }
-    &__tel {
-        margin-left: auto;
-        font-size: 24px;
-        letter-spacing: 0.01em;
-        line-height: 36px;
-        color: #fff;
-        span {
-            margin-right: 15px;
-        }
-        a {
-            display: flex;
-            color: #fff;
-        }
-    }
-    &__itemWrap {
-        width: -moz-fit-content;
-        line-height: 36px;
-        width: -webkit-fit-content;
-        width: fit-content;
-        &:nth-child(1) {
-            margin-right: 120px;
-        }
-        &:nth-child(2) {
-            margin-right: 80px;
-        }
-    }
-    &__mail {
-        @include fontSize(16px,
-        22px);
-        text-align: right;
-        color: #908acb;
-    }
-    &__production {
-        @include fontSize(16px,
-        22px);
-        color: #908acb;
-        display: flex;
-        align-items: center;
-        img {
-            @include up-vw(margin-left,20px);
-        }
-=======
         justify-content: space-between;
         @include fluid(margin-top, 20px, 60px);
->>>>>>> 15f63e2c186cae52fbcee40d7c33eda2efaf4742
     }
     &__list {
         display: flex;
-<<<<<<< HEAD
-        span {
-            &::before {
-                @include fontSize(24px,
-                36px);
-            }
-        }
-    }
-    &__phones {
-        @include fontSize(24px,36px);
-    }
-    &__paySystem {
-        img {
-            margin-right: 30px;
-=======
         justify-content: space-between;
         flex-wrap: wrap;
         height: 100%;
         li {
             width: 28%;
->>>>>>> 15f63e2c186cae52fbcee40d7c33eda2efaf4742
         }
         &-link {
             color: #ffffff;
@@ -2006,18 +1888,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             display: block;
         }
     }
-<<<<<<< HEAD
-    &__links {
-        margin-left: 15px;
-    }
-    &__caption {
-        margin-bottom: 15px;
-        @include fontSize(16px,22px);
-        color: #908acb;
-    }
-=======
     
->>>>>>> 15f63e2c186cae52fbcee40d7c33eda2efaf4742
 }
 
 .container {
@@ -2263,8 +2134,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
                 @include fluid(font-size,12px,14px);
                 color: #999;
             }
-        }
-        &String {
         }
         &NamePlace {
             display: flex;
