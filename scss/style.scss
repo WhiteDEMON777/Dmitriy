@@ -170,7 +170,7 @@
     line-height: 2;
 }
 
-$breakpoint-to-fluid: 1025px;
+$breakpoint-to-fluid: 992px;
 $base-vw: 1920px;
 $line-height-base: 1.2;
 $container-width: 1260px;
@@ -639,7 +639,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     &__tomorrow {
         display: flex;
         position: absolute;
-        right: 30%;
+        right: 27%;
         &-text {
             @include fluid(font-size, 12px, 14px);
             font-weight: 600;
@@ -647,7 +647,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             padding-bottom: 5px;
             cursor: pointer;
             border-bottom: 2px dotted transparent;
-            @include fluid(margin-left, 15px, 30px);
+            @include fluid(margin-right, 15px, 30px);
             &:hover {
                 border-bottom: 2px dotted #908acb;
             }
@@ -863,8 +863,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     width: 100%;
     @include fluid(padding-right, 15px, 100px);
     &__content {
-        @include fluid(padding-top, 50px, 100px);
-        @include fluid(padding-bottom, 40px, 80px);
+        @include fluid(padding-top, 30px, 100px);
+        @include fluid(padding-bottom, 30px, 100px);
         width: 100%;
         background-color: #fff;
         @include fluid(border-top-right-radius, 50px, 260px);
@@ -877,7 +877,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         display: flex;
         width: 100%;
         justify-content: space-between;
-        @include fluid(margin-top, 40px, 80px);
+        @include fluid(margin-top, 20px, 80px);
     }
     &__point {
         display: flex;
@@ -900,7 +900,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         }
     }
     &__pointTitle {
-        @include fluid(margin-top, 20px, 30px);
+        @include fluid(margin-top, 15px, 30px);
         @include fluid(font-size, 18px, 20px);
         text-align: center;
         font-weight: 700;
@@ -919,8 +919,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     width: 100%;
     background-image: linear-gradient(to bottom, #fff 50%, #efefef 100%);
     &__content {
-        @include fluid(padding-top, 50px, 100px);
-        @include fluid(padding-bottom, 50px, 100px);
+        @include fluid(padding-top, 30px, 100px);
+        @include fluid(padding-bottom, 30px, 100px);
         @include fluid(border-top-left-radius, 50px, 260px);
         @include fluid(border-bottom-right-radius, 50px, 260px);
         width: 100%;
@@ -939,7 +939,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         @include fluid(border-radius, 15px, 30px);
         padding: 10px;
         @include fluid(padding-bottom, 15px, 30px);
-        @include fluid(margin-right, 23px, 30px);
+        @include fluid(margin-right, 20px, 30px);
         @include fluid(margin-top, 20px, 40px);
         position: relative;
         top: 0;
@@ -1031,8 +1031,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     width: 100%;
     @include fluid(padding-left, 15px, 100px);
     &__content {
-        padding-top: 100px;
-        padding-bottom: 100px;
+        @include fluid(padding-top, 30px, 100px);
+        @include fluid(padding-bottom, 30px, 100px);
         width: 100%;
         background: #efefef;
         @include fluid(border-top-left-radius, 50px, 260px);
@@ -1041,18 +1041,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             @include fluid(padding-right, 0, 100px);
         }
     }
-    &__discription {
-        
-    }
     &__text {
-        @include up-vw(margin-top,
-        40px);
-        @include up-vw(margin-bottom,
-        40px);
-        @include fontSize(18px,
-        36px);
-        text-align: left;
+        @include fluid(margin-top, 20px, 40px);
+        @include fluid(margin-bottom, 20px, 40px);
+        @include fluid(font-size, 16px, 18px);
+        @include fluid(line-height, 28px, 36px);
         color: #888;
+    }
+    &__discription {
+        width: 32%;
     }
     &__links {
         a {
@@ -1063,6 +1060,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+    &__img {
+        width: 60%;
+        @include fluid(height, 400px, 670px);
+        object-fit: contain;
     }
 }
 
@@ -1819,31 +1821,29 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .news {
-    &--alt {
-        background-color: #fff;
-        background-image: linear-gradient(to bottom, #fff 50%, #1E1B36 50%);
-        width: 100%;
-    }
     background-color: #fff;
     background-image: linear-gradient(to bottom,
-    #fff 50%,
+    #ffffff 50%,
     #1E1B36 50%);
     width: 100%;
+    &--home {
+        background-image: linear-gradient(to bottom,
+    #EFEFEF 50%,
+    #1E1B36 50%);
+    width: 100%;
+    }
     &__content {
-        padding-top: 100px;
-        padding-bottom: 100px;
+        @include fluid(padding-top, 30px, 100px);
+        @include fluid(padding-bottom, 30px, 100px);
+        @include fluid(border-top-left-radius, 50px, 260px);
+        @include fluid(border-bottom-right-radius, 50px, 260px);
         width: 100%;
-        background-color: #4F3D8E;
-        @include border-radius-vw(0,
-        260px,
-        260px,
-        0);
-        &--alt {
-            @include fluid(padding-top,50px,100px);
-            @include fluid(padding-bottom,50px,100px);
-            width: 100%;
-            background-color: #EFEFEF;
-            @include border-radius-vw(260px,0,260px,0);
+        background-color: #EFEFEF;
+        &--home {
+            background-color: #4F3D8E;
+            border-radius: none;
+            @include fluid(border-top-left-radius, 0, 0);
+            @include fluid(border-top-right-radius, 50px, 260px);
         }
     }
     &__headline {}
@@ -1947,13 +1947,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .footer {
-    &-alt {
-        background-color: #EFEFEF;
-        width: 100%;
-    }
-    &-usual {
+    background-color: #EFEFEF;
+    width: 100%;
+    &--home {
         background-color: #4F3D8E;
-        width: 100%;
     }
     &__content {
         @include padding-vw(100px,
