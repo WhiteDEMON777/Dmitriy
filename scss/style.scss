@@ -172,12 +172,10 @@
 
 $breakpoint-to-fluid: 992px;
 $base-vw: 1920px;
-$line-height-base: 1.2;
 $container-width: 1260px;
 $container-width-md: 900px;
 $baseFontSize: 16px;
 $p-medium: 15px;
-$p-small: 0px;
 * {
     box-sizing: border-box;
     margin: 0;
@@ -354,7 +352,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .main {
     background-image: url("./../img/banner.png");
     background-color: #fff;
-    @include fluid(border-bottom-left-radius, 50px, 260px);
+    @include fluid(border-bottom-left-radius, 30px, 260px);
     @include fluid(padding-bottom, 50px, 225px);
     background-position: center;
     background-size: cover;
@@ -535,7 +533,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         &-logo {
             img {
                 @include fluid(width, 180px, 285px);
-                @include fluid(height, 30x, 49px);
+                @include fluid(height, 30px, 49px);
                 object-fit: contain;
             }
         }
@@ -662,6 +660,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         justify-content: space-between;
         align-items: center;
         &InputBlock {
+            @include fluid(margin-left, 15px, 25px);
             .selectize {
                 &-input, &-dropdown, &-input input {
                     width: 200px;
@@ -685,9 +684,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         &InputWrapper {
             display: flex;
             align-items: center;
-            span {
-                @include fluid(margin-right, 15px, 25px);
-            }
         }
         span {
             @include fluid(font-size, 20px, 25px);
@@ -699,7 +695,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         &InputWrapper {
             display: flex;
             span {
-                @include fluid(margin-right, 15px, 25px);
                 @include fluid(font-size, 20px, 24px);
             }
         }
@@ -714,8 +709,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             }
         }
         &InputBlock {
-            display: flex;
-            flex-direction: column;
+            @include fluid(margin-left, 15px, 25px);
         }
     }
     &__where {
@@ -731,11 +725,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             @include fluid(font-size, 12px,14px);
             border-left: 1px solid #DDDDDD;
             display: flex;
-            span {
-                @include fluid(margin-right, 15px, 25px);
-            }
         }
         &InputBlock {
+            @include fluid(margin-left, 15px, 25px);
             .selectize {
                 &-input, &-dropdown, &-input input {
                     width: 200px;
@@ -867,8 +859,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         @include fluid(padding-bottom, 30px, 100px);
         width: 100%;
         background-color: #fff;
-        @include fluid(border-top-right-radius, 50px, 260px);
-        @include fluid(border-bottom-right-radius, 50px, 260px);
+        @include fluid(border-top-right-radius, 30px, 260px);
+        @include fluid(border-bottom-right-radius, 30px, 260px);
         &Offset {
             @include fluid(padding-left, 0px, 100px);
         }
@@ -921,8 +913,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     &__content {
         @include fluid(padding-top, 30px, 100px);
         @include fluid(padding-bottom, 30px, 100px);
-        @include fluid(border-top-left-radius, 50px, 260px);
-        @include fluid(border-bottom-right-radius, 50px, 260px);
+        @include fluid(border-top-left-radius, 30px, 260px);
+        @include fluid(border-bottom-right-radius, 30px, 260px);
         width: 100%;
         background-color: #4F3D8E;
     }
@@ -1035,8 +1027,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         @include fluid(padding-bottom, 30px, 100px);
         width: 100%;
         background: #efefef;
-        @include fluid(border-top-left-radius, 50px, 260px);
-        @include fluid(border-bottom-left-radius, 50px, 260px);
+        @include fluid(border-top-left-radius, 30px, 260px);
+        @include fluid(border-bottom-left-radius, 30px, 260px);
         &Offset {
             @include fluid(padding-right, 0, 100px);
         }
@@ -1830,119 +1822,82 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         background-image: linear-gradient(to bottom,
     #EFEFEF 50%,
     #1E1B36 50%);
-    width: 100%;
     }
     &__content {
         @include fluid(padding-top, 30px, 100px);
         @include fluid(padding-bottom, 30px, 100px);
-        @include fluid(border-top-left-radius, 50px, 260px);
-        @include fluid(border-bottom-right-radius, 50px, 260px);
+        @include fluid(border-top-left-radius, 30px, 260px);
+        @include fluid(border-bottom-right-radius, 30px, 260px);
         width: 100%;
         background-color: #EFEFEF;
         &--home {
             background-color: #4F3D8E;
             border-radius: none;
             @include fluid(border-top-left-radius, 0, 0);
-            @include fluid(border-top-right-radius, 50px, 260px);
+            @include fluid(border-top-right-radius, 30px, 260px);
         }
     }
-    &__headline {}
     &__cards {
-        margin-top: 80px;
+        @include fluid(margin-top, 20px, 40px);
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        flex-wrap: wrap;
     }
-    &__cardsRow {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        &:nth-child(n+1) {
-            margin-top: 40px;
-        }
-    }
+
     &__card {
+        @include fluid(margin-top, 20px, 40px);
         background-color: #fff;
-        display: flex;
-        max-width: 390px;
-        flex-direction: column;
-        text-align: right;
+        width: 31.7%;
+        top: 0;
+        position: relative;
         transition: 0.3s;
         box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.05);
-        overflow: hidden;
-        @include border-radius-vw(30px);
-        @include padding-vw(15px,
-        10px,
-        25px,
-        10px);
+        @include fluid(border-radius, 15px, 30px);
+        @include fluid(padding, 5px, 10px);
+        @include fluid(padding-bottom, 15px, 30px);
+        @include fluid(margin-right, 20px, 30px);
+        &:hover {
+            top: -20px;
+        }
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
         img {
             width: 100%;
-            height: auto;
-            @include border-radius-vw(20px);
-        }
-        &:nth-child(even) {
-            margin-left: 30px;
-            margin-right: 30px;
-        }
-        &:hover {
-            transform: translateY(-20px);
-            .goButton {
-                width: 150px;
-                height: 45px;
-                border-radius: 18px;
-                background: linear-gradient(#ff45a9 0%, #eb1487 99.99%, #fd2498 100%);
-            }
-            .popDirections__PriceNum {
-                color: #E5097F;
-            }
-            .popDirections__Way {
-                color: #393185;
-            }
+            @include fluid(height, 170px, 220px);
+            @include fluid(border-radius, 10px, 20px);
+            object-fit: cover;
         }
     }
     &__title {
+        @include fluid(font-size, 16px, 18px);
         font-weight: 700;
-        @include fontSize(18px,
-        32px);
-        text-align: left;
         color: #393185;
     }
     &__text {
-        @include up-vw(margin-top,
-        20px);
-        text-align: left;
-        @include fontSize(16px,
-        24px);
-        color: #333;
-        @include up-vw(margin-bottom,
-        20px);
+        @include fluid(margin-top, 10px, 20px);
+        @include fluid(margin-bottom, 10px, 20px);
+        @include fluid(font-size, 14px, 16px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 70px;
     }
     &__date {
-        @include up-vw(margin-top,
-        10px);
-        @include fontSize(14px,
-        19px);
-        text-align: left;
+        @include fluid(margin-top, 5px, 10px);
+        @include fluid(font-size, 12px, 14px);
         color: #999;
     }
     &__readmore {
-        margin-top: auto;
+        display: block;
         font-weight: 600;
         text-decoration: underline;
         color: #e5097f;
-        margin-right: 20px;
-        margin-left: auto;
-        width: auto;
+        @include fluid(margin-right, 10px, 20px);
+        text-align: right;
     }
     &__description {
-        text-align: right;
-        @include up-vw(margin-top,
-        30px);
-        @include up-vw(padding-left,
-        30px);
-        @include up-vw(padding-right,
-        30px);
+        @include fluid(margin-top, 15px, 25px);
+        @include fluid(padding-left, 10px, 20px);
+        @include fluid(padding-right, 10px, 20px);
     }
 }
 
@@ -1953,159 +1908,41 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         background-color: #4F3D8E;
     }
     &__content {
-        @include padding-vw(100px,
-        0px,
-        40px,
-        0px);
+        @include fluid(padding-top, 30px, 100px);
+        @include fluid(padding-bottom, 30px, 50px);
         width: 100%;
         background-color: #1E1B36;
-        @include border-radius-vw(260px,
-        0,
-        0,
-        0);
+        @include fluid(border-top-left-radius, 30px, 260px);
     }
-    &__row {
-        width: 100%;
+    &__container {
         display: flex;
-        align-items: center;
-        &--last {
-            align-items: flex-end;
-        }
-        &:nth-child(2) {
-            @include up-vw(margin-top,
-            30px);
-        }
-        &:nth-child(3) {
-            @include up-vw(margin-top,
-            20px);
-        }
-        &:nth-child(4) {
-            @include up-vw(margin-top,
-            15px);
-        }
-        &--spaceBetween {
-            justify-content: space-between;
-        }
-        &--flexEnd {
-            justify-content: flex-end;
-        }
-        &--center {
-            justify-content: center;
-        }
+        justify-content: space-between;
     }
-    &__copyright {
-        @include fontSize(16px,
-        22px);
+    &__logo {
+        @include fluid(width, 180px, 285px);
+        @include fluid(height, 30px, 50px);
+        object-fit: contain;
     }
-    &__navigation {
-        @include up-vw(margin-left,
-        60px);
-        min-width: 520px;
+    &__payment {
         display: flex;
-        align-items: flex-start;
+        justify-content: space-between;
+        @include fluid(margin-top, 20px, 60px);
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
         flex-wrap: wrap;
-        a {
-            display: flex;
-            color: #fff;
+        height: 100%;
+        li {
+            width: 28%;
+        }
+        &-link {
+            color: #ffffff;
+            @include fluid(margin-bottom, 10px, 20px);
+            display: block;
         }
     }
-    &__tel {
-        margin-left: auto;
-        font-size: 24px;
-        letter-spacing: 0.01em;
-        line-height: 36px;
-        color: #fff;
-        span {
-            margin-right: 15px;
-        }
-        a {
-            display: flex;
-            color: #fff;
-        }
-    }
-    &__itemWrap {
-        width: -moz-fit-content;
-        line-height: 36px;
-        width: -webkit-fit-content;
-        width: fit-content;
-        &:nth-child(1) {
-            margin-right: 120px;
-        }
-        &:nth-child(2) {
-            margin-right: 80px;
-        }
-    }
-    &__mail {
-        @include fontSize(16px,
-        22px);
-        text-align: right;
-        color: #908acb;
-    }
-    &__production {
-        @include fontSize(16px,
-        22px);
-        color: #908acb;
-        display: flex;
-        align-items: center;
-        img {
-            @include up-vw(margin-left,
-            20px);
-        }
-    }
-    &__tel {
-        display: flex;
-        span {
-            &::before {
-                @include fontSize(24px,
-                36px);
-            }
-        }
-    }
-    &__phones {
-        @include fontSize(24px,
-        36px);
-    }
-    &__paySystem {
-        img {
-            margin-right: 30px;
-        }
-    }
-    &__socials {
-        display: flex;
-        align-items: center;
-        a {
-            span {
-                &::before {
-                    color: #8F8D9B;
-                }
-            }
-            margin-left: 40px;
-            &:first-child {
-                span {
-                    &::before {
-                        font-size: 9px;
-                        display: flex;
-                    }
-                }
-            }
-            &:hover {
-                span {
-                    &::before {
-                        color: #fff;
-                    }
-                }
-            }
-        }
-    }
-    &__links {
-        margin-left: 15px;
-    }
-    &__caption {
-        margin-bottom: 15px;
-        @include fontSize(16px,
-        22px);
-        color: #908acb;
-    }
+    
 }
 
 .container {
