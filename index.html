@@ -16,21 +16,6 @@
 <body>
     <header class=main>
         <div class="container">
-            <div class="header__mobileMenu none">
-                <a href=""><img src="./img/logo.svg" alt=""></a>
-                <div class="menu">
-                    <div class="menu__burger">
-                        <span class="menu__burger-icon"></span>
-                    </div>
-                    <ul class="menu__list">
-                        <li><a href="./route.html" class="menu__list-link scroll close-menu">Главная</a></li>
-                        <li><a href="" class="menu__list-link scroll close-menu">О компании</a></li>
-                        <li><a href="" class="menu__list-link scroll close-menu">Служба поддержки</a></li>
-                        <li><a href="" class="menu__list-link scroll close-menu">Контакты автостанций</a></li>
-                        <li><a href="" class="menu__list-link scroll close-menu">Новости</a></li>
-                    </ul>
-                </div>
-            </div>
             <div class="header__navigation">
                 <a href="" class="header__navigation-logo"><img src="./img/logo.svg" alt=""></a>
                 <ul>
@@ -86,8 +71,10 @@
                         <a href=" " class="button">Найти билеты</a>
                     </div>
                 </div>
-                <span class="header__tomorrow ">3автра</span>
-                <span class="header__AfterTomorrow ">Послезавтра</span>
+                <div class="header__tomorrow">
+                    <div class="header__tomorrow-text">3автра</div>
+                    <div class="header__tomorrow-text">Послезавтра</div>
+                </div>
             </div>
     </header>
     <div class="advantages ">
@@ -99,19 +86,16 @@
                     </div>
                     <div class="advantages__points ">
                         <div class="advantages__point ">
-                            <div class="advantages__Img ">
-                                <span class="icon-Group-59 ">
-                                    <span class="path1 "></span>
-                                    <span class="path2 "></span>
-                                </span>
+                            <div class="advantages__Img">
+                                <img src="./img/icon/advantages1.svg" alt="" class="advantages__Img-icon">
                             </div>
                             <div class="advantages__pointTitle ">Без печати билета</div>
                             <div class="advantages__pointText ">При посадке просто покажите билет на экране вашего
                                 телефона, распечатывать необязательно</div>
                         </div>
                         <div class="advantages__point ">
-                            <div class="advantages__Img "><span class="icon-Group-60 "><span class="path1 "></span><span
-                                        class="path2 "></span></span>
+                            <div class="advantages__Img">
+                                <img src="./img/icon/advantages2.svg" alt="" class="advantages__Img-icon">
                             </div>
                             <div class="advantages__pointTitle ">Выбирайте удобные места
                             </div>
@@ -119,10 +103,8 @@
                                 места на конкретном рейсе</div>
                         </div>
                         <div class="advantages__point ">
-                            <div class="advantages__Img ">
-                                <span class="icon-Group-68 ">
-                                    <span class="path1 "></span>
-                                    <span class="path2 "></span></span>
+                            <div class="advantages__Img">
+                                <img src="./img/icon/advantages3.svg" alt="" class="advantages__Img-icon">
                             </div>
                             <div class="advantages__pointTitle ">Безопасная оплата
                             </div>
@@ -130,8 +112,8 @@
                                 данных</div>
                         </div>
                         <div class="advantages__point ">
-                            <div class="advantages__Img "><span class="icon-Group-69 "><span class="path1 "></span><span
-                                        class="path2 "></span></span>
+                            <div class="advantages__Img">
+                                <img src="./img/icon/advantages4.svg" alt="" class="advantages__Img-icon">
                             </div>
                             <div class="advantages__pointTitle ">Возврат билета
                             </div>
@@ -152,113 +134,101 @@
                     <div class="title__link "><a href=" ">Посмотреть все<img src="./img/icon/longArrow.svg " alt=" "></a></div>
                 </div>
                 <div class="popDirections__cards ">
-                    <div class="popDirections__cardsRow ">
-                        <div class="popDirections__card "><img src="./img/picture/pop--1.png " alt=" ">
-                            <div class="popDirections__Way ">Саратов - Москва</div>
-                            <div class="popDirections__discription ">
-                                <div class="popDirections__Price ">
-                                    <div class="popDirections__PriceText">Цена от</div>
-                                    <div class="popDirections__PriceNum ">1500 руб.</div>
-                                </div>
-                                <a href=" " class="goButton ">
-                                    <img src="./img/icon/arrow-right.svg " alt=" ">
-                                </a>
+                    <div class="popDirections__card ">
+                        <img class="popDirections__card-img" src="./img/picture/pop--1.png " alt=" ">
+                        <div class="popDirections__Way ">Саратов - Москва</div>
+                        <div class="popDirections__discription ">
+                            <div class="popDirections__Price ">
+                                <div class="popDirections__PriceText">Цена от</div>
+                                <div class="popDirections__PriceNum ">1500 руб.</div>
                             </div>
-                        </div>
-                        <div class="popDirections__card "><img src="./img/picture/pop--2.png " alt=" ">
-                            <div class="popDirections__Way ">Саратов - Москва</div>
-                            <div class="popDirections__discription ">
-                                <div class="popDirections__Price ">
-                                    <div class="popDirections__PriceText">Цена от</div>
-                                    <div class="popDirections__PriceNum ">1500 руб.</div>
-                                </div>
-                                <a href=" " class="goButton ">
-                                    <img src="./img/icon/arrow-right.svg " alt=" ">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="popDirections__card "><img src="./img/picture/pop--3.png " alt=" ">
-                            <div class="popDirections__Way ">Саратов - Москва</div>
-                            <div class="popDirections__discription ">
-                                <div class="popDirections__Price ">
-                                    <div class="popDirections__PriceText">Цена от</div>
-                                    <div class="popDirections__PriceNum ">1500 руб.</div>
-                                </div>
-                                <a href=" " class="goButton ">
-                                    <img src="./img/icon/arrow-right.svg " alt=" ">
-                                </a>
-                            </div>
+                            <a href=" " class="goButton ">
+                                <img src="./img/icon/arrow-right.svg " alt=" ">
+                            </a>
                         </div>
                     </div>
-                    <div class="popDirections__cardsRow ">
-                        <div class="popDirections__card "><img src="./img/picture/pop--4.png " alt=" ">
-                            <div class="popDirections__Way ">Саратов - Москва</div>
-                            <div class="popDirections__discription ">
-                                <div class="popDirections__Price ">
-                                    <div class="popDirections__PriceText">Цена от</div>
-                                    <div class="popDirections__PriceNum ">1500 руб.</div>
-                                </div>
-                                <a href=" " class="goButton ">
-                                    <img src="./img/icon/arrow-right.svg " alt=" ">
-                                </a>
+                    <div class="popDirections__card ">
+                        <img class="popDirections__card-img"  src="./img/picture/pop--2.png " alt=" ">
+                        <div class="popDirections__Way ">Саратов - Москва</div>
+                        <div class="popDirections__discription ">
+                            <div class="popDirections__Price ">
+                                <div class="popDirections__PriceText">Цена от</div>
+                                <div class="popDirections__PriceNum ">1500 руб.</div>
                             </div>
+                            <a href=" " class="goButton ">
+                                <img src="./img/icon/arrow-right.svg " alt=" ">
+                            </a>
                         </div>
-                        <div class="popDirections__card "><img src="./img/picture/pop--5.png " alt=" ">
-                            <div class="popDirections__Way ">Саратов - Москва</div>
-                            <div class="popDirections__discription ">
-                                <div class="popDirections__Price ">
-                                    <div class="popDirections__PriceText">Цена от</div>
-                                    <div class="popDirections__PriceNum ">1500 руб.</div>
-                                </div>
-                                <a href=" " class="goButton ">
-                                    <img src="./img/icon/arrow-right.svg " alt=" ">
-                                </a>
+                    </div>
+                    <div class="popDirections__card ">
+                        <img class="popDirections__card-img" src="./img/picture/pop--3.png " alt=" ">
+                        <div class="popDirections__Way ">Саратов - Москва</div>
+                        <div class="popDirections__discription ">
+                            <div class="popDirections__Price ">
+                                <div class="popDirections__PriceText">Цена от</div>
+                                <div class="popDirections__PriceNum ">1500 руб.</div>
                             </div>
+                            <a href=" " class="goButton ">
+                                <img src="./img/icon/arrow-right.svg " alt=" ">
+                            </a>
                         </div>
-                        <!-- <div class="popDirections__card "><img src="./img/picture/pop--6.png " alt=" ">
-                            <div class="popDirections__Way ">Саратов - Москва</div>
-                            <div class="popDirections__discription ">
-                                <div class="popDirections__Price ">
-                                    <div class="popDirections__PriceText">Цена от</div>
-                                    <div class="popDirections__PriceNum ">1500 руб.</div>
-                                </div>
-                                <a href=" " class="goButton ">
-                                    <img src="./img/icon/arrow-right.svg " alt=" ">
-                                </a>
+                    </div>
+                    <div class="popDirections__card ">
+                        <img class="popDirections__card-img" src="./img/picture/pop--4.png " alt=" ">
+                        <div class="popDirections__Way ">Саратов - Москва</div>
+                        <div class="popDirections__discription ">
+                            <div class="popDirections__Price ">
+                                <div class="popDirections__PriceText">Цена от</div>
+                                <div class="popDirections__PriceNum ">1500 руб.</div>
                             </div>
-                        </div> -->
+                            <a href=" " class="goButton ">
+                                <img src="./img/icon/arrow-right.svg " alt=" ">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="popDirections__card ">
+                        <img class="popDirections__card-img" src="./img/picture/pop--5.png " alt=" ">
+                        <div class="popDirections__Way ">Саратов - Москва</div>
+                        <div class="popDirections__discription ">
+                            <div class="popDirections__Price ">
+                                <div class="popDirections__PriceText">Цена от</div>
+                                <div class="popDirections__PriceNum ">1500 руб.</div>
+                            </div>
+                            <a href=" " class="goButton ">
+                                <img src="./img/icon/arrow-right.svg " alt=" ">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="market ">
+    <div class="market">
         <div class="market__content ">
             <div class="market__contentOffset ">
                 <div class="container ">
                     <div class="market__wrapper ">
-                        <div class="market__discription ">
+                        <div class="market__discription">
                             <div class="title__line ">
-                                <div class="title title--colorBlue title--widthMin">Сервис заказа билетов
-                                </div>
+                                <div class="title title--colorBlue title--widthMin">Сервис заказа билетов</div>
                             </div>
                             <div class="market__text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                                 eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-                            <div class="market__links ">
+                            <div class="market__links">
                                 <a href="https://apps.apple.com/ru/app/vlastelin-%D0%B0%D0%B2%D1%82%D0%BE%D0%B1%D1%83%D1%81%D0%BD%D1%8B%D0%B5-%D0%B1%D0%B8%D0%BB%D0%B5%D1%82%D1%8B/id1531837805 "><img
                                         src="./img/icon/AppStore.svg " alt=" "></a>
                                 <a href="https://play.google.com/store/apps/details?id=ru.spaceapp.vlastelin.android "><img
                                         src="./img/icon/GooglePlay.svg " alt=" "></a>
                             </div>
                         </div>
-                        <img src="./img/picture/market.png " alt=" ">
+                        <img class="market__img" src="./img/picture/market.png " alt=" ">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="news ">
-        <div class="news__content ">
+    <div class="news news--home">
+        <div class="news__content news__content--home">
             <div class="container ">
                 <div class="news__headline ">
                     <div class="title__line title__line--flex">
@@ -305,8 +275,8 @@
             </div>
         </div>
     </div>
-    <footer class=footer-usual>
-        <div class="footer__content ">
+    <footer class="footer footer--home">
+        <div class="footer__content">
             <div class="container ">
                 <div class="footer__row ">
                     <a class="footer__logo" href=" "><img src="./img/logo.svg " alt=" "></a>
