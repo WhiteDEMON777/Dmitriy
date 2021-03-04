@@ -2167,10 +2167,35 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         @include fluid(margin-bottom,20px,40px);
         @include fluid(border-radius,9px,18px);
         @include fluid(padding,10px,20px);
+        display:flex;
+        width:100%;
+        justify-content: space-between;
         background-color: #fff;
+        .selectize {
+            &-input, &-dropdown, &-input input {
+                @include fluid(font-size, 18px, 20px);
+                padding: 0;
+                font-weight: 600;
+                border: none;
+                box-shadow: none;
+                border-radius: none;
+                line-height: normal;
+            }
+            &-control{
+                width: 100%;
+            }
+            &-input.focus {
+                box-shadow: none;
+            }
+        }
+        .selectize-control.single .selectize-input:after {
+            content: none;
+        }
     }
     &__frame{
         @include fluid(border-radius,10px,20px);
+        @include fluid(top,5px,10px);
+        position:sticky;
     }
     &__mail {
         font-weight: normal;
@@ -2188,8 +2213,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         }
         &--container {
             @include fluid(margin-left, 7px, 15px);
-            width: 600px;
-            height: 803px;
             @include fluid(border-radius, 10px, 20px);
         }
     }

@@ -54,7 +54,6 @@ $(document).ready(function() {
             }
         });
     });
-
     $('.modal__countPlus').each(function(index, item) {
         $(item).on('click', function(e) {
             let cont = $(e.target).parent();
@@ -84,3 +83,8 @@ $('.map__point').on("click", function(){
     $('.map__pointContact', $(this)).slideToggle().css("display","flex");
     $(this).toggleClass("map__point--active");
 });
+$('#select-search').selectize();
+
+$('.map__search').on("click",function(){
+var evt = new KeyboardEvent('keydown', {'keyCode':8, 'which':8});
+document.dispatchEvent(evt);});
