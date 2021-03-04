@@ -1123,7 +1123,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         @include fluid(padding-bottom, 50px, 100px);
         width: 100%;
         background-color: #EFEFEF;
-        @include border-radius-vw(260px, 0px, 260px, 0px);
+        @include fluid(border-top-left-radius, 30px, 260px);
+        @include fluid(border-bottom-right-radius, 30px, 260px);
     }
     &__wrapper {
         width: 86%;
@@ -1385,7 +1386,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         padding-bottom: 100px;
         width: 100%;
         background-color: #EFEFEF;
-        @include border-radius-vw(260px,0,260px,0);
+        @include fluid(border-top-left-radius, 30px, 260px);
+        @include fluid(border-bottom-right-radius, 30px, 260px);
         &--alt {
             padding-top: 100px;
             padding-bottom: 100px;
