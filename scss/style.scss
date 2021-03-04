@@ -705,6 +705,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             color: #666666;
             font-family: "Open Sans";
             @include fluid(font-size, 18px, 20px);
+            @include fluid(margin-top, 3px, 6px);
             font-weight: 600;
             &::placeholder {
                 color: #666;
@@ -1348,11 +1349,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .input {
     width: 47.5%;
+    @include fluid(padding-top, 10px, 18px);
+    @include fluid(padding-bottom, 10px, 18px);
+    @include fluid(border-radius, 9px, 18px);
+    @include fluid(padding-left, 10px, 20px);
+    @include fluid(font-size, 14px, 16px);
     background-color: #fff;
-    border-radius: 18px;
-    padding-left: 20px;
-    font-size: 16px;
-    margin-bottom: 10px;
     &::-webkit-input-placeholder {
         color: #999;
     }
@@ -1419,7 +1421,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         @include fluid(border-bottom-left-radius, 30px, 260px);
         @include fluid(padding-right, 50px, 100px);
         &Offset {
-            @include fluid(padding-left, 50px, 100px);
+            @include fluid(padding-left, 15px, 100px);
         }
     }
     &__row {
@@ -1591,8 +1593,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         @include fluid(padding-bottom, 50px, 100px);
         width: 100%;
         background-color: #efefef;
-        @include fluid(border-top-right-radius, 30px, 260px); 
-        @include fluid(border-bottom-right-radius, 30px, 260px); 
+        @include fluid(border-top-right-radius, 30px, 260px);
+        @include fluid(border-bottom-right-radius, 30px, 260px);
     }
     &__Total {
         display: flex;
@@ -1615,7 +1617,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             padding: 10px 0px;
             &Num {
                 font-weight: 800;
-                @include fluid(font-size, 24px, 32px);
+                @include fluid(font-size, 18px, 32px);
                 color: #e5097f;
             }
         }
@@ -1687,19 +1689,16 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .scheme {
     position: relative;
-    width: 704px;
-    height: 352px;
-    border-radius: 20px;
-    background: #fff;
-    padding: 20px;
+    width: 57%;
+    @include fluid(height, 250px, 350px);
     display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
     &__Set {
-        width: 100%;
-        height: 100%;
         display: flex;
         flex-direction: row-reverse;
+        position: relative;
+        @include fluid(padding-top, 10px, 20px);
+        @include fluid(padding-bottom, 10px, 20px);
+        @include fluid(padding-left, 15px, 20px);
     }
     &__tile {
         &Set {
@@ -1708,11 +1707,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             height: 100%;
             flex-direction: column;
             justify-content: space-between;
-            max-height: 90px;
+            @include fluid(height, 70px, 95px);
         }
-        width: 40px;
-        height: 40px;
-        border-radius: 10px;
+        @include fluid(width, 30px, 40px);
+        @include fluid(height, 30px, 40px);
+        @include fluid(border-radius, 5px, 10px);
         background: #ccc;
         display: flex;
         align-items: center;
@@ -1737,12 +1736,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             }
         }
         &--busy {
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             cursor: not-allowed;
             background: #393185;
             color: #fff;
@@ -1755,37 +1748,16 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        &:first-child {
-            padding-right: 125px;
-        }
         &:nth-child(n+2) {
-            margin-right: 10px;
+            @include fluid(margin-right, 5px, 10px);
         }
     }
-    &--wheel {
+    &__img {
         position: absolute;
-        top: 40px;
-        right: 55px;
-    }
-    &--front {
-        position: absolute;
-        right: 0;
-        top: 20px;
-    }
-    &--back {
-        position: absolute;
-        left: 0px;
-        top: 70px;
-    }
-    &--stairs-1 {
-        position: absolute;
-        bottom: 0px;
-        right: 60px;
-    }
-    &--stairs-2 {
-        position: absolute;
-        bottom: 0px;
-        left: 85px;
+        width: 100%;
+        height: 100%;
+        object-position: left;
+        object-fit: contain;
     }
 }
 
@@ -2169,7 +2141,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
     &__phoneBlock {
         display: flex;
-        @include fluid(margin-top,40px,80px);
+        @include fluid(margin-top,30px,80px);
         .noLineHeight{
             &::before{
                 line-height: 1;
@@ -2183,7 +2155,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
     &__span {
         @include fluid(font-size,14px,16px);
-        @include fluid(margin-bottom,28px,32px);
         color: #a1a1a1;
     }
 }
@@ -2204,7 +2175,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             }
         }
         .selectize {
-            &-input, &-dropdown, &-input.input-active  input {
+            &-input, &-dropdown, &-input.input-active input {
                 @include fluid(font-size, 18px, 20px);
                 padding: 0;
                 font-weight: 600;
@@ -2213,6 +2184,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
                 border-radius: none;
                 line-height: normal;
                 display: block;
+            }
+            &-input {
+                input {
+                    @include fluid(font-size, 18px, 20px);
+                    font-weight: 600;
+                    width: 100%!important;
+                }
             }
             &-control{
                 width: 96%;
@@ -2322,7 +2300,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         &NamePlace {
             display: flex;
             span {
-                @include fluid(margin-right,8px,10px);
+                @include fluid(margin-right,10px,20px);
             }
         }
         &Contact {
@@ -2335,7 +2313,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
     &__pointNumber {
         position: relative;
-        @include fluid(padding-left,20px,25px);
+        @include fluid(padding-left,25px,35px);
         span {
             position: absolute;
             left: 0;

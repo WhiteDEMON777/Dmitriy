@@ -92,8 +92,12 @@ $('.map__point').on("click", function(){
     $('.map__pointContact', $(this)).slideToggle();
     $(this).toggleClass("map__point--active");
 });
-$('#select-search').selectize();
+$('#select-search').selectize({
+    placeholder:"Поиск по городу",
+    hideSelected: true,
 
+});
+$('.select-js').selectize();
 $('.map__search').on("click",function(){
 var evt = new KeyboardEvent('keydown', {'keyCode':8, 'which':8});
 document.dispatchEvent(evt);});
