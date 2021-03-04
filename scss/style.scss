@@ -498,7 +498,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background-size: contain;
     &--home {
         background-image: url("./../img/banner.png");
-        @include fluid(border-bottom-left-radius, 30px, 260px);
+        @include fluid(border-bottom-left-radius, 0px, 260px);
         @include fluid(padding-bottom, 50px, 225px);
         background-position: center;
         background-size: cover;
@@ -658,9 +658,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         align-items: center;
         &InputBlock {
             @include fluid(margin-left, 15px, 25px);
+            width: 100%;
             .selectize {
                 &-input, &-dropdown, &-input input {
-                    width: 200px;
                     @include fluid(font-size, 18px, 20px);
                     @include fluid(margin-top, 3px, 6px);
                     padding: 0;
@@ -673,6 +673,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
                 &-input.focus {
                     box-shadow: none;
                 }
+                &-control{
+                    width: 100%;
+                }
             }
             .selectize-control.single .selectize-input:after {
                 content: none;
@@ -681,6 +684,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         &InputWrapper {
             display: flex;
             align-items: center;
+            width: 20%;
         }
         span {
             @include fluid(font-size, 20px, 25px);
@@ -689,6 +693,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     &__date {
         border-left: 1px solid #DDDDDD;
         @include fluid(padding-left, 15px, 30px);
+        width: 25%;
         &InputWrapper {
             display: flex;
             span {
@@ -710,6 +715,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         }
     }
     &__where {
+        width: 25%;
         display: flex;
         align-items: center;
         img {
@@ -722,12 +728,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             @include fluid(font-size, 12px,14px);
             border-left: 1px solid #DDDDDD;
             display: flex;
+            width: 100%;
         }
         &InputBlock {
             @include fluid(margin-left, 15px, 25px);
+            width: 100%;
             .selectize {
                 &-input, &-dropdown, &-input input {
-                    width: 200px;
                     @include fluid(font-size, 18px, 20px);
                     @include fluid(margin-top, 3px, 6px);
                     padding: 0;
@@ -739,6 +746,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
                 }
                 &-input.focus {
                     box-shadow: none;
+                }
+                &-control{
+                    width: 100%;
                 }
             }
             .selectize-control.single .selectize-input:after {
@@ -857,14 +867,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .advantages {
     background-color: #4F3D8E;
     width: 100%;
-    @include fluid(padding-right, 15px, 100px);
+    @include fluid(padding-right, 0px, 100px);
     &__content {
         @include fluid(padding-top, 30px, 100px);
         @include fluid(padding-bottom, 30px, 100px);
         width: 100%;
         background-color: #fff;
-        @include fluid(border-top-right-radius, 30px, 260px);
-        @include fluid(border-bottom-right-radius, 30px, 260px);
+        @include fluid(border-top-right-radius, 0px, 260px);
+        @include fluid(border-bottom-right-radius, 0px, 260px);
         &Offset {
             @include fluid(padding-left, 0px, 100px);
         }
@@ -917,8 +927,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     &__content {
         @include fluid(padding-top, 30px, 100px);
         @include fluid(padding-bottom, 30px, 100px);
-        @include fluid(border-top-left-radius, 30px, 260px);
-        @include fluid(border-bottom-right-radius, 30px, 260px);
+        @include fluid(border-top-left-radius, 0px, 260px);
+        @include fluid(border-bottom-right-radius, 0px, 260px);
         width: 100%;
         background-color: #4F3D8E;
     }
@@ -1025,14 +1035,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .market {
     background-color: #4F3D8E;
     width: 100%;
-    @include fluid(padding-left, 15px, 100px);
+    @include fluid(padding-left, 0px, 100px);
     &__content {
         @include fluid(padding-top, 30px, 100px);
         @include fluid(padding-bottom, 30px, 100px);
         width: 100%;
         background: #efefef;
-        @include fluid(border-top-left-radius, 30px, 260px);
-        @include fluid(border-bottom-left-radius, 30px, 260px);
+        @include fluid(border-top-left-radius, 0px, 260px);
+        @include fluid(border-bottom-left-radius, 0px, 260px);
         &Offset {
             @include fluid(padding-right, 0, 100px);
         }
@@ -1081,15 +1091,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         @include fluid(font-size,14px,16px);
         @include fluid(line-height,24px,32px);
         color: #666;
-        &:nth-child(n+1) {
-            @include fluid(margin-top,20px,40px);
-        }
         p{
+            @include fluid(margin-top,20px,40px);
             img{
                 @include fluid(border-radius,10px,20px);
                 float:left;
                 @include fluid(margin-right,20px,60px);
                 @include fluid(margin-bottom,20px,60px);
+                width: 50%;
             }
         }
     }
@@ -1097,6 +1106,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         align-items: center;
         display: flex;
         @include fluid(margin-bottom,30px,60px);
+        @include fluid(margin-top,30px,80px);
             align-items: center;
             display: flex;
             @include fluid(margin-bottom,30px,60px);
@@ -1104,8 +1114,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             float: left;
             @include fluid(border-radius,10px,20px);
             @include fluid(margin-bottom,10px,25px);
-            object-fit: cover;
-            width: 100%;
+            object-fit: contain;
+            width: 50%;
         }
     }
 
@@ -1348,7 +1358,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .input {
     width: 47.5%;
-    height: 58px;
     background-color: #fff;
     border-radius: 18px;
     padding-left: 20px;
@@ -1797,15 +1806,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     &__content {
         @include fluid(padding-top, 30px, 100px);
         @include fluid(padding-bottom, 30px, 100px);
-        @include fluid(border-top-left-radius, 30px, 260px);
-        @include fluid(border-bottom-right-radius, 30px, 260px);
+        @include fluid(border-top-left-radius, 0px, 260px);
+        @include fluid(border-bottom-right-radius, 0px, 260px);
         width: 100%;
         background-color: #EFEFEF;
         &--home {
             background-color: #4F3D8E;
             border-radius: none;
             @include fluid(border-top-left-radius, 0, 0);
-            @include fluid(border-top-right-radius, 30px, 260px);
+            @include fluid(border-top-right-radius, 0px, 260px);
         }
     }
     &__cards {
@@ -1885,7 +1894,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         @include fluid(padding-bottom, 30px, 50px);
         width: 100%;
         background-color: #1E1B36;
-        @include fluid(border-top-left-radius, 30px, 260px);
+        @include fluid(border-top-left-radius, 0px, 260px);
     }
     &__container {
         display: flex;
@@ -2193,8 +2202,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         width:100%;
         justify-content: space-between;
         background-color: #fff;
+        &-button {
+            img {
+                @include fluid(width, 20px, 24px);
+                @include fluid(height, 20px, 24px);
+            }
+        }
         .selectize {
-            &-input, &-dropdown, &-input input {
+            &-input, &-dropdown, &-input.input-active  input {
                 @include fluid(font-size, 18px, 20px);
                 padding: 0;
                 font-weight: 600;
@@ -2202,9 +2217,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
                 box-shadow: none;
                 border-radius: none;
                 line-height: normal;
+                display: block;
             }
             &-control{
-                width: 100%;
+                width: 96%;
             }
             &-input.focus {
                 box-shadow: none;
@@ -2212,6 +2228,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         }
         .selectize-control.single .selectize-input:after {
             content: none;
+        }
+        .selectize-input, .selectize-control.single .selectize-input.input-active {
+            display: block;
         }
     }
     &__frame{
@@ -2222,16 +2241,17 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     &__mail {
         font-weight: normal;
         @include fluid(font-size, 12px, 14px);
+        @include fluid(padding-left,20px,25px);
         color: #908acb;
     }
     &__row {
-        @include fluid(margin-top, 40px, 80px);
+        @include fluid(margin-top, 30px, 80px);
         display: flex;
     }
     &__col {
         width: 50%;
         &--paddingRight {
-            @include fluid(padding-right, 22px, 45px);
+            @include fluid(padding-right, 20px, 45px);
         }
         &--container {
             @include fluid(margin-left, 7px, 15px);
@@ -2306,6 +2326,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         }
         &NamePlace {
             display: flex;
+            span {
+                @include fluid(margin-right,8px,10px);
+            }
         }
         &Contact {
             @include fluid(margin-top,10px,20px);
@@ -2315,9 +2338,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             }
         }
     }
-    &__map-icon{
-        &::before{
-            @include fluid(margin-right,5px,10px);
+    &__pointNumber {
+        position: relative;
+        @include fluid(padding-left,20px,25px);
+        span {
+            position: absolute;
+            left: 0;
         }
     }
 }
@@ -2326,6 +2352,16 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     .header {
         background-position-x: 105%;
         &--home {
+            background-position: center;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .header {
+        background: none;
+        &--home {
+            background-image: url("./../img/banner.png");
             background-position: center;
         }
     }
