@@ -13,23 +13,19 @@
 </head>
 
 <body>
-    <header class=tickets>
-        <div class="tickets__wrapper">
-            <div class="container">
-                <div class="header__navigation header__navigation--black">
-                    <a href=""><img src="./img/logo.svg" alt=""></a>
-                    <ul>
-                        <li><a class="header__nav-cur" href="">Главная</a></li>
-                        <li><a href="">О компании</a></li>
-                        <li><a href="">Служба поддержки</a></li>
-                        <li><a href="">Контакты автостанций</a></li>
-                        <li><a href="">Новости</a></li>
-                    </ul>
-                    <a href=""><span class="icon--147--pink"></span></a>
-                </div>
-
+    <header class="header">
+        <div class="container">
+            <div class="header__navigation">
+                <a href="" class="header__navigation-logo"><img src="./img/logo.svg" alt=""></a>
+                <ul class="header__navigation-list">
+                    <li><a class="header__navigation-link" href="./route.html">Главная</a></li>
+                    <li><a class="header__navigation-link" href="">О компании</a></li>
+                    <li><a class="header__navigation-link" href="">Служба поддержки</a></li>
+                    <li><a class="header__navigation-link" href="">Контакты автостанций</a></li>
+                    <li><a class="header__navigation-link" href="">Новости</a></li>
+                </ul>
+                <a class="header__navigation-cabinet" href=""><span class="icon--147"></span></a>
             </div>
-        </div>
     </header>
     <div class="ticketOffer">
         <div class="ticketOffer__content">
@@ -204,39 +200,47 @@
             </div>
         </div>
     </div>
-    <footer class=footer>
+    <footer class="footer">
         <div class="footer__content">
             <div class="container">
-                <div class="footer__row">
-                    <a href=""><img src="./img/logo.svg" alt=""></a>
-                    <div class="footer__navigation">
-                        <div class="footer__itemWrap"><a href="">Главная</a><a href="">О компании</a></div>
-                        <div class="footer__itemWrap"><a href="">Служба поддержки</a><a href="">Контакты автостанций</a></div>
-                        <div class="footer__itemWrap"><a href="">Новости</a><a href="">Покупателю</a></div>
+                <div class="footer__container">
+                    <div class="footer__item">
+                        <a href="" class="footer__logo"><img src="./img/logo.svg" alt="" class="footer__logo-img"></a>
+                        <div class="footer__payment">
+                            <img src="./img/icon/Visa-Logo-2006–2014.svg" alt="" class="footer__payment-img">
+                            <img src="./img/icon/1280px-Mastercard-logo.svg" alt="" class="footer__payment-img">
+                            <img src="./img/icon/1200px-Maestro_2016.svg" alt="" class="footer__payment-img">
+                        </div>
                     </div>
-                    <div class="footer__tel"><span class="icon--76"></span>
-                        <div class="footer__phones">
-                            <a href="">8 (8452) 91-31-61</a><a href="">8 (8452) 50-18-74</a></div>
+                    <ul class="footer__list">
+                        <li><a href="#" class="footer__list-link">Главная</a></li>
+                        <li><a href="#" class="footer__list-link">Служба поддержки</a></li>
+                        <li><a href="#" class="footer__list-link">Новости</a></li>
+                        <li><a href="#" class="footer__list-link">О компании</a></li>
+                        <li><a href="#" class="footer__list-link">Контакты автостанций</a></li>
+                        <li><a href="#" class="footer__list-link">Покупателю</a></li>
+                    </ul>
+                    <div class="footer__contacts">
+                        <div class="footer__contacts-phone"><span class="icon--76"></span> 8 (8452) 91-31-61</div>
+                        <div class="footer__contacts-phone"> 8 (8452) 50-18-74</div>
+                        <a href="#" class="footer__contacts-email">info@vlastelinauto.ru</a>
+                        <div class="footer__contacts-social">
+                            <a class="footer__contacts-link" href=""><span class="icon-vk"></span></a>
+                            <a class="footer__contacts-link" href=""><span class="icon-facebook"></span></a>
+                            <a class="footer__contacts-link" href=""><span class="icon-inst"></span></a>
+                        </div>
                     </div>
                 </div>
-                <div class="footer__row footer__row--spaceBetween">
-                    <div class="footer__paySystem"><img src="./img/icon/Visa-Logo-2006–2014.svg" alt=""><img src="./img/icon/1280px-Mastercard-logo.svg" alt=""><img src="./img/icon/1200px-Maestro_2016.svg" alt=""></div>
-                    <a class="footer__mail" href="">info@vlastelinauto.ru</a>
-                </div>
-                <div class="footer__row footer__row--flexEnd">
-                    <div class="footer__socials">
-                        <a href=""><img src="./img/icon/vk.svg" alt=""></a>
-                        <a href=""><img src="./img/icon/facebook.svg" alt=""></a>
-                        <a href=""><img src="./img/icon/inst.svg" alt=""></a>
+                <div class="footer__copyrighted">
+                    <div class="footer__copyrighted-text">2021 © <span>Властелин.</span> Все права защищены</div>
+                    <div class="footer__copyrighted-app">
+                        <div class="footer__copyrighted-text">Наше приложение</div>
+                        <div class="footer__copyrighted-item">
+                            <a href=""><img src="./img/icon/Appstore--Dark.svg" alt="" class="footer__copyrighted-img"></a>
+                            <a href=""><img src="./img/icon/GooglePlay--Dark.svg" alt="" class="footer__copyrighted-img"></a>
+                        </div>
                     </div>
-                </div>
-                <div class="footer__row footer__row--last footer__row--spaceBetween text--lightBlue"><span class="footer_copyright">2021 © <span class="text--white">Властелин.</span> Все права защищены</span>
-                    <div class="footer__links">
-                        <div class="footer__caption text--lightBlue">Наше приложение</div>
-                        <a href="https://apps.apple.com/ru/app/vlastelin-%D0%B0%D0%B2%D1%82%D0%BE%D0%B1%D1%83%D1%81%D0%BD%D1%8B%D0%B5-%D0%B1%D0%B8%D0%BB%D0%B5%D1%82%D1%8B/id1531837805"><img src="./img/icon/AppStore.svg" alt=""></a>
-                        <a href="https://play.google.com/store/apps/details?id=ru.spaceapp.vlastelin.android"><img src="./img/icon/GooglePlay.svg" alt="">
-                        </a>
-                    </div><a class="footer__production text--lightBlue" href="">Работа над сайтом <img src="./img/icon/SpaceApp.svg" alt=""></a>
+                    <a href="" class="footer__copyrighted-spaceapp">Работа над сайтом</a>
                 </div>
             </div>
         </div>
