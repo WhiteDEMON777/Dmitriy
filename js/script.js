@@ -65,7 +65,6 @@ $(document).ready(function() {
             }
         });
     });
-<<<<<<< HEAD
     
     var start = new Date();
 
@@ -80,15 +79,6 @@ $(document).ready(function() {
             dateFormat: 'd MM yyyy',
         });
     }
-=======
-    var dbDate = "20 мая 2021";
-    var date2 = new Date(dbDate);
-    $("#dateRide").datepicker({
-        dateFormat: 'dd MM yyyy'
-    }).datepicker('setDate', date2)
-    
-    $('select').selectize();
->>>>>>> d4acacdd9dd7aa6c0fa541b1a9dc663ec7399dca
 });
 $(".scheme__tile").on("click", function() {
     this.classList.toggle("scheme__tile--selected");
