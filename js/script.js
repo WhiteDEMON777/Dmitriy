@@ -89,7 +89,7 @@ $('.menu__burger').on('click', function() {
     $('html').toggleClass('overflow');
 })
 $('.map__point').on("click", function(){
-    $('.map__pointContact', $(this)).slideToggle().css("display","flex");
+    $('.map__pointContact', $(this)).slideToggle();
     $(this).toggleClass("map__point--active");
 });
 $('#select-search').selectize();
