@@ -2056,6 +2056,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .map {
+    &__search{
+        @include fluid(margin-bottom,20px,40px);
+        @include fluid(border-radius,9px,18px);
+        @include fluid(padding,10px,20px);
+        background-color: #fff;
+    }
     &__frame{
         @include fluid(border-radius,10px,20px);
     }
@@ -2088,13 +2094,27 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         @include fluid(padding-bottom,12px,25px);
         @include fluid(padding-left,15px,30px);
         @include fluid(padding-right,15px,30px);
-        background: #fff;
         @include fluid(border-radius,15px,30px);
+        @include fluid(margin-bottom, 5px, 10px);
+        background: #fff;
         overflow: hidden;
         transition: 0.5s;
-        height:100px;
+        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
         &:hover {
-            height: 300px;
+            cursor: pointer;
+            .icon--25 {
+                &::before {
+                    color: #e5097f;
+                }
+            }
+        }
+        .map__pointContact{
+            display: none;
+        }
+        &--active{
+            .map__pointContact{
+                display: flex;
+            }
             .icon-map_point {
                 &::before {
                     color: #e5097f;
@@ -2106,9 +2126,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
                     color: #e5097f;
                 }
             }
-        }
-        &:nth-child(n+2) {
-            @include fluid(margin-top, 5px, 10px);
         }
         .icon-map_point {
             @include fluid(font-size,14px,16px);
@@ -2144,6 +2161,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             &Data {
                 a{display: block;}
             }
+        }
+    }
+    &__map-icon{
+        &::before{
+            @include fluid(margin-right,5px,10px);
         }
     }
 }

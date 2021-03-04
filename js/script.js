@@ -66,10 +66,8 @@ $(document).ready(function() {
             }
         });
     });
-
     var dbDate = "20 мая 2021";
     var date2 = new Date(dbDate);
-
     $("#dateRide").datepicker({
         dateFormat: 'dd MM yyyy'
     }).datepicker('setDate', date2)
@@ -82,3 +80,7 @@ $('.menu__burger').on('click', function() {
     $('body').toggleClass('overflow');
     $('html').toggleClass('overflow');
 })
+$('.map__point').on("click", function(){
+    $('.map__pointContact', $(this)).slideToggle().css("display","flex");
+    $(this).toggleClass("map__point--active");
+});
