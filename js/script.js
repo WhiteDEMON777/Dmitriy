@@ -54,7 +54,6 @@ $(document).ready(function() {
             }
         });
     });
-
     $('.modal__countPlus').each(function(index, item) {
         $(item).on('click', function(e) {
             let cont = $(e.target).parent();
@@ -66,6 +65,7 @@ $(document).ready(function() {
             }
         });
     });
+<<<<<<< HEAD
     
     var start = new Date();
 
@@ -80,6 +80,15 @@ $(document).ready(function() {
             dateFormat: 'd MM yyyy',
         });
     }
+=======
+    var dbDate = "20 мая 2021";
+    var date2 = new Date(dbDate);
+    $("#dateRide").datepicker({
+        dateFormat: 'dd MM yyyy'
+    }).datepicker('setDate', date2)
+    
+    $('select').selectize();
+>>>>>>> d4acacdd9dd7aa6c0fa541b1a9dc663ec7399dca
 });
 $(".scheme__tile").on("click", function() {
     this.classList.toggle("scheme__tile--selected");
@@ -89,3 +98,12 @@ $('.menu__burger').on('click', function() {
     $('body').toggleClass('overflow');
     $('html').toggleClass('overflow');
 })
+$('.map__point').on("click", function(){
+    $('.map__pointContact', $(this)).slideToggle().css("display","flex");
+    $(this).toggleClass("map__point--active");
+});
+$('#select-search').selectize();
+
+$('.map__search').on("click",function(){
+var evt = new KeyboardEvent('keydown', {'keyCode':8, 'which':8});
+document.dispatchEvent(evt);});
