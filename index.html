@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
-    <link rel="icon" href="./img/icon/favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="./img/icon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./plugins/datepicker/dist/css/datepicker.min.css">
     <link rel="stylesheet" type="text/css" href="./css/selectize.css" />
@@ -14,18 +14,18 @@
 </head>
 
 <body>
-    <header class=main>
+    <header class="header header--home">
         <div class="container">
             <div class="header__navigation">
                 <a href="" class="header__navigation-logo"><img src="./img/logo.svg" alt=""></a>
-                <ul>
-                    <li><a href="./route.html">Главная</a></li>
-                    <li><a href="">О компании</a></li>
-                    <li><a href="">Служба поддержки</a></li>
-                    <li><a href="">Контакты автостанций</a></li>
-                    <li><a href="">Новости</a></li>
+                <ul class="header__navigation-list">
+                    <li><a class="header__navigation-link header__navigation-link--colorWhite" href="./route.html">Главная</a></li>
+                    <li><a class="header__navigation-link header__navigation-link--colorWhite" href="">О компании</a></li>
+                    <li><a class="header__navigation-link header__navigation-link--colorWhite" href="">Служба поддержки</a></li>
+                    <li><a class="header__navigation-link header__navigation-link--colorWhite" href="">Контакты автостанций</a></li>
+                    <li><a class="header__navigation-link header__navigation-link--colorWhite" href="">Новости</a></li>
                 </ul>
-                <a href=""><span class="icon--147"></span></a>
+                <a class="header__navigation-cabinet header__navigation-cabinet--home" href=""><span class="icon--147"></span></a>
             </div>
             <div class="header__headline">
                 <div class="header__title">Билеты на автобус по всей России</div>
@@ -329,9 +329,5 @@
     <script type="text/javascript" src="./js/selectize.js"></script>
     <script src="./plugins/datepicker/dist/js/datepicker.min.js"></script>
     <script src="./js/script.js "></script>
-    <script>
-        $('select').selectize();
-    </script>
 </body>
-
 </html>

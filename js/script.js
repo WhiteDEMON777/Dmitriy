@@ -71,6 +71,8 @@ $(document).ready(function() {
     $("#dateRide").datepicker({
         dateFormat: 'dd MM yyyy'
     }).datepicker('setDate', date2)
+    
+    $('select').selectize();
 });
 $(".scheme__tile").on("click", function() {
     this.classList.toggle("scheme__tile--selected");

@@ -340,14 +340,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
 }
 
-.main {
-    background-image: url("./../img/banner.png");
-    background-color: #fff;
-    @include fluid(border-bottom-left-radius, 30px, 260px);
-    @include fluid(padding-bottom, 50px, 225px);
-    background-position: center;
-    background-size: cover;
-}
 
 .tickets {
     background-color: #EFEFEF;
@@ -411,7 +403,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         color: #999;
     }
     &__price {
-
         display: flex;
         flex-direction: column;
         &Text{
@@ -500,6 +491,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .header {
+    background-color: #ffffff;
+    background-image: url("./../img/picture/background.svg");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    &--home {
+        background-image: url("./../img/banner.png");
+        @include fluid(border-bottom-left-radius, 30px, 260px);
+        @include fluid(padding-bottom, 50px, 225px);
+        background-position: center;
+        background-size: cover;
+    }
     &__navigation {
         width: 100%;
         justify-content: space-between;
@@ -514,7 +517,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
                 object-fit: contain;
             }
         }
-        ul {
+        &-list {
             position: relative;
             display: flex;
             li {
@@ -525,7 +528,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
                 @include fluid(padding-bottom, 10px, 20px);
                 &::after {
                     content: "";
-                    width: 0%;
+                    width: 0;
+                    outline: 1px solid transparent;
                     display: block;
                     position: absolute;
                     transition: all 0.3s ease-in-out;
@@ -541,23 +545,38 @@ input[type="date"]::-webkit-calendar-picker-indicator {
                 }
             }
         }
-        a {
-            @include fluid(font-size, 14px,
-                16px);
-            color: #fff;
+        &-cabinet {
             span {
                 position: relative;
                 @include fluid(top , -3px,-8px);
-                top: -8px;
                 @include fluid(font-size, 20px,24px);
                 &::before {
                     transition: 0.3s;
+                    color: #e5097f;
                 }
                 &:hover {
                     &::before {
-                        color: #e5097f;
+                        color: #bd0065;
                     }
                 }
+            }
+            &--home {
+                span {
+                    &::before {
+                        color: #ffffff;
+                    }
+                    &:hover {
+                        &::before {
+                            color: #e5097f;
+                        }
+                    }
+                }
+            }
+        }
+        &-link {
+            @include fluid(font-size, 14px,16px);
+            &--colorWhite {
+                color: #fff;
             }
         }
         &--black {
@@ -623,6 +642,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             @include fluid(margin-right, 15px, 30px);
             &:hover {
                 border-bottom: 2px dotted #908acb;
+            }
+            &--colorBlue {
+                color: #393185;
             }
         }
     }
@@ -2273,6 +2295,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     &__map-icon{
         &::before{
             @include fluid(margin-right,5px,10px);
+        }
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .header {
+        background-position-x: 105%;
+        &--home {
+            background-position: center;
         }
     }
 }
