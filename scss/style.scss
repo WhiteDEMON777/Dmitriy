@@ -152,19 +152,16 @@
 .icon--147:before {
     content: "\e90c";
     color: #fff;
-    font-size: 24px;
     line-height: 2;
 }
 
 .icon--147--pink:before {
     content: "\e90c";
     color: #e5097f;
-    font-size: 24px;
     line-height: 2;
 }
 
 .icon--76:before {
-    font-size: 24px;
     content: "\e912";
     color: #e5097f;
     line-height: 2;
@@ -738,11 +735,17 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     @include fluid(padding-top, 14px, 24px);
     @include fluid(padding-bottom, 13px, 23px);
     @include fluid(border-radius, 15px, 25px);
-    background: linear-gradient(#ff45a9 0%, #eb1487 99.99%, #fd2498 100%);
+    background-image: linear-gradient(#ff45a9 0%, #eb1487 99.99%, #fd2498 100%);
     @include fluid(font-size, 12px, 20px);
+    background-size: 100% 100%;
     color: #f4f4f4;
     font-weight: 700;
     display: block;
+    transition: all .3s ease-in-out;
+    &:hover {
+        background-position: 0 100%;
+        background-size: 100% 200%;
+    }
     &--contact {
         @include fluid(width, 180px, 354px);
         @include fluid(padding-top, 10px, 18px);
@@ -1804,6 +1807,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         &:hover {
             top: -20px;
         }
+        &:hover .news__readmore {
+            text-decoration: underline;
+        }
         &:nth-child(3n) {
             margin-right: 0;
         }
@@ -1835,7 +1841,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     &__readmore {
         display: block;
         font-weight: 600;
-        text-decoration: underline;
         color: #e5097f;
         @include fluid(margin-right, 10px, 20px);
         text-align: right;
@@ -1865,20 +1870,28 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         justify-content: space-between;
     }
     &__logo {
-        @include fluid(width, 180px, 285px);
-        @include fluid(height, 30px, 50px);
-        object-fit: contain;
+        &-img {
+            @include fluid(width, 180px, 285px);
+            @include fluid(height, 30px, 50px);
+            object-fit: contain;
+        }
     }
     &__payment {
         display: flex;
         justify-content: space-between;
         @include fluid(margin-top, 20px, 60px);
+        &-img {
+            @include fluid(width, 55px, 75px);
+            @include fluid(height, 32px, 42px);
+            object-fit: contain;
+        }
     }
     &__list {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         height: 100%;
+        @include fluid(margin-left, 30px, 10px);
         li {
             width: 28%;
         }
@@ -1886,9 +1899,103 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             color: #ffffff;
             @include fluid(margin-bottom, 10px, 20px);
             display: block;
+            opacity: .5;
+            transition: opacity .3s ease-in-out;
+            &:hover {
+                opacity: 1;
+            }
         }
     }
-    
+    &__contacts {
+        &-phone {
+            color: #ffffff;
+            @include fluid(font-size, 16px, 24px);
+            font-weight: 700;
+            letter-spacing: 0.24px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            span {
+                position: absolute;
+                @include fluid(left, -25px, -45px);
+                @include fluid(font-size, 16px, 24px);
+            }
+        }
+        &-email {
+            display: block;
+            color: #908acb;
+            @include fluid(margin-top, 15px, 30px);
+            text-align: right;
+            transition: color .3s ease-in-out;
+            &:hover {
+                color: #ffffff;
+            }
+        }
+        &-social {
+            @include fluid(margin-top, 20px, 40px);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        &-link {
+            opacity: .5;
+            @include fluid(margin-left, 20px, 40px);
+            transition: opacity .3s ease-in-out;
+            &:hover {
+                opacity: 1;
+            }
+            span {
+                @include fluid(font-size, 14px, 16px);
+            }
+            .icon-vk {
+                @include fluid(font-size, 8px, 10px);
+            }
+        }
+    }
+    &__copyrighted {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        &-text {
+            color: #908acb;
+            span {
+                color: #ffffff;
+            }
+        }
+        &-item {
+            @include fluid(margin-top, 10px, 15px);
+        }
+        &-img {
+            @include fluid(margin-right, 5px, 10px);
+            @include fluid(width, 90px, 120px);
+            @include fluid(height, 30px, 40px);
+            object-fit: contain;
+            object-position: left;
+        }
+        &-app {
+            @include fluid(margin-left, 0px, 70px);
+        }
+        &-spaceapp {
+            color: #908acb;
+            transition: color .3s ease-in-out;
+            position: relative;
+            display: flex;
+            align-items: center;
+            @include fluid(padding-right, 40px, 60px);
+            &:hover {
+                color: #ffffff;
+            }
+            &::before {
+                content: " ";
+                position: absolute;
+                background: url('../img/icon/SpaceApp.svg') no-repeat;
+                @include fluid(width, 31px, 41px);
+                @include fluid(height, 23px, 33px);
+                background-size: contain;
+                right: 0;
+            }
+        }
+    }
 }
 
 .container {
