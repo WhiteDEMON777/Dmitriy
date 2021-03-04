@@ -1615,7 +1615,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             padding: 10px 0px;
             &Num {
                 font-weight: 800;
-                @include fluid(font-size, 24px, 32px);
+                @include fluid(font-size, 18px, 32px);
                 color: #e5097f;
             }
         }
@@ -1630,7 +1630,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             @include fluid(padding-left, 20px, 40px);
             &Num {
                 font-weight: 800;
-                font-size: 32px;
+                @include fluid(font-size, 20px, 32px);
                 color: #333;
             }
         }
@@ -1640,8 +1640,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         align-items: center;
     }
     &__marker {
-        width: 24px;
-        height: 24px;
+        @include fluid(width, 12px, 24px);
+        @include fluid(height, 12px, 24px);
         border-radius: 5px;
         margin-right: 10px;
         &--grey {
@@ -1659,27 +1659,28 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         justify-content: space-between;
     }
     &__panel {
-        margin-top: 60px;
-        margin-bottom: 80px;
+        @include fluid(margin-top, 30px, 60px);
+        @include fluid(margin-bottom, 40px, 80px);
         display: flex;
         justify-content: space-between;
     }
     &__passengersCount {
+        margin-left: 20px;
         display: flex;
         flex-direction: column;
-        max-width: 390px;
-        font-size: 14px;
+        max-width: 31.7%;
+        @include fluid(font-size, 12px, 14px);
         color: #999;
-        padding: 50px 0px;
+        @include fluid(padding-top, 25px, 50px);
         min-height: 255px;
         justify-content: space-between;
         &Title {
-            font-size: 24px;
+            @include fluid(font-size, 20px, 24px);
             color: #333;
             margin-bottom: 20px;
         }
         &Text {
-            font-size: 14px;
+            @include fluid(font-size, 12px, 14px);
             color: #999;
         }
     }

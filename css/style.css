@@ -4706,13 +4706,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .chooseSit__TotalPriceNum {
   font-weight: 800;
-  font-size: 24px;
+  font-size: 18px;
   color: #e5097f;
 }
 
 @media (min-width: 992px) {
   .chooseSit__TotalPriceNum {
-    font-size: calc( 0.00862 * 100vw + 15.44828px);
+    font-size: calc( 0.01509 * 100vw + 3.03448px);
   }
 }
 
@@ -4747,8 +4747,20 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .chooseSit__TotalBlockNum {
   font-weight: 800;
-  font-size: 32px;
+  font-size: 20px;
   color: #333;
+}
+
+@media (min-width: 992px) {
+  .chooseSit__TotalBlockNum {
+    font-size: calc( 0.01293 * 100vw + 7.17241px);
+  }
+}
+
+@media (min-width: 1920px) {
+  .chooseSit__TotalBlockNum {
+    font-size: 32px;
+  }
 }
 
 .chooseSit__markerBlock {
@@ -4757,10 +4769,34 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .chooseSit__marker {
-  width: 24px;
-  height: 24px;
+  width: 12px;
+  height: 12px;
   border-radius: 5px;
   margin-right: 10px;
+}
+
+@media (min-width: 992px) {
+  .chooseSit__marker {
+    width: calc( 0.01293 * 100vw + -0.82759px);
+  }
+}
+
+@media (min-width: 1920px) {
+  .chooseSit__marker {
+    width: 24px;
+  }
+}
+
+@media (min-width: 992px) {
+  .chooseSit__marker {
+    height: calc( 0.01293 * 100vw + -0.82759px);
+  }
+}
+
+@media (min-width: 1920px) {
+  .chooseSit__marker {
+    height: 24px;
+  }
 }
 
 .chooseSit__marker--grey {
@@ -4781,32 +4817,105 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .chooseSit__panel {
-  margin-top: 60px;
-  margin-bottom: 80px;
+  margin-top: 30px;
+  margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
 }
 
+@media (min-width: 992px) {
+  .chooseSit__panel {
+    margin-top: calc( 0.03233 * 100vw + -2.06897px);
+  }
+}
+
+@media (min-width: 1920px) {
+  .chooseSit__panel {
+    margin-top: 60px;
+  }
+}
+
+@media (min-width: 992px) {
+  .chooseSit__panel {
+    margin-bottom: calc( 0.0431 * 100vw + -2.75862px);
+  }
+}
+
+@media (min-width: 1920px) {
+  .chooseSit__panel {
+    margin-bottom: 80px;
+  }
+}
+
 .chooseSit__passengersCount {
+  margin-left: 20px;
   display: flex;
   flex-direction: column;
-  max-width: 390px;
-  font-size: 14px;
+  max-width: 31.7%;
+  font-size: 12px;
   color: #999;
-  padding: 50px 0px;
+  padding-top: 25px;
   min-height: 255px;
   justify-content: space-between;
 }
 
+@media (min-width: 992px) {
+  .chooseSit__passengersCount {
+    font-size: calc( 0.00216 * 100vw + 9.86207px);
+  }
+}
+
+@media (min-width: 1920px) {
+  .chooseSit__passengersCount {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 992px) {
+  .chooseSit__passengersCount {
+    padding-top: calc( 0.02694 * 100vw + -1.72414px);
+  }
+}
+
+@media (min-width: 1920px) {
+  .chooseSit__passengersCount {
+    padding-top: 50px;
+  }
+}
+
 .chooseSit__passengersCountTitle {
-  font-size: 24px;
+  font-size: 20px;
   color: #333;
   margin-bottom: 20px;
 }
 
+@media (min-width: 992px) {
+  .chooseSit__passengersCountTitle {
+    font-size: calc( 0.00431 * 100vw + 15.72414px);
+  }
+}
+
+@media (min-width: 1920px) {
+  .chooseSit__passengersCountTitle {
+    font-size: 24px;
+  }
+}
+
 .chooseSit__passengersCountText {
-  font-size: 14px;
+  font-size: 12px;
   color: #999;
+}
+
+@media (min-width: 992px) {
+  .chooseSit__passengersCountText {
+    font-size: calc( 0.00216 * 100vw + 9.86207px);
+  }
+}
+
+@media (min-width: 1920px) {
+  .chooseSit__passengersCountText {
+    font-size: 14px;
+  }
 }
 
 .scheme {
