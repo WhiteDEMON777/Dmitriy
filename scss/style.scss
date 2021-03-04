@@ -859,7 +859,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: #999;
     @include fluid(margin-top,10px,20px);
     &--marginLeft {
-        @include fluid(margin-left,10px,40px);
+        @include fluid(margin-left,15px,40px);
         @include fluid(line-height,28px,32px);
     }
 }
@@ -1125,19 +1125,19 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background-color: #fff;
     background-image: linear-gradient(to bottom, #fff 50%, #1E1B36 50%);
     width: 100%;
-    &__base {
+    &__substrate {
         display: flex;
-        justify-content: space-between;
     }
     &__content {
-        padding-top: 80px;
-        padding-bottom: 100px;
+        @include fluid(padding-top, 40px, 80px);
+        @include fluid(padding-bottom, 50px, 100px);
         width: 100%;
         background-color: #EFEFEF;
-        @include border-radius-vw(260px,0,260px,0);
+        @include border-radius-vw(260px, 0px, 260px, 0px);
     }
     &__wrapper {
         width: 86%;
+        @include fluid(margin-right, 40px, 80px);
         input[type=radio], input[type=checkbox] {
             display: none;
             &:checked {
@@ -1146,6 +1146,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
                         &::before {
                             background-color: #393185;
                             background-image: url('/img/icon/checkbox__check.svg');
+                            background-repeat: no-repeat;
+                            background-position: 50% 55%;
                         }
                     }
                 }
@@ -1153,16 +1155,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         }
     }
     &__passengers {
-        @include fluid(padding-left, 0, 48px, $breakpoint-to-fluid, $base-vw);
+        @include fluid(padding-left, 15px, 48px, $breakpoint-to-fluid, $base-vw);
     }
     &__passengerCard {
-        margin-top: 48px;
+        @include fluid(margin-top, 15px, 48px);
     }
     &__passengerTitle {
-        margin-bottom: 30px;
-        font-size: 24px;
-        text-align: left;
-        color: #333;
+        @include fluid(margin-bottom, 15px, 30px);
+        @include fluid(font-size, 20px, 24px);
         font-weight: 800;
     }
     &__passengerContainer {
@@ -1171,28 +1171,19 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         justify-content: space-between;
         flex-wrap: wrap;
         &--margin {
-            margin-top: 30px;
+            @include fluid(margin-top, 15px, 30px);
         }
     }
     &__passengerSex {
-        padding-left: 20px;
-        margin: 30px 0px;
-        font-size: 14px;
-        color: #333;
+        @include fluid(padding-left, 10px, 20px);
+        @include fluid(margin-top, 15x, 30px);
+        @include fluid(margin-bottom, 15px, 30px);
+        @include fluid(font-size, 12px, 14px);
         display: flex;
         align-items: center;
     }
     &__passengerCheck {
-        &--MarginTop {
-            margin-top: 30px;
-            margin-left: 0px;
-        }
-        &--border {
-            &::before {
-                border: 1px solid #ccc;
-            }
-        }
-        margin-left: 35px;
+        @include fluid(margin-left, 17.5px, 35px);
         display: flex;
         align-items: center;
         &::before {
@@ -1207,83 +1198,81 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             background-size: 50%;
             background-repeat: no-repeat;
         }
+        &--MarginTop {
+            @include fluid(margin-top, 15px, 30px);
+            @include fluid(margin-left, 0px, 0px);
+        }
+        &--border {
+            &::before {
+                border: 1px solid #ccc;
+            }
+        }
     }
     &__buyerInfo {
-        padding: 40px 48px;
-        margin-top: 40px;
-        border-radius: 30px;
+        @include fluid(padding-top, 20px, 40px);
+        @include fluid(padding-bottom, 20px, 40px);
+        @include fluid(padding-left, 24px, 48px);
+        @include fluid(padding-right, 24px, 48px);
+        @include fluid(margin-top, 20px, 40px);
+        @include fluid(border-radius, 15px, 30px);
         background: #fff;
         box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
         &Title {
-            font-size: 24px;
+            @include fluid(font-size, 20px, 24px);
             font-weight: 800;
-            color: #333;
         }
         &Text {
-            margin-top: 20px;
-            font-size: 16px;
-            line-height: 32px;
+            @include fluid(margin-top, 10px, 20px);
+            @include fluid(font-size, 14px, 16px);
+            @include fluid(line-height, 28px, 32px);
             color: #999;
         }
     }
     &__buyDialogue {
-        margin-top: 96px;
-        height: -webkit-max-content;
-        height: -moz-max-content;
-        height: max-content;
-        padding: 30px;
-        border-radius: 30px;
+        height: 100%;
+        @include fluid(padding, 15px, 30px);
+        @include fluid(border-radius, 15px, 30px);
         background: #fff;
         box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
-        font-size: 16px;
-        line-height: 32px;
-        color: #333;
-        width: -webkit-max-content;
-        width: -moz-max-content;
-        width: max-content;
+        @include fluid(font-size, 14px, 16px);
+        @include fluid(line-height, 28px, 32px);
         margin-left: 10px;
         position: sticky;
-        top: 80px;
+        @include fluid(top, 20px, 40px);
         &Ticket {
             &Money {
-                font-size: 14px;
+                @include fluid(font-size, 12px, 14px);
                 font-weight: normal;
-                line-height: 24px;
-                text-align: center;
+                @include fluid(line-height, 20px, 24px);
                 color: #f4f4f4;
-            }
-            &Num {
-                text-align: center;
             }
         }
         &Uptext {
             font-weight: 800;
-            font-size: 16px;
-            color: #333;
+            @include fluid(font-size, 14px, 16px);
             &--time {
                 text-align: right;
             }
         }
         &Subtext {
-            font-size: 12px;
-            text-align: left;
+            @include fluid(font-size, 10px, 12px);
             color: #666;
             max-width: 157px;
-            line-height: 17px;
+            @include fluid(line-height, 13px, 17px);
             &--date {
                 text-align: right;
             }
         }
         &Headline {
-            font-size: 24px;
+            @include fluid(font-size, 20px, 24px);
             color: #999;
-            margin-bottom: 20px;
+            @include fluid(margin-bottom, 10px, 20px);
         }
         &Points {
             display: flex;
             flex-direction: column;
             &Place {
-                margin-bottom: 30px;
+                @include fluid(margin-bottom, 15px, 30px);
             }
         }
         &Total {
@@ -1293,11 +1282,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         }
         &Buy {
             width: 100%;
-            padding: 20px;
-            border-radius: 20px;
+            @include fluid(padding, 10px, 20px);
+            @include fluid(border-radius, 10px, 20px);
             background: linear-gradient(#ff45a9 0%, #eb1487 99.99%, #fd2498 100%);
-            font-size: 20px;
-            line-height: 24px;
+            @include fluid(font-size, 16px, 20px);
+            @include fluid(line-height, 20px, 24px);
             text-align: center;
             color: #f4f4f4;
             font-weight: 700;
@@ -1310,8 +1299,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         }
         &Price {
             font-weight: bold;
-            font-size: 20px;
-            line-height: 32px;
+            @include fluid(font-size, 16px, 20px);
+            @include fluid(line-height, 28px, 32px);
             color: #393185;
         }
         &City {
@@ -1420,14 +1409,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background-color: #EFEFEF;
     width: 100%;
     &__content {
-        padding-top: 100px;
-        padding-bottom: 100px;
+        @include fluid(padding-top, 50px, 100px);
+        @include fluid(padding-bottom, 50px, 100px);
         width: 100%;
         background-color: #fff;
-        @include border-radius-vw(260px,0,0,260px);
-        @include up-vw(padding-right,100px);
+        @include fluid(border-top-left-radius, 30px, 260px);
+        @include fluid(border-bottom-left-radius, 30px, 260px);
+        @include fluid(padding-right, 50px, 100px);
         &Offset {
-            @include up-vw(padding-left,100px);
+            @include fluid(padding-left, 50px, 100px);
         }
     }
     &__row {
@@ -1441,14 +1431,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     &__routeInfo {
         display: flex;
         flex-direction: column;
-        padding-left: 15px;
+        @include fluid(padding-left, 7.5px, 15px);
     }
     &__route {
         &Point {
             display: flex;
             justify-content: space-between;
             padding-left: 10px;
-            padding-right: 25px;
+            @include fluid(padding-right, 12.5px, 25px);
             &Dot {
                 display: flex;
                 position: relative;
@@ -1483,39 +1473,37 @@ input[type="date"]::-webkit-calendar-picker-indicator {
                 }
                 &Title {
                     margin-bottom: 5px;
-                    font-size: 16px;
+                    @include fluid(font-size, 14px, 16px);
                     font-weight: 800;
-                    color: #333;
                 }
                 &Block {
-                    margin-left: 35px;
-                    padding-bottom: 25px;
-                    max-width: 160px;
+                    @include fluid(margin-left, 17.5px, 35px);
+                    @include fluid(padding-bottom, 12.5px, 25px);
                 }
                 &Address{
                     font-weight: normal;
-                    font-size: 12px;
+                    @include fluid(font-size, 10px, 12px);
                     color: #666;
                 }
                 &Date{
-                font-weight: normal;
-                font-size: 12px;
-                color: #666;
+                    font-weight: normal;
+                    @include fluid(font-size, 10px, 12px);
+                    color: #666;
                 }
             }
         }
-        padding-right: 110px;
+        @include fluid(padding-right, 55px, 110px);
         &Destination {
             display: flex;
             justify-content: space-between;
             font-weight: normal;
-            font-size: 16px;
+            @include fluid(font-size, 14px, 16px);
             color: #666;
             margin-top: 10px;
             span {
                 line-height: 1;
                 &::before {
-                    font-size: 32px;
+                    @include fluid(font-size, 28px, 32px);
                 }
             }
         }
@@ -1523,7 +1511,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             display: flex;
             justify-content: space-between;
             font-weight: normal;
-            font-size: 16px;
+            @include fluid(font-size, 14px, 16px);
             color: #666;
             margin-bottom: 10px;
             &Name {
@@ -1531,14 +1519,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
                 &Text {
                     display: flex;
                     flex-direction: column;
-                    width: 235px;
+                    max-width: 55%;
                     margin-left: 30px;
                 }
             }
             span {
                 line-height: 1;
                 &::before {
-                    font-size: 32px;
+                    @include fluid(font-size, 24px, 32px);
                 }
             }
         }
@@ -1548,13 +1536,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             justify-content: space-between;
         }
         &Time {
-            font-size: 32px;
+            @include fluid(font-size, 24px, 32px);
             color: #393185;
             font-weight: 800;
         }
         &Title {
             font-weight: 800;
-            font-size: 24px;
+            @include fluid(font-size, 20px, 24px);
             color: #393185;
             margin-bottom: 5px;
         }
@@ -1562,33 +1550,32 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     &__title {
         font-size: 24px;
         color: #999;
-        margin-bottom: 40px;
+        @include fluid(margin-bottom, 20px, 40px);
         &:nth-child(n+1) {
-            margin-top: 20px;
+            @include fluid(margin-top, 10px, 20px);
         }
     }
     &__subtitle {
         font-weight: 800;
-        font-size: 16px;
+        @include fluid(font-size, 14px, 16px);
         color: #333;
-        margin-bottom: 20px;
+        @include fluid(margin-bottom, 10px, 20px);
     }
     &__text {
-        line-height: 22px;
-        font-size: 16px;
+        @include fluid(line-height, 20px, 22px);
+        @include fluid(font-size, 14px, 16px);
         color: #999;
         margin-bottom: 10px;
     }
     &__circs {
-        font-size: 16px;
-        line-height: 48px;
-        color: #333;
+        @include fluid(font-size, 14px, 16px);
+        @include fluid(line-height, 42px, 48px);
     }
     &__circumstanta {
         display: flex;
         align-items: center;
         img {
-            margin-right: 20px;
+            @include fluid(margin-right, 10px, 20px);
         }
     }
 }
@@ -1598,20 +1585,24 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background-image: linear-gradient(to bottom, #fff 50%, #1E1B36 50%);
     width: 100%;
     &__content {
-        padding-top: 100px;
-        padding-bottom: 100px;
+        @include fluid(padding-top, 50px, 100px);
+        @include fluid(padding-bottom, 50px, 100px);
         width: 100%;
         background-color: #efefef;
-        @include border-radius-vw(0,260px,260px,0);
+        @include fluid(border-top-right-radius, 30px, 260px); 
+        @include fluid(border-bottom-right-radius, 30px, 260px); 
     }
     &__Total {
         display: flex;
         justify-content: space-between;
-        font-size: 16px;
-        line-height: 21px;
+        @include fluid(font-size, 14px, 16px);
+        @include fluid(line-height, 19px, 21px);
         color: #999;
-        padding: 50px 40px;
-        border-radius: 30px;
+        @include fluid(padding-top, 25px, 50px);
+        @include fluid(padding-bottom, 25px, 50px);
+        @include fluid(padding-right, 20px, 40px);
+        @include fluid(padding-left, 20px, 40px);
+        @include fluid(border-radius, 15px, 30px);
         background: #fff;
         box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
         &Price {
@@ -1622,7 +1613,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             padding: 10px 0px;
             &Num {
                 font-weight: 800;
-                font-size: 32px;
+                @include fluid(font-size, 24px, 32px);
                 color: #e5097f;
             }
         }
@@ -1630,9 +1621,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            width: 185px;
+            width: 15%;
             border-left: 1px solid #DDDDDD;
-            padding: 10px 0px 10px 40px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            @include fluid(padding-left, 20px, 40px);
             &Num {
                 font-weight: 800;
                 font-size: 32px;
@@ -2101,9 +2094,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
                     &::before {
                         background-color: #393185;
                         border: none;
-                        background-image: url();
+                        background-image: url(/img/icon/checkbox__check.svg);
                         background-repeat: no-repeat;
-                        background-position: center;
+                        background-position: 50% 55%;
                         box-sizing: border-box;
                     }
                 }

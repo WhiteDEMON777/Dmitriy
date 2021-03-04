@@ -65,13 +65,20 @@ $(document).ready(function() {
             }
         });
     });
-    var dbDate = "20 мая 2021";
-    var date2 = new Date(dbDate);
-    $("#dateRide").datepicker({
-        dateFormat: 'dd MM yyyy'
-    }).datepicker('setDate', date2)
     
-    $('select').selectize();
+    var start = new Date();
+
+    if ($(".dateRide").length) {
+        $(".dateRide").datepicker({
+            dateFormat: 'd MM yyyy',
+        }).data('datepicker').selectDate(new Date());
+    }
+
+    if ($(".birthDate").length) {
+        $(".birthDate").datepicker({
+            dateFormat: 'd MM yyyy',
+        });
+    }
 });
 $(".scheme__tile").on("click", function() {
     this.classList.toggle("scheme__tile--selected");
