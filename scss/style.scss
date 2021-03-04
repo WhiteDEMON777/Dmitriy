@@ -346,96 +346,87 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     &__substrate {
         background-image: linear-gradient(to bottom, #fff 50%, #1E1B36 50%);
     }
-    &__wrapper {
-        background-image: url("./../img/picture/background.svg");
-        background-position: 100%;
-        background-position-y: 100%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        @include padding-vw(40px,0px,40px,0px);
-        color: #333;
-    }
     &__content {
+        @include fluid(border-top-left-radius,30px,260px);
+        @include fluid(border-bottom-right-radius,30px,260px);
+        @include fluid(padding-top,40px,80px);
+        @include fluid(padding-bottom,85px,170px);
         background-color: #EFEFEF;
-        @include border-radius-vw(260px,0,260px,0);
-        @include padding-vw(80px,0px,170px,0px);
     }
-    &__sort {
-        @include padding-vw(50px,0,30px,0);
-    }
+    
     &__card {
+        @include fluid(margin-top,5px,10px);
+        @include fluid(padding,15px,30px);
+        @include fluid(border-radius,15px,30px);
+        width: 100%;
+        background-color: #fff;
         justify-content: space-between;
         display: flex;
         flex-wrap: nowrap;
-        width: 100%;
-        background-color: #fff;
         box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
-        @include up-vw(margin-top,10px);
-        @include padding-vw(30px);
-        @include border-radius-vw(30px);
         &:hover {
             box-shadow: 0px 25px 80px rgba(0, 0, 0, 0.1);
         }
     }
     &__date {
-        font-size: 20px;
-        line-height: 32px;
+        @include fluid(font-size,18px,20px);
+        @include fluid(line-height,28px,32px);
         color: #666;
     }
     &__time {
-        @include up-vw(margin-top,10px);
+        @include fluid(margin-top,5px,10px);
+        @include fluid(line-height,28px,32px);
         font-weight: 800;
-        font-size: 32px;
         color: #393185;
     }
     &__destination {
-        margin-top: 20px;
+        @include fluid(margin-top,10px,20px);
+        @include fluid(font-size,12px,14px);
+        @include fluid(line-height,19px,21px);
         width: 200px;
-        font-size: 14px;
-        line-height: 21px;
         color: #999;
     }
     &__title {
-        text-align: left;
+        @include fluid(font-size,12px,14px);
+        @include fluid(line-height,19px,21px);
+        text-align: left;//checked
         width: 177px;
-        font-size: 14px;
-        line-height: 21px;
         color: #999;
     }
     &__price {
         display: flex;
         flex-direction: column;
         &Text{
-            font-size: 14px;
-            line-height: 21px;
+            @include fluid(font-size,12px,14px);
+            @include fluid(line-height,19px,21px);
             color: #999;
         }
     }
     &__Movetime {
-        font-size: 14px;
-        line-height: 21px;
+        @include fluid(font-size,12px,14px);
+        @include fluid(line-height,19px,21px);
         color: #999;
         display: flex;
         flex-direction: column;
     }
     &__priceNum {
-        font-size: 20px;
-        line-height: 32px;
+        @include fluid(font-size,18px,20px);
+        @include fluid(line-height,28px, 32px);
         color: #393185;
         font-weight: 700;
     }
     &__timeNum {
         font-weight: 700;
-        font-size: 16px;
-        line-height: 32px;
-        color: #333;
+        @include fluid(font-size,14px,16px);
+        @include fluid(line-height,28px,32px);
+        color: #333;//checked
     }
     &__buy {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         font-weight: 700;
-        font-size: 20px;
+        @include fluid(font-size,18px,20px);
         text-align: center;
         color: #f4f4f4;
     }
@@ -445,19 +436,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 18px;
+        @include fluid(border-radius,9px,18px);
         width: 215px;
         height: 60px;
         background: linear-gradient(#ff45a9 0%, #eb1487 99.99%, #fd2498 100%);
     }
     &__from {
-        width: -webkit-fit-content;
-        width: -moz-fit-content;
         width: fit-content;
     }
     &__to {
-        width: -webkit-fit-content;
-        width: -moz-fit-content;
         width: fit-content;
     }
     &__total {
@@ -465,13 +452,124 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         flex-direction: column;
         justify-content: space-between;
     }
-}
+    &__sort {
+        @include fluid(padding-top,25px,50px);
+        @include fluid(padding-bottom,25px,50px);
+        display: flex;
+        justify-content: space-between;
+        &-title{
+            @include fluid(margin-right,15px,30px);
+        }
+    }
+    &__Input-sortBy{
 
+        @include fluid(border-radius,10px, 20px);
+        display:none;
+        background-color: #fff;
+    }
+    &__Input-show{
+        @include fluid(border-radius,10px, 20px);
+        display:none;
+        background-color: #fff;
+    }
+    &__sortBy{
+        display: flex;
+        align-items:center;
+        .selected{
+            background-color: #fff;
+        }
+        .dropdown{
+            width: 100%;
+        }
+        ul{
+            width:100%;
+            border-top-width: 0;
+            border-bottom-width: 1px;
+            border-left-width: 1px;
+            border-right-width: 1px;
+            border-style: solid;
+            border-color: #CCCCCC;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+           li{
+               padding-top:10px;
+               padding-bottom:10px;
+               padding-left:20px;
+               cursor:pointer;
+               &:hover{
+                   background-color: #efefef;
+               }
+           }
+            background-color: #fff;
+        }
+    }
+    &__show{
+        display: flex;
+        align-items:center;
+        .selected{
+            background-color: #fff;
+        }
+        .dropdown{
+            width: 100%;
+        }
+        ul{
+            width:100%;
+            border-top-width: 0;
+            border-bottom-width: 1px;
+            border-left-width: 1px;
+            border-right-width: 1px;
+            border-style: solid;
+            border-color: #CCCCCC;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            scrollbar-width: none;
+           li{
+               padding-top:10px;
+               padding-bottom:10px;
+               padding-left:20px;
+               cursor:pointer;
+               &:hover{
+                   background-color: #efefef;
+               }
+           }
+            background-color: #fff;
+        }
+    }
+}
+.jq-selectbox{
+    &__trigger{
+        &-arrow{
+            display:block;
+            width: 10px;
+            height: 5px;
+            background-image: url("./../img/icon/arrow_down.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            @include fluid(margin-left,10px, 20px);
+        }
+    }
+    &__select{
+        cursor:pointer;
+        display:flex;
+        align-items: center;
+        @include fluid(padding-top,10px,19px);
+        @include fluid(padding-bottom,10px,19px);
+        @include fluid(padding-left,15px,30px);
+        @include fluid(padding-right,15px,30px);
+    }
+    &__styler{
+        @include fluid(border-radius,10px,20px);
+    }
+    &__dropdown{
+        width: 100%;
+        @include fluid(margin-top,-5px,-9px);
+    }
+}
 .breadCrumbs {
     display: flex;
     @include fluid(font-size,14px,16px);
     @include fluid(margin-bottom ,20px,80px);
-    color: #333;
     align-items: center;
 }
 
@@ -1124,7 +1222,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         padding-bottom: 100px;
         width: 100%;
         background-color: #EFEFEF;
-        @include border-radius-vw(260px,0,260px,0);
+        @include fluid(border-top-left-radius,30px,260px);
+        @include fluid(border-bottom-right-radius,30px,260px);
     }
     &__wrapper {
         width: 86%;
@@ -1143,7 +1242,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         }
     }
     &__passengers {
-        @include fluid(padding-left, 0, 48px, $breakpoint-to-fluid, $base-vw);
+        @include fluid(padding-left, 0, 48px);
     }
     &__passengerCard {
         margin-top: 48px;
@@ -1339,7 +1438,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     resize: none;
     width: 100%;
     height: 160px;
-    @include fluid(padding, 10px, 20px, $breakpoint-to-fluid, $base-vw);
+    @include fluid(padding, 10px, 20px);
     background-color: #fff;
     border-radius: 18px;
     border: 1px solid #ccc;
@@ -1396,13 +1495,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         padding-bottom: 100px;
         width: 100%;
         background-color: #EFEFEF;
-        @include border-radius-vw(260px,0,260px,0);
+        @include fluid(border-top-left-radius,30px,260px);
+        @include fluid(border-bottom-right-radius,30px,260px);
         &--alt {
             padding-top: 100px;
             padding-bottom: 100px;
             width: 100%;
             background-color: #EFEFEF;
-            @include border-radius-vw(260px,0,260px,0);
+            @include fluid(border-top-left-radius,30px,260px);
+            @include fluid(border-bottom-right-radius,30px,260px);
         }
     }
 }
@@ -1415,10 +1516,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         padding-bottom: 100px;
         width: 100%;
         background-color: #fff;
-        @include border-radius-vw(260px,0,0,260px);
-        @include up-vw(padding-right,100px);
+        @include fluid(border-top-left-radius,30px,260px);
+        @include fluid(border-bottom-left-radius,30px,260px);
+        @include fluid(padding-right,50px,100px);
         &Offset {
-            @include up-vw(padding-left,100px);
+            @include fluid(padding-left,50px,100px);
         }
     }
     &__row {
@@ -1593,7 +1695,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         padding-bottom: 100px;
         width: 100%;
         background-color: #efefef;
-        @include border-radius-vw(0,260px,260px,0);
+        @include fluid(border-top-right-radius,30px,260px);
+        @include fluid(border-bottom-right-radius,30px,260px);
     }
     &__Total {
         display: flex;
@@ -2039,7 +2142,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
     &__line {
         display: flex;
-        @include up-vw(margin-top,40px);
+        @include fluid(margin-top,20px,40px);
         justify-content: space-between;
         align-items: flex-start;
     }
@@ -2050,7 +2153,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         }
     }
     &__subtext {
-        @include up-vw(font-size,14px);
+        @include fluid(font-size,12px,14px);
         color: #999;
     }
     &__count {
@@ -2059,20 +2162,20 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             cursor: pointer;
         }
         &Inp {
-            @include up-vw(width,47px);
-        @include up-vw(font-size,22px);
+            @include fluid(width,23px,47px);
+            @include fluid(font-size,20px,22px);
             text-align: center;
         }
     }
     &__children {
         display: none;
-        @include up-vw(padding-top,49px);
+        @include fluid(padding-top,25px,49px);
         .modal {
             &__title {
-                @include up-vw(margin-bottom,23px);
+                @include fluid(margin-bottom,11px,23px);
             }
             &__line {
-                @include up-vw(margin-top,10px);
+                @include fluid(margin-top,5px,10px);
                 align-items: center;
                 justify-content: flex-start;
             }
@@ -2082,7 +2185,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         }
     }
     &__select {
-        @include up-vw(margin-right,31px);
+        @include fluid(margin-right,15px,31px);
     }
     input[type="checkbox"] {
         display: none;
@@ -2102,26 +2205,26 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         }
     }
     &__checkbox {
-        @include up-vw(font-size,14px);
+        @include fluid(font-size,12px,14px);
         color: #999;
         display: flex;
         align-items: center;
         &::before {
             content: '';
             display: block;
-            @include up-vw(width,24px);
-            @include up-vw(height,24px);
-            @include up-vw(border-radius,5px);
+            @include fluid(width,12px,24px);
+            @include fluid(height,12px,24px);
+            border-radius:5px;
             background-color: #fff;
             border: 1px solid #ccc;
-            @include up-vw(margin-right,10px);
+            @include fluid(margin-right,5px,10px);
         }
     }
     &__button {
         width: 100%;
-        @include up-vw(height,60px);
-        @include up-vw(margin-top,40px);
-        @include up-vw(border-radius,18px);
+        @include fluid(height,30,60px);
+        @include fluid(margin-top,20px,40px);
+        @include fluid(border-radius,9px,18px);
         background: linear-gradient(#4f46a5 0%, #393185 100%);
         display: flex;
         justify-content: center;
