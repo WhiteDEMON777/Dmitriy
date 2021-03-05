@@ -213,6 +213,21 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     -webkit-appearance: none;
 }
 
+input[type=radio], input[type=checkbox] {
+    opacity:0;
+    position:absolute;
+    &:checked {
+        &+.checkbox {
+            &::before {
+                background-color: #393185;
+                background-image: url('/img/icon/checkbox__check.svg');
+                background-repeat: no-repeat;
+                background-position: 50% 55%;
+            }
+        }
+    }
+}
+
 .overflow {
     height: 100vh;
     min-height: 100vh;
@@ -1172,21 +1187,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     &__wrapper {
         width: 86%;
         @include fluid(margin-right, 40px, 80px);
-        input[type=radio], input[type=checkbox] {
-            display: none;
-            &:checked {
-                &+.ticketOffer {
-                    &__passengerCheck {
-                        &::before {
-                            background-color: #393185;
-                            background-image: url('/img/icon/checkbox__check.svg');
-                            background-repeat: no-repeat;
-                            background-position: 50% 55%;
-                        }
-                    }
-                }
-            }
-        }
     }
     &__passengers {
         @include fluid(padding-left, 0, 50px);
@@ -1217,31 +1217,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         display: flex;
         align-items: center;
     }
+    
     &__passengerCheck {
         @include fluid(margin-left, 17.5px, 35px);
-        display: flex;
-        align-items: center;
-        &::before {
-            content: '';
-            cursor:pointer;
-            width: 24px;
-            height: 24px;
-            background-color: #fff;
-            border-radius: 5px;
-            margin-right: 10px;
-            transition: background-color .2s ease-in-out;
-            background-position: center;
-            background-size: 50%;
-            background-repeat: no-repeat;
-        }
         &--MarginTop {
             @include fluid(margin-top, 15px, 30px);
             @include fluid(margin-left, 0px, 0px);
-        }
-        &--border {
-            &::before {
-                border: 1px solid #ccc;
-            }
         }
     }
     &__buyerInfo {
@@ -1374,7 +1355,28 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         @include fluid(margin-bottom,5px,10px);
     }
 }
-
+.checkbox{
+    display: flex;
+    align-items: center;
+    cursor:pointer;
+    &::before {
+        content: '';
+        width: 24px;
+        height: 24px;
+        background-color: #fff;
+        border-radius: 5px;
+        margin-right: 10px;
+        transition: background-color .2s ease-in-out;
+        background-position: center;
+        background-size: 50%;
+        background-repeat: no-repeat;
+    }
+    &--border {
+        &::before {
+            border: 1px solid #ccc;
+        }
+    }
+}
 .textarea {
     outline: none;
     border: none;
@@ -2080,39 +2082,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
     &__children {
         @include fluid(padding-top,25px,49px);
-        .modal {
-            &__title {
-                @include fluid(margin-bottom,11px,23px);
-            }
-            &__line {
-                @include fluid(margin-top,5px,10px);
-                align-items: center;
-                justify-content: flex-start;
-            }
-        }
-        &--open {
-            display: block;
-        }
+        
     }
     &__select {
         @include fluid(margin-right,15px,31px);
-    }
-    input[type="checkbox"] {
-        display: none;
-        &:checked {
-            +.modal {
-                &__checkbox {
-                    &::before {
-                        background-color: #393185;
-                        border: none;
-                        background-image: url(/img/icon/checkbox__check.svg);
-                        background-repeat: no-repeat;
-                        background-position: 50% 55%;
-                        box-sizing: border-box;
-                    }
-                }
-            }
-        }
     }
     &__checkbox {
         @include fluid(font-size,12px,14px);
@@ -2133,7 +2106,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     &__button {
         display: block;
         width: 100%;
-        @include fluid(height,30,60px);
         @include fluid(margin-top,20px,40px);
         @include fluid(border-radius,9px,18px);
         background: linear-gradient(#4f46a5 0%, #393185 100%);
