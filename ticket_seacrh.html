@@ -47,7 +47,7 @@
                                 <span class="icon-Union"></span>
                                 <div class="header__fromInputBlock">
                                     <div class="header__fromInputBlock-text">Откуда</div>
-                                    <select class="header__fromInputBlock-select" class="select-js" >
+                                    <select class="select-js-main" >
                                         <option value="1">Саратов</option>
                                         <option value="2">Москва</option>
                                         <option value="3">Магнитогорск</option>
@@ -59,10 +59,10 @@
                                 <div class="header__whereInputWrapper"><span class="icon-we"></span>
                                     <div class="header__whereInputBlock">
                                         <div class="header__whereInputBlock-text">Куда</div>
-                                        <select class="select-js" >
-                                            <option value="1">Саратов</option>
-                                            <option value="2">Москва</option>
-                                            <option value="3">Магнитогорск</option>
+                                        <select class="select-js-main" >
+                                            <option value="0">Мурманск</option>
+                                            <option value="1">Москва</option>
+                                            <option value="2">Алгонквик</option>
                                         </select>
                                     </div>
                                 </div>
@@ -70,7 +70,7 @@
                             <div class="header__date">
                                 <div class="header__dateInputWrapper"><span class="icon-Vector1"></span>
                                     <div class="header__dateInputBlock">Дата поездки
-                                    <input class="header__dateInput" type="text" name=" " id="dateRide"
+                                    <input class="header__dateInput dateRide" type="text" name=" " id="dateRide"
                                             placeholder="дд мм гггг">
                                     </div>
                                 </div>
@@ -79,15 +79,15 @@
                         </div>
                     </div>
                     <div class="header__tomorrow">
-                        <div class="header__tomorrow-text header__tomorrow-text--colorBlue">3автра</div>
-                        <div class="header__tomorrow-text header__tomorrow-text--colorBlue">Послезавтра</div>
+                        <div class="header__tomorrow-text header__tomorrow-text--colorBlue" day="1">3автра</div>
+                        <div class="header__tomorrow-text header__tomorrow-text--colorBlue" day="2">Послезавтра</div>
                     </div>
                 </div>
                 <div class="tickets__sort">
                     <div class="tickets__sortBy">
                         <div class="tickets__sort-title">Сортировка</div>
                         <select name="" id="sortBy" class="tickets__Input-sortBy">
-                            <option value=>По дате отправления</option>
+                            <option value="">По дате отправления</option>
                             <option value="">По дате прибытия</option>
                             <option value="">По времени прибытия</option>
                             <option value="">По времени отправления</option>
@@ -258,15 +258,9 @@
     <script src="./plugins/datepicker/dist/js/datepicker.min.js"></script>
     <script src="./plugins/jQueryFormStyler-master/jquery.formstyler.min.js"></script>
     <script>
-        $('.tickets__Input-sortBy').styler({
-            selectSmartPositioning:false,
-        });
-        $('.tickets__Input-show').styler({
-            selectSmartPositioning:false,
-            selectVisibleOptions:3
-        });
+        
     </script>
-    <!-- <script src="./js/script.js"></script> -->
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

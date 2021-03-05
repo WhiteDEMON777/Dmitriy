@@ -41,7 +41,35 @@ $('#select-search').selectize({
 
 });
 $('.select-js').selectize();
+$('.title__outgo-input').selectize({
+    selectSmartPositioning:false,
+    selectVisibleOptions:3
+});
+
+var select = $('.select-js-main').selectize();
+select.each(function() {
+    var selectize = this.selectize;
+    selectize.on('focus', function() {
+        this.clear();
+    });
+    selectize.on('blur', function() {
+        var opts = this.options;
+        if (this.items.length === 0) {
+            this.addItem(Object.keys(opts)[0]);
+        }
+    });
+    selectize.on('item_add', function() {
+        this.blur();
+    });
+});
 $('.map__search').on("click",function(){
     var evt = new KeyboardEvent('keydown', {'keyCode':8, 'which':8});
-    document.dispatchEvent(evt);
+    this.dispatchEvent(evt);
+});
+$('.tickets__Input-sortBy').styler({
+    selectSmartPositioning:false,
+});
+$('.tickets__Input-show').styler({
+    selectSmartPositioning:false,
+    selectVisibleOptions:3
 });

@@ -462,7 +462,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         }
     }
     &__Input-sortBy{
-
         @include fluid(border-radius,10px, 20px);
         display:none;
         background-color: #fff;
@@ -480,6 +479,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         }
         .dropdown{
             width: 100%;
+            z-index:11;
         }
         ul{
             width:100%;
@@ -536,6 +536,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         }
     }
 }
+.select-js-main{
+    .selectize-dropdown{
+        z-index:11;
+    }
+}
 .jq-selectbox{
     &__trigger{
         &-arrow{
@@ -550,13 +555,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         }
     }
     &__select{
-        cursor:pointer;
-        display:flex;
-        align-items: center;
         @include fluid(padding-top,10px,19px);
         @include fluid(padding-bottom,10px,19px);
         @include fluid(padding-left,15px,30px);
         @include fluid(padding-right,15px,30px);
+        cursor:pointer;
+        display:flex;
+        align-items: center;
+        z-index: 9;
     }
     &__styler{
         @include fluid(border-radius,10px,20px);
@@ -901,7 +907,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-weight: 800;
     &__link {
         font-weight: 600;
-        @include fluid(font-size, 18px, 22px);
+        @include fluid(font-size, 14px, 16px);
         color: #fff;
     }
     &__line {
@@ -950,6 +956,43 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
     &--small {
         @include fluid(font-size, 20px, 32px);
+    }
+    &__outgo{
+        display: flex;
+        align-items:center;
+        .selected{
+            background-color: #fff;
+        }
+        .dropdown{
+            width: 100%;
+        }
+        ul{
+            width:100%;
+            border-top-width: 0;
+            border-bottom-width: 1px;
+            border-left-width: 1px;
+            border-right-width: 1px;
+            border-style: solid;
+            border-color: #CCCCCC;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            scrollbar-width: none;
+           li{
+               padding-top:10px;
+               padding-bottom:10px;
+               padding-left:20px;
+               cursor:pointer;
+               &:hover{
+                   background-color: #efefef;
+               }
+           }
+            background-color: #fff;
+        }
+        &Text{
+            @include fluid(margin-right,7px,15px);
+            color:#908ACB;
+        }
+        
     }
 }
 
