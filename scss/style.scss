@@ -245,7 +245,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         @include fluid(padding-bottom,30px,170px);
         background-color: #EFEFEF;
     }
-    
+
     &__card {
         @include fluid(margin-top,5px,10px);
         @include fluid(padding,15px,30px);
@@ -262,17 +262,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
     &__date {
         @include fluid(font-size,18px,20px);
-        @include fluid(line-height,28px,32px);
         color: #666;
     }
     &__time {
         @include fluid(margin-top,5px,10px);
-        @include fluid(line-height,28px,32px);
+        @include fluid(padding-top,5px,10px);
+        @include fluid(font-size,28px,32px);
+        border-top: 1px dashed rgba(221, 221, 221, 0.5);
         font-weight: 800;
         color: #393185;
     }
     &__destination {
-        @include fluid(margin-top,10px,20px);
+        @include fluid(margin-top,5px,10px);
         @include fluid(font-size,12px,14px);
         @include fluid(line-height,19px,21px);
         width: 200px;
@@ -281,8 +282,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     &__title {
         @include fluid(font-size,12px,14px);
         @include fluid(line-height,19px,21px);
-        text-align: left;//checked
-        width: 177px;
+        @include fluid(margin-bottom,10px,20px);
+        @include fluid(width,185px,215px);
         color: #999;
     }
     &__price {
@@ -297,7 +298,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     &__Movetime {
         @include fluid(font-size,12px,14px);
         @include fluid(line-height,19px,21px);
-        color: #999;
         display: flex;
         flex-direction: column;
     }
@@ -311,7 +311,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         font-weight: 700;
         @include fluid(font-size,14px,16px);
         @include fluid(line-height,28px,32px);
-        color: #333;//checked
     }
     &__buy {
         display: flex;
@@ -319,15 +318,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         justify-content: space-between;
         font-weight: 700;
         @include fluid(font-size,18px,20px);
-        text-align: center;
         color: #f4f4f4;
-    }
-    
-    &__from {
-        width: fit-content;
-    }
-    &__to {
-        width: fit-content;
     }
     &__total {
         display: flex;
@@ -345,12 +336,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
     &__Input-sortBy{
         @include fluid(border-radius,10px, 20px);
-        display:none;
         background-color: #fff;
     }
     &__Input-show{
         @include fluid(border-radius,10px, 20px);
-        display:none;
         background-color: #fff;
     }
     &__sortBy{
@@ -756,11 +745,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     @include fluid(border-radius, 15px, 25px);
     background-image: linear-gradient(#ff45a9 0%, #eb1487 99.99%, #fd2498 100%);
     @include fluid(font-size, 12px, 20px);
-    background-size: 100% 100%;
     color: #f4f4f4;
     font-weight: 700;
     display: block;
     transition: all .3s ease-in-out;
+    background-size: 100% 100%;
     &:hover {
         background-position: 0 100%;
         background-size: 100% 200%;
@@ -845,7 +834,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         .selectize-control{
             .selectize-input{
                 input:focus{
-                    width: 50px !important;;
+                    width: 50px !important;
                 }
             }
         }
@@ -853,9 +842,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             margin-top: 5px;
             .selectize{
                 &-input{
-                    input[type="select-one"]{
-                        width:50px;
-                    }
                     box-shadow: none;
                     @include fluid(padding-right,35px,35px);
                     .item{
@@ -1203,7 +1189,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         }
     }
     &__passengers {
-        @include fluid(padding-left, 0, 48px);
+        @include fluid(padding-left, 0, 50px);
+        @include fluid(padding-right, 0, 50px);
     }
     &__passengerCard {
         @include fluid(margin-top, 15px, 48px);
@@ -1341,6 +1328,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             display: flex;
             flex-direction: column;
             width: 100%;
+            transition: all .3s ease-in-out;
+            background-size: 100% 100%;
+            &:hover {
+                background-position: 0 100%;
+                background-size: 100% 200%;
+            }
             &--route {
                 @include fluid(width, 200px, 350px);
             }
@@ -1392,6 +1385,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     @include fluid(padding, 10px, 20px);
     @include fluid(font-size, 14px, 16px);
     @include fluid(border-radius, 14px, 18px);
+    font-family: "Open Sans";
     background-color: #fff;
     border: 1px solid #ccc;
 }
@@ -1538,7 +1532,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
                 }
             }
         }
-        
+
         &Destination {
             display: flex;
             justify-content: space-between;
@@ -1606,7 +1600,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         font-weight: 800;
         @include fluid(font-size, 14px, 16px);
         color: #333;
-        
+
     }
     &__text {
         @include fluid(line-height, 20px, 22px);
@@ -1615,7 +1609,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         @include fluid(margin-top, 10px, 20px);
         @include fluid(margin-bottom, 5px, 10px);
     }
-    
+
     &__circumstanta {
         display: flex;
         align-items: center;
