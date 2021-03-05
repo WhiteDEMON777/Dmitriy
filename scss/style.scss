@@ -181,6 +181,7 @@ $p-medium: 15px;
 a {
     text-decoration: none;
     color: #333333;
+    cursor:pointer;
 }
 
 ul {
@@ -1235,6 +1236,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         align-items: center;
         &::before {
             content: '';
+            cursor:pointer;
             width: 24px;
             height: 24px;
             background-color: #fff;
@@ -1371,6 +1373,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
                 }
             }
         }
+    }
+    &__input{
+        @include fluid(margin-bottom,5px,10px);
     }
 }
 
@@ -1774,6 +1779,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             background: #393185;
             color: #fff;
             &:hover {
+                color: #fff;
                 background: #393185;
             }
         }
