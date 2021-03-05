@@ -4,14 +4,14 @@ $(document).ready(function() {
 
     if ($(".dateRide").length) {
         var datepicker = $(".dateRide").datepicker({
-            dateFormat: 'd MM yyyy',
+            dateFormat: 'd.mm.yyyy',
         });
         datepicker.data('datepicker').selectDate(new Date());
     }
 
     if ($(".birthDate").length) {
         $(".birthDate").datepicker({
-            dateFormat: 'd MM yyyy',
+            dateFormat: 'd.mm.yyyy',
         });
     }
 
@@ -35,15 +35,13 @@ $('.map__point').on("click", function(){
     $('.map__pointContact', $(this)).slideToggle();
     $(this).toggleClass("map__point--active");
 });
-$('#select-search').selectize({
-    placeholder:"Поиск по городу",
-    hideSelected: true,
-
+$('.select-js').selectize({
+    selectSmartPositioning:false,
+    selectVisibleOptions:5
 });
-$('.select-js').selectize();
 var select = $('.title__outgo-input').selectize({
     selectSmartPositioning:false,
-    selectVisibleOptions:3
+    selectVisibleOptions:5
 });
 select.each(function() {
     var selectize = this.selectize;
@@ -60,7 +58,30 @@ select.each(function() {
     });
 });
 
-select = $('.select-js-main').selectize();
+select =$('#select-search').selectize({
+    placeholder:"Поиск по городу",
+    hideSelected: true,
+    selectSmartPositioning:false,
+    selectVisibleOptions:5
+});
+select.each(function() {
+    var selectize = this.selectize;
+    selectize.on('focus', function() {
+        this.clear();
+    });
+    selectize.on('blur', function() {
+        if (this.items.length === 0) {
+            this.addItem(this.lastValidValue);
+        }
+    });
+    selectize.on('item_add', function() {
+        this.blur();
+    });
+});
+select = $('.select-js-main').selectize({
+    selectSmartPositioning:false,
+    selectVisibleOptions:5
+});
 select.each(function() {
     var selectize = this.selectize;
     selectize.on('focus', function() {

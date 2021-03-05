@@ -220,7 +220,7 @@ input[type=radio], input[type=checkbox] {
         &+.checkbox {
             &::before {
                 background-color: #393185;
-                background-image: url('/img/icon/checkbox__check.svg');
+                background-image: url('../img/icon/checkbox__check.svg');
                 background-repeat: no-repeat;
                 background-position: 50% 55%;
             }
