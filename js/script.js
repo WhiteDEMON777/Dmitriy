@@ -78,6 +78,9 @@ select.each(function() {
 $('.tickets__Input-sortBy').styler({
     selectSmartPositioning:false,
 });
+$('.modal__select').styler({
+    selectSmartPositioning:false,
+});
 $('.tickets__Input-show').styler({
     selectSmartPositioning:false,
     selectVisibleOptions:3
