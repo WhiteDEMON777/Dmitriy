@@ -1339,6 +1339,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             display: flex;
             flex-direction: column;
             width: 100%;
+            &--route {
+                @include fluid(width, 200px, 350px);
+            }
         }
         &Price {
             font-weight: bold;
@@ -1515,7 +1518,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
                     font-weight: 800;
                 }
                 &Block {
-                    @include fluid(margin-left, 15px, 35px);
+                    @include fluid(margin-left, 30px, 35px);
                     @include fluid(padding-bottom, 12px, 25px);
                 }
                 &Address{
@@ -1557,7 +1560,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
                 &Text {
                     display: flex;
                     flex-direction: column;
-                    max-width: 55%;
+                    width: 57%;
                     margin-left: 30px;
                 }
             }
@@ -1574,7 +1577,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             justify-content: space-between;
         }
         &Time {
-            @include fluid(font-size, 24px, 32px);
+            @include fluid(font-size, 26px, 32px);
             color: #393185;
             font-weight: 800;
         }
@@ -1636,8 +1639,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         @include fluid(font-size, 14px, 16px);
         @include fluid(line-height, 19px, 21px);
         color: #999;
-        @include fluid(padding-top, 25px, 50px);
-        @include fluid(padding-bottom, 25px, 50px);
+        @include fluid(padding-top, 20px, 50px);
+        @include fluid(padding-bottom, 20px, 50px);
         @include fluid(padding-right, 20px, 40px);
         @include fluid(padding-left, 20px, 40px);
         @include fluid(border-radius, 15px, 30px);
