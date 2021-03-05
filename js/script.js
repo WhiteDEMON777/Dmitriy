@@ -1,10 +1,15 @@
 $(document).ready(function() {
     
-    var start = new Date();
-
+    
     if ($(".dateRide").length) {
+        var start = new Date();
+        var mdate = new Date(start.getFullYear(), start.getMonth() + 1, 0);
+        mdate.setDate(start.getDate() + mdate.getDate());
         var datepicker = $(".dateRide").datepicker({
-            dateFormat: 'd MM yyyy',
+            dateFormat: 'd mm yyyy',
+            startDate: start,
+            minDate: start,
+            maxDate: mdate,
         });
         datepicker.data('datepicker').selectDate(new Date());
     }
@@ -38,9 +43,7 @@ $('.map__point').on("click", function(){
 $('#select-search').selectize({
     placeholder:"Поиск по городу",
     hideSelected: true,
-
 });
-$('.select-js').selectize();
 var select = $('.title__outgo-input').selectize({
     selectSmartPositioning:false,
     selectVisibleOptions:3
