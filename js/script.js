@@ -41,30 +41,39 @@ $('#select-search').selectize({
 
 });
 $('.select-js').selectize();
-$('.title__outgo-input').selectize({
+var select = $('.title__outgo-input').selectize({
     selectSmartPositioning:false,
     selectVisibleOptions:3
 });
-
-var select = $('.select-js-main').selectize();
 select.each(function() {
     var selectize = this.selectize;
     selectize.on('focus', function() {
         this.clear();
     });
     selectize.on('blur', function() {
-        var opts = this.options;
         if (this.items.length === 0) {
-            this.addItem(Object.keys(opts)[0]);
+            this.addItem(this.lastValidValue);
         }
     });
     selectize.on('item_add', function() {
         this.blur();
     });
 });
-$('.map__search').on("click",function(){
-    var evt = new KeyboardEvent('keydown', {'keyCode':8, 'which':8});
-    this.dispatchEvent(evt);
+
+select = $('.select-js-main').selectize();
+select.each(function() {
+    var selectize = this.selectize;
+    selectize.on('focus', function() {
+        this.clear();
+    });
+    selectize.on('blur', function() {
+        if (this.items.length === 0) {
+            this.addItem(this.lastValidValue);
+        }
+    });
+    selectize.on('item_add', function() {
+        this.blur();
+    });
 });
 $('.tickets__Input-sortBy').styler({
     selectSmartPositioning:false,

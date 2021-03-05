@@ -908,6 +908,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     &__link {
         font-weight: 600;
         @include fluid(font-size, 14px, 16px);
+        padding-bottom: 10px;
         color: #fff;
     }
     &__line {
@@ -960,8 +961,32 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     &__outgo{
         display: flex;
         align-items:center;
-        .selected{
-            background-color: #fff;
+        .selectize-control{
+            .selectize-input{
+                input:focus{
+                    width: 50px !important;;
+                }
+            }
+        }
+        &-input {
+            margin-top: 5px;
+            .selectize{
+                &-input{
+                    input[type="select-one"]{
+                        width:50px;
+                    }
+                    box-shadow: none;
+                    @include fluid(padding-right,35px,35px);
+                    .item{
+                        color:#fff;
+                        border-bottom:2px dotted #908ACB;
+                    }
+                }
+                &-input.full {
+                    background-color: transparent;
+                    border-style: none;
+                }
+            }
         }
         .dropdown{
             width: 100%;
@@ -977,22 +1002,21 @@ input[type="date"]::-webkit-calendar-picker-indicator {
             border-bottom-left-radius: 10px;
             border-bottom-right-radius: 10px;
             scrollbar-width: none;
-           li{
-               padding-top:10px;
-               padding-bottom:10px;
-               padding-left:20px;
-               cursor:pointer;
-               &:hover{
-                   background-color: #efefef;
-               }
-           }
+        li{
+            padding-top:10px;
+            padding-bottom:10px;
+            padding-left:20px;
+            cursor:pointer;
+            &:hover{
+                background-color: #efefef;
+            }
+        }
             background-color: #fff;
         }
         &Text{
             @include fluid(margin-right,7px,15px);
             color:#908ACB;
         }
-        
     }
 }
 
