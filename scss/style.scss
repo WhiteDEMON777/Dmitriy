@@ -220,7 +220,7 @@ input[type=radio], input[type=checkbox] {
         &+.checkbox {
             &::before {
                 background-color: #393185;
-                background-image: url('/img/icon/checkbox__check.svg');
+                background-image: url('../img/icon/checkbox__check.svg');
                 background-repeat: no-repeat;
                 background-position: 50% 55%;
             }
@@ -260,7 +260,7 @@ input[type=radio], input[type=checkbox] {
         @include fluid(padding-bottom,30px,170px);
         background-color: #EFEFEF;
     }
-    
+
     &__card {
         @include fluid(margin-top,5px,10px);
         @include fluid(padding,15px,30px);
@@ -277,17 +277,18 @@ input[type=radio], input[type=checkbox] {
     }
     &__date {
         @include fluid(font-size,18px,20px);
-        @include fluid(line-height,28px,32px);
         color: #666;
     }
     &__time {
         @include fluid(margin-top,5px,10px);
-        @include fluid(line-height,28px,32px);
+        @include fluid(padding-top,5px,10px);
+        @include fluid(font-size,28px,32px);
+        border-top: 1px dashed rgba(221, 221, 221, 0.5);
         font-weight: 800;
         color: #393185;
     }
     &__destination {
-        @include fluid(margin-top,10px,20px);
+        @include fluid(margin-top,5px,10px);
         @include fluid(font-size,12px,14px);
         @include fluid(line-height,19px,21px);
         width: 200px;
@@ -296,8 +297,8 @@ input[type=radio], input[type=checkbox] {
     &__title {
         @include fluid(font-size,12px,14px);
         @include fluid(line-height,19px,21px);
-        text-align: left;//checked
-        width: 177px;
+        @include fluid(margin-bottom,10px,20px);
+        @include fluid(width,185px,215px);
         color: #999;
     }
     &__price {
@@ -312,7 +313,6 @@ input[type=radio], input[type=checkbox] {
     &__Movetime {
         @include fluid(font-size,12px,14px);
         @include fluid(line-height,19px,21px);
-        color: #999;
         display: flex;
         flex-direction: column;
     }
@@ -326,7 +326,6 @@ input[type=radio], input[type=checkbox] {
         font-weight: 700;
         @include fluid(font-size,14px,16px);
         @include fluid(line-height,28px,32px);
-        color: #333;//checked
     }
     &__buy {
         display: flex;
@@ -334,15 +333,7 @@ input[type=radio], input[type=checkbox] {
         justify-content: space-between;
         font-weight: 700;
         @include fluid(font-size,18px,20px);
-        text-align: center;
         color: #f4f4f4;
-    }
-    
-    &__from {
-        width: fit-content;
-    }
-    &__to {
-        width: fit-content;
     }
     &__total {
         display: flex;
@@ -360,12 +351,10 @@ input[type=radio], input[type=checkbox] {
     }
     &__Input-sortBy{
         @include fluid(border-radius,10px, 20px);
-        display:none;
         background-color: #fff;
     }
     &__Input-show{
         @include fluid(border-radius,10px, 20px);
-        display:none;
         background-color: #fff;
     }
     &__sortBy{
@@ -771,11 +760,11 @@ input[type=radio], input[type=checkbox] {
     @include fluid(border-radius, 15px, 25px);
     background-image: linear-gradient(#ff45a9 0%, #eb1487 99.99%, #fd2498 100%);
     @include fluid(font-size, 12px, 20px);
-    background-size: 100% 100%;
     color: #f4f4f4;
     font-weight: 700;
     display: block;
     transition: all .3s ease-in-out;
+    background-size: 100% 100%;
     &:hover {
         background-position: 0 100%;
         background-size: 100% 200%;
@@ -860,7 +849,7 @@ input[type=radio], input[type=checkbox] {
         .selectize-control{
             .selectize-input{
                 input:focus{
-                    width: 50px !important;;
+                    width: 50px !important;
                 }
             }
         }
@@ -868,9 +857,6 @@ input[type=radio], input[type=checkbox] {
             margin-top: 5px;
             .selectize{
                 &-input{
-                    input[type="select-one"]{
-                        width:50px;
-                    }
                     box-shadow: none;
                     @include fluid(padding-right,35px,35px);
                     .item{
@@ -1203,7 +1189,8 @@ input[type=radio], input[type=checkbox] {
         @include fluid(margin-right, 40px, 80px);
     }
     &__passengers {
-        @include fluid(padding-left, 0, 48px);
+        @include fluid(padding-left, 0, 50px);
+        @include fluid(padding-right, 0, 50px);
     }
     &__passengerCard {
         @include fluid(margin-top, 15px, 48px);
@@ -1322,6 +1309,12 @@ input[type=radio], input[type=checkbox] {
             display: flex;
             flex-direction: column;
             width: 100%;
+            transition: all .3s ease-in-out;
+            background-size: 100% 100%;
+            &:hover {
+                background-position: 0 100%;
+                background-size: 100% 200%;
+            }
             &--route {
                 @include fluid(width, 200px, 350px);
             }
@@ -1394,6 +1387,7 @@ input[type=radio], input[type=checkbox] {
     @include fluid(padding, 10px, 20px);
     @include fluid(font-size, 14px, 16px);
     @include fluid(border-radius, 14px, 18px);
+    font-family: "Open Sans";
     background-color: #fff;
     border: 1px solid #ccc;
 }
@@ -1540,7 +1534,7 @@ input[type=radio], input[type=checkbox] {
                 }
             }
         }
-        
+
         &Destination {
             display: flex;
             justify-content: space-between;
@@ -1608,7 +1602,7 @@ input[type=radio], input[type=checkbox] {
         font-weight: 800;
         @include fluid(font-size, 14px, 16px);
         color: #333;
-        
+
     }
     &__text {
         @include fluid(line-height, 20px, 22px);
@@ -1617,7 +1611,7 @@ input[type=radio], input[type=checkbox] {
         @include fluid(margin-top, 10px, 20px);
         @include fluid(margin-bottom, 5px, 10px);
     }
-    
+
     &__circumstanta {
         display: flex;
         align-items: center;
