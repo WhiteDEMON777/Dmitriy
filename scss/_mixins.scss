@@ -14,8 +14,8 @@
 @mixin container-md {
     width: 100%;
     max-width: $container-width-md;
-    padding-left: $p-small;
-    padding-right: $p-small;
+    padding-left: $p-medium;
+    padding-right: $p-medium;
     margin: auto;
 }
 
