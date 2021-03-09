@@ -2050,6 +2050,15 @@ input[type=radio], input[type=checkbox] {
         @include fluid(padding, 20px, 40px);
         @include fluid(font-size, 16px, 20px);
     }
+    &__login{
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+            @include fluid(border-radius, 10px, 20px);
+            @include fluid(width, 230px, 525px);
+            @include fluid(padding, 20px, 40px);
+            @include fluid(font-size, 16px, 20px);
+    }
     &__title {
         font-weight: 800;
     }
@@ -2082,7 +2091,6 @@ input[type=radio], input[type=checkbox] {
     }
     &__children {
         @include fluid(padding-top,25px,49px);
-        
     }
     &__select {
         @include fluid(margin-right,15px,31px);
