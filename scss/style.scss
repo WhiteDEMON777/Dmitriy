@@ -970,7 +970,7 @@ input[type=radio], input[type=checkbox] {
             @include fluid(margin-right,30px,60px);
         }
         display: flex;
-        width: 100%;
+        width: 48%;
         @include fluid(font-size,14px,16px);
         @include fluid(line-height,28px,32px);
         color: #666;
