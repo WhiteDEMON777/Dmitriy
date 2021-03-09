@@ -28,7 +28,7 @@ ul {
     padding-left: 0;
 }
 
-input,button {
+input,button,a {
     outline: none;
     border: none;
     background: none;
@@ -419,6 +419,7 @@ input[type=radio], input[type=checkbox] {
     }
     &__title {
         @include fluid(font-size, 32px, 84px);
+        @include fluid(line-height, 32px, 84px);
         @include fluid(width, 375px, 887px);
         color: #fff;
         font-weight: 800;
@@ -431,9 +432,11 @@ input[type=radio], input[type=checkbox] {
         color: #fff;
     }
     &__headline {
-        @include fluid(margin-top, 30px, 195px);
+        @include fluid(margin-top, 30px, 175px);
         position: relative;
-        @include fluid(padding-left, 20px, 50px);
+        @include fluid(padding-left, 26px, 62px);
+        @include fluid(padding-top, 10px,20px);
+        @include fluid(padding-bottom, 10px,20px);
         &::before {
             content: "";
             left: 0px;
@@ -442,6 +445,7 @@ input[type=radio], input[type=checkbox] {
             @include fluid(border-radius, 3px, 6px);
             background: linear-gradient(#ff45a9 0%, #eb1487 99.99%, #fd2498 100%);
             position: absolute;
+            top:0;
         }
     }
     &__buyTicket {
@@ -972,14 +976,14 @@ input[type=radio], input[type=checkbox] {
         display: flex;
         width: 48%;
         @include fluid(font-size,14px,16px);
-        @include fluid(line-height,28px,32px);
+        @include fluid(line-height,20px,32px);
         color: #666;
     }
     &__Span {
         display: flex;
         width: 100%;
         @include fluid(font-size,14px,16px);
-        @include fluid(line-height,28px,32px);
+        @include fluid(line-height,20px,32px);
         color: #666;
         p{
             @include fluid(margin-top,20px,40px);
@@ -995,11 +999,11 @@ input[type=radio], input[type=checkbox] {
     &__imgRow {
         align-items: center;
         display: flex;
-        @include fluid(margin-bottom,30px,60px);
-        @include fluid(margin-top,30px,80px);
+        @include fluid(margin-bottom,20px,60px);
+        @include fluid(margin-top,20px,80px);
             align-items: center;
             display: flex;
-            @include fluid(margin-bottom,30px,60px);
+            @include fluid(margin-bottom,20px,60px);
         img {
             float: left;
             @include fluid(border-radius,10px,20px);
@@ -2030,11 +2034,16 @@ input[type=radio], input[type=checkbox] {
         width: 71%;
         justify-content: space-between;
         &Number {
-            font-weight: 700;
             @include fluid(font-size,20px,24px);
             @include fluid(line-height,28px,32px);
-            color: #393185;
             @include fluid(margin-bottom,15px,30px);
+            font-weight: 700;
+            color: #393185;
+            &--icon{
+                content:"";
+                display:block;
+                background-image: url(./../img/icon/);
+            }
         }
     }
     &__mail {
@@ -2236,6 +2245,16 @@ input[type=radio], input[type=checkbox] {
 @media screen and (max-width: 992px) {
     .container {
         @include container-md;
+    }
+    .contact{
+        &__name{
+            flex-direction: column;
+            input{
+                width:100%;
+                margin:0;
+                margin-bottom:10px;
+            }
+        }
     }
     .header {
         background: none;
@@ -2470,19 +2489,64 @@ input[type=radio], input[type=checkbox] {
             }
         }
     }
-    .infoPage__imgRow{
-        .infoPage__sideSpan{
-            width:100%;
-            margin:0;
+    .infoPage{
+        &__Span{
+            p{
+                img{
+                    width:100%;
+                    margin:0;
+                    margin-bottom: 20px;
+                }
+            }
         }
+        &__imgRow{
         flex-direction: column-reverse;
+        .infoPage{
+            &__sideSpan{
+                width:100%;
+                margin:0;
+                }
+            }
         img{
             width:100%;
+            margin:0;
+            margin-bottom: 20px;
+        }
         }
     }
 }
 
 @media screen and (max-width: 600px) {
+    .contact{
+        &__row{
+            flex-direction:column;
+        }
+        &__tel{
+            flex-direction:column;
+            align-items: center;
+            width:100%;
+        }
+        &__col{
+            margin:0;
+            width:100%;
+        }
+        &__phoneBlock{
+            margin:0;
+            margin-top:20px;
+            flex-direction: column;
+        }
+        &__spanNotice{
+            display:none;
+        }
+        &__name{
+            flex-direction: column;
+            input{
+                width:100%;
+                margin:0;
+                margin-bottom:10px;
+            }
+        }
+    }
     .title {
         &__line {
             &--flex {
