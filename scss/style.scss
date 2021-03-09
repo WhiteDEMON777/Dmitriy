@@ -328,7 +328,7 @@ input[type=radio], input[type=checkbox] {
     &--home {
         background-image: url("./../img/banner.png");
         @include fluid(border-bottom-left-radius, 0px, 260px);
-        @include fluid(padding-bottom, 50px, 225px);
+        @include fluid(padding-bottom, 0px, 225px);
         background-position: center;
         background-size: cover;
     }
@@ -448,16 +448,14 @@ input[type=radio], input[type=checkbox] {
         position: relative;
     }
     &__ticket {
-        align-items: center;
         margin-bottom: 5px;
         @include fluid(padding-top, 5px, 10px);
         @include fluid(padding-bottom, 5px, 10px);
         @include fluid(margin-top, 30px, 60px);
-        @include fluid(border-radius, 15px, 30px);
+        @include fluid(border-radius, 0px, 30px);
         width: 100%;
         background: #fff;
         box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
-        display: flex;
         color: #999;
     }
     &__tomorrow {
@@ -596,7 +594,7 @@ input[type=radio], input[type=checkbox] {
 
 .button {
     text-align: center;
-    @include fluid(width, 150px, 275px);
+    @include fluid(width, 250px, 275px);
     @include fluid(padding-top, 14px, 24px);
     @include fluid(padding-bottom, 13px, 23px);
     @include fluid(border-radius, 15px, 25px);
@@ -636,15 +634,8 @@ input[type=radio], input[type=checkbox] {
         font-weight: 600;
         @include fluid(font-size, 14px, 16px);
         padding-bottom: 10px;
-        color: #fff;
-    }
-    &__line {
-        @include fluid(padding-left, 15px, 40px);
-        position: relative;
-        &--flex {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
+        &--mobile {
+            display: none;
         }
         a {
             transition: 0.3s;
@@ -659,6 +650,15 @@ input[type=radio], input[type=checkbox] {
         img {
             @include fluid(margin-left, 10px, 20px);
             transition: 0.3s;
+        }
+    }
+    &__line {
+        @include fluid(padding-left, 15px, 40px);
+        position: relative;
+        &--flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
         }
         &::before {
             content: "";
@@ -773,7 +773,7 @@ input[type=radio], input[type=checkbox] {
         display: flex;
         width: 100%;
         justify-content: space-between;
-        @include fluid(margin-top, 20px, 80px);
+        @include fluid(margin-top, 10px, 80px);
     }
     &__point {
         display: flex;
@@ -884,7 +884,7 @@ input[type=radio], input[type=checkbox] {
     }
     &__PriceNum {
         @include fluid(margin-top, 5px, 10px);
-        @include fluid(font-size, 20px, 24px);
+        @include fluid(font-size, 18px, 24px);
         font-weight: 700;
         color: #393185;
     }
@@ -959,7 +959,7 @@ input[type=radio], input[type=checkbox] {
     }
     &__img {
         width: 60%;
-        @include fluid(height, 400px, 670px);
+        @include fluid(height, 310px, 670px);
         object-fit: contain;
     }
 }
@@ -1819,7 +1819,7 @@ input[type=radio], input[type=checkbox] {
             }
         }
         &-social {
-            @include fluid(margin-top, 20px, 40px);
+            @include fluid(margin-top, 15px, 40px);
             display: flex;
             justify-content: flex-end;
             align-items: center;
@@ -2100,7 +2100,7 @@ input[type=radio], input[type=checkbox] {
             }
             &-input.focus {
                 box-shadow: none;
-            }   
+            }
          }
         .selectize-control.single .selectize-input:after {
             content: none;
@@ -2239,6 +2239,8 @@ input[type=radio], input[type=checkbox] {
     }
     .header {
         background: none;
+        margin-top: 70px;
+        background-color: #393185;
         &__navigation {
             width: 100%;
             left: 0;
@@ -2353,6 +2355,100 @@ input[type=radio], input[type=checkbox] {
                 }
             }
         }
+        &__ticket {
+            background: transparent;
+            box-shadow: none;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            &-button {
+                margin-top: 20px;
+            }
+        }
+        &__from {
+            flex-direction: column;
+            padding: 0;
+            &InputWrapper {
+                padding: 5px 20px;
+                border-radius: 10px;
+                background-color: #ffffff;
+                width: 100%;
+            }
+        }
+        &__where {
+            width: 100%;
+            margin-top: 10px;
+            img {
+                display: none;
+            }
+            &InputWrapper {
+                border: none;
+                background-color: #ffffff;
+                padding: 5px 20px;
+                border-radius: 10px;
+            }
+        }
+        &__date {
+            border: none;
+            background-color: #ffffff;
+            padding: 5px 20px;
+            border-radius: 10px;
+            width: 100%;
+            margin-top: 10px;
+        }
+        &__tomorrow {
+            display: none;
+        }
+    }
+    .advantages {
+        &__points {
+            flex-wrap: wrap;
+        }
+        &__point {
+            width: 46%;
+            margin-top: 10px;
+        }
+    }
+    .title {
+        &__link {
+            display: none;
+            justify-content: flex-end;
+            margin-top: 20px;
+            &--mobile {
+                display: flex;
+            }
+        }
+    }
+    .popDirections {
+        &__cards {
+            justify-content: space-between;
+        }
+        &__card {
+            margin-right: 0;
+            width: 48%;
+        }
+    }
+    .market {
+        &__wrapper {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__discription {
+            width: 100%;
+        }
+        &__img {
+            margin-top: 20px;
+        }
+    }
+    .news {
+        &__cards {
+            justify-content: space-between;
+        }
+        &__card {
+            margin-right: 0;
+            width: 48%;
+        }
     }
     .footer {
         &__list {
@@ -2386,4 +2482,72 @@ input[type=radio], input[type=checkbox] {
     }
 }
 
+@media screen and (max-width: 600px) {
+    .title {
+        &__line {
+            &--flex {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    }
+    .market {
+        &__img {
+            width: 100%;
+            height: 250px;
+        }
+        &__links {
+            a {
+                margin-right: 5px;
+            }
+        }
+    }
+    .advantages {
+        &__point {
+            width: 100%;
+        }
+    }
+    .popDirections {
+        &__card {
+            width: 100%;
+        }
+    }
+    .news {
+        &__card {
+            width: 100%;
+        }
+    }
+    .footer {
+        &__container {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__contacts {
+            margin-top: 20px;
+            &-phone {
+                margin-left: 20px;
+            }
+            &-email {
+                text-align: center;
+            }
+            &-social {
+                justify-content: center;
+            }
+            &-link {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+        &__copyrighted {
+            flex-direction: column;
+            align-items: center;
+            &-spaceapp {
+                margin-top: 15px;
+            }
+            &-text {
+                text-align: center;
+            }
+        }
+    }
+}
 
