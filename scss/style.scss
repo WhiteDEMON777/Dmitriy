@@ -28,13 +28,12 @@ ul {
     padding-left: 0;
 }
 
-input {
+input,button {
     outline: none;
     border: none;
     background: none;
     resize: none;
 }
-
 
 body {
     background-color: #ffffff;
@@ -1204,8 +1203,8 @@ input[type=radio], input[type=checkbox] {
     cursor:pointer;
     &::before {
         content: '';
-        width: 24px;
-        height: 24px;
+        @include fluid(width,12px,24px);
+        @include fluid(height,12px,24px);
         background-color: #fff;
         border-radius: 5px;
         margin-right: 10px;
@@ -1263,6 +1262,11 @@ input[type=radio], input[type=checkbox] {
     }
     &--width{
         width:100%;
+    }
+    &--num{
+        padding-left: 0;
+        text-align: center;
+        font-weight: 700;
     }
 }
 
@@ -1887,8 +1891,13 @@ input[type=radio], input[type=checkbox] {
 
 .modal {
     display: none;
+    &__caption{
+        @include fluid(font-size, 16px, 18px);
+        text-align: center;
+    }
     &__logo{
         @include fluid(margin-bottom,30px,60px);
+        width:100%;
     }
     &__container{
         display: flex;
@@ -1926,6 +1935,9 @@ input[type=radio], input[type=checkbox] {
         }
     }
     &__text {
+        @include fluid(font-size, 12px, 14px);
+        text-align: center;
+        color: #666;
         &Wrap {
             display: flex;
             flex-direction: column;
@@ -1958,19 +1970,22 @@ input[type=radio], input[type=checkbox] {
         display: flex;
         align-items: center;
         &::before {
-            content: '';
-            display: block;
             @include fluid(width,12px,24px);
             @include fluid(height,12px,24px);
+            @include fluid(margin-right,5px,10px);
+            content: '';
+            display: block;
+            flex-shrink: 0;
             border-radius:5px;
             background-color: #fff;
             border: 1px solid #ccc;
-            @include fluid(margin-right,5px,10px);
         }
     }
     &__button {
         display: block;
         width: 100%;
+        border:none;
+        cursor:pointer;
         @include fluid(margin-top,20px,40px);
         @include fluid(border-radius,9px,18px);
         background: linear-gradient(#4f46a5 0%, #393185 100%);
@@ -1979,6 +1994,10 @@ input[type=radio], input[type=checkbox] {
         @include fluid(padding-bottom, 14px, 16px);
         @include fluid(font-size,14px,16px);
         color: #fff;
+        &:hover {
+            background-position: 0 100%;
+            background-size: 100% 200%;
+        }
         &--pink{
             text-align: center;
             color:#fff;
