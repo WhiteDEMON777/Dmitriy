@@ -1,4 +1,18 @@
 $(document).ready(function() {
+    $('.header__burger').on('click', function(){
+        $('.header').toggleClass('header--open')
+    });
+
+    $(document).on('click', function(e) {
+        if (!$(e.target).closest(".header--open").length) {
+            $('.header').removeClass('header--open');
+        };
+        e.stopPropagation();
+    });
+    $('.header__navigation-link').on('click', function(){
+        $('.header').removeClass('header--open');
+    });
+    
     if ($(".dateRide").length) {
         var start = new Date();
         var mdate = new Date(start.getFullYear(), start.getMonth() + 1, 0);
