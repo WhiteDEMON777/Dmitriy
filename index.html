@@ -338,16 +338,54 @@
         <form class="modal__container" id="modal__cabinet" >
             <img class="modal__logo" src="./img/logo.svg" alt="">
             <div class="modal__title">
-                Введите свой адрес 
-электронной почты
+                Введите свой адрес электронной почты
             </div>
                 <div class="modal__item">
                     <input type="text" class="modal__input input input--border input--width" placeholder="Введите e-mail">
                 </div>
-                <div class="modal__item"><a href="#" class="modal__button modal__button--pink modal__button--noMargin">
+                <div class="modal__policy">
+                    <input type="checkbox" name="seat[]" id="seat1">
+                        <label class="checkbox modal__checkbox" for="seat1">
+                            Согласен с политикой обработки 
+    персональных данных
+                        </label>
+                </div>
+                <div class="modal__item"><button type="submit" href="#modal__code" rel="nofollow" class="modal__button modalButton-js modal__button--pink modal__button--noMargin modalbox">
                     Далее
-                    </a>
-                    <a href="" class="modal__link">Уже есть аккаунт</a></div>
+                    </button>
+                    <a class="modal__link">Уже есть аккаунт</a></div>
+        </div>
+        </form>
+    </div>
+    <div class="modal">
+        <form class="modal__container" id="modal__code" >
+        <img class="modal__logo" src="./img/logo.svg" alt="">
+        <div class="modal__title">
+            Введите код
+подтверждения 
+        </div>
+            <div class="modal__item">
+                <input type="text" class="modal__input input input--num input--border input--width">
+            </div>
+            <div class="modal__text">На указанную вами почту было отправлено сообщение с кодом подтверждения</div>
+            <div class="modal__item"><button type="submit" href="#modal__message" class="modalButton-js modal__button modal__button--pink modal__button--noMargin modalbox">
+                Далее
+                </button>
+            <a href="" class="modal__link">Уже есть аккаунт</a></div>
+        </div>
+        </form>
+    </div>
+    <div class="modal">
+        <form class="modal__container" id="modal__message" >
+            <div class="modal__caption">
+                Мы рады что Вы пользуетесь 
+            услугами нашей компании
+            <div class="modal__item">
+            <button class="modal__button modalButton-js modal__button--pink modal__button--noMargin">
+                ОК
+            </button>
+        </div>
+            </form>
         </div>
         </form>
     </div>
@@ -356,6 +394,7 @@
     <script src="./plugins/jQueryFormStyler-master/jquery.formstyler.min.js"></script>
     <script type="text/javascript" src="./js/selectize.js"></script>
     <script src="./plugins/datepicker/dist/js/datepicker.min.js"></script>
+    <script src="./plugins/maskedinput/jquery.maskedinput.min.js"></script>
     <script src="./js/script.js "></script>
 </body>
 </html>

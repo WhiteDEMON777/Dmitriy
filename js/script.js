@@ -25,7 +25,11 @@ $(document).ready(function() {
     });
 
     $('.modalbox').fancybox();
+    
 });
+$('.modalButton-js').click(function(){
+    $.fancybox.close();
+    });
 $(".scheme__tile").on("click", function() {
     this.classList.toggle("scheme__tile--selected");
 });
@@ -113,3 +117,4 @@ $('.tickets__Input-show').styler({
     selectSmartPositioning:false,
     selectVisibleOptions:3
 });
+$('.input--num').mask('9   9   9   9');
