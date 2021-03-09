@@ -116,6 +116,10 @@ select.each(function() {
 $('.tickets__Input-sortBy').styler({
     selectSmartPositioning:false,
 });
+$('#age').styler({
+    selectSmartPositioning:false,
+    selectVisibleOptions:3
+});
 $('.modal__select').styler({
     selectSmartPositioning:false,
 });

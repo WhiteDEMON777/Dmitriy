@@ -1261,6 +1261,9 @@ input[type=radio], input[type=checkbox] {
     &--border {
         border: 1px solid #cccccc;
     }
+    &--width{
+        width:100%;
+    }
 }
 
 .return {
@@ -1884,23 +1887,43 @@ input[type=radio], input[type=checkbox] {
 
 .modal {
     display: none;
-    &__passengers {
+    &__logo{
+        @include fluid(margin-bottom,30px,60px);
+    }
+    &__container{
         display: flex;
         flex-direction: column;
         background-color: #fff;
         @include fluid(border-radius, 10px, 20px);
-        @include fluid(width, 230px, 525px);
         @include fluid(padding, 20px, 40px);
-        @include fluid(font-size, 16px, 20px);
+        @include fluid(width, 230px, 525px);
     }
     &__title {
+        @include fluid(font-size, 16px, 20px);
         font-weight: 800;
     }
     &__line {
-        display: flex;
         @include fluid(margin-top,20px,40px);
+        display: flex;
         justify-content: space-between;
         align-items: flex-start;
+    }
+    &__item{
+        @include fluid(margin-top,20px,40px);
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+    }
+    &__input{
+        @include fluid(margin-bottom,5px,10px);
+    }
+    &__link{
+        @include fluid(font-size, 12px, 14px);
+        @include fluid(margin-top,10px,20px);
+        color: #393185;
+        &:hover{
+            text-decoration: underline;
+        }
     }
     &__text {
         &Wrap {
@@ -1925,7 +1948,6 @@ input[type=radio], input[type=checkbox] {
     }
     &__children {
         @include fluid(padding-top,25px,49px);
-
     }
     &__select {
         @include fluid(margin-right,15px,31px);
@@ -1955,8 +1977,17 @@ input[type=radio], input[type=checkbox] {
         text-align: center;
         @include fluid(padding-top, 14px, 16px);
         @include fluid(padding-bottom, 14px, 16px);
-        @include fluid(padding-left, 14px, 16px);
+        @include fluid(font-size,14px,16px);
         color: #fff;
+        &--pink{
+            text-align: center;
+            color:#fff;
+            background: linear-gradient(#ff45a9 0%, #eb1487 99.99%, #fd2498 100%);
+            width:70%;
+        }
+        &--noMargin{
+            margin-top:0px;
+        }
     }
 }
 
@@ -2050,8 +2081,8 @@ input[type=radio], input[type=checkbox] {
             }
             &-input.focus {
                 box-shadow: none;
-            }
-        }
+            }   
+         }
         .selectize-control.single .selectize-input:after {
             content: none;
         }
