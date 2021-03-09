@@ -18,7 +18,7 @@ $(document).ready(function() {
         var mdate = new Date(start.getFullYear(), start.getMonth() + 1, 0);
         mdate.setDate(start.getDate() + mdate.getDate());
         var datepicker = $(".dateRide").datepicker({
-            dateFormat: 'd mm yyyy',
+            dateFormat: 'd.mm.yyyy',
             startDate: start,
             minDate: start,
             maxDate: mdate,
