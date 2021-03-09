@@ -979,7 +979,7 @@ input[type=radio], input[type=checkbox] {
         display: flex;
         width: 100%;
         @include fluid(font-size,14px,16px);
-        @include fluid(line-height,24px,32px);
+        @include fluid(line-height,28px,32px);
         color: #666;
         p{
             @include fluid(margin-top,20px,40px);
@@ -2372,6 +2372,16 @@ input[type=radio], input[type=checkbox] {
                 margin-top: 20px;
                 margin-bottom: 20px;
             }
+        }
+    }
+    .infoPage__imgRow{
+        .infoPage__sideSpan{
+            width:100%;
+            margin:0;
+        }
+        flex-direction: column-reverse;
+        img{
+            width:100%;
         }
     }
 }
