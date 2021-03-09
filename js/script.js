@@ -1,6 +1,4 @@
 $(document).ready(function() {
-    
-    
     if ($(".dateRide").length) {
         var start = new Date();
         var mdate = new Date(start.getFullYear(), start.getMonth() + 1, 0);
@@ -103,6 +101,10 @@ select.each(function() {
 });
 $('.tickets__Input-sortBy').styler({
     selectSmartPositioning:false,
+});
+$('#age').styler({
+    selectSmartPositioning:false,
+    selectVisibleOptions:3
 });
 $('.modal__select').styler({
     selectSmartPositioning:false,
