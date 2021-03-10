@@ -2829,5 +2829,29 @@ input[type=radio], input[type=checkbox] {
             }
         }
     }
+    .modal {
+        &__select {
+            width: 60%;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .chooseSit__passengersCount {
+        width: 65%;
+    }
+    
+}
+
+@media screen and (max-width: 400px) {
+    .chooseSit__passengersCount {
+        width: 100%;
+    }
+    .chooseSit__Total {
+        width: 100%;
+    }
+    .ticketOffer__buyDialogueBuy--route {
+        width: 100%;
+    }
 }
 
