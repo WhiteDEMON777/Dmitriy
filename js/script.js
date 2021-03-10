@@ -41,6 +41,7 @@ $(document).ready(function() {
     });
 
     $('.modalbox').fancybox({
+        touch: false,
         afterLoad: function() {
             $('.modal__select').styler({
                 selectSmartPositioning:true,

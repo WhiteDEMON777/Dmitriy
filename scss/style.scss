@@ -684,7 +684,6 @@ input[type=radio], input[type=checkbox] {
             }
         }
         &-input {
-            margin-top: 5px;
             .selectize{
                 &-input{
                     box-shadow: none;
@@ -728,6 +727,7 @@ input[type=radio], input[type=checkbox] {
         &Text{
             @include fluid(margin-right,7px,15px);
             color:#908ACB;
+            margin-bottom: 5px;
         }
     }
 }
@@ -2686,6 +2686,10 @@ input[type=radio], input[type=checkbox] {
             align-items: center;
             text-align: center;
         }
+        &__to {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
     }
 }
 
@@ -2897,7 +2901,7 @@ input[type=radio], input[type=checkbox] {
         &__card{
             flex-direction: column;
             align-items: center;
-            width:95%;
+            width:100%;
         }}
     .chooseSit__passengersCount {
         width: 100%;
@@ -2908,11 +2912,18 @@ input[type=radio], input[type=checkbox] {
     .ticketOffer{
         &__buyDialogue {
         width: 100%;
+        &Buy--route {
+            width: 100%;
+        }
         }
         &__passengerContainer{
             .input{
                 width:100%;
             }
         }
+    }
+    .jq-selectbox__select {
+        padding-left: 8px;
+        padding-right: 8px;
     }
 }
