@@ -2131,6 +2131,7 @@ input[type=radio], input[type=checkbox] {
         @include fluid(border-radius,10px,20px);
         @include fluid(top,5px,10px);
         position:sticky;
+        height:720px;
     }
     &__mail {
         font-weight: normal;
@@ -2640,6 +2641,35 @@ input[type=radio], input[type=checkbox] {
             }
         }
     }
+    .map{
+        &__row{
+
+            flex-direction: column;
+        }
+        &__col{
+            padding: 0;
+            width:100%;
+            margin:0;
+        }
+        &__point{
+            display: none;
+        }
+        &__frame{
+            height:400px;
+        }
+    }
+    .tickets{
+        &__card{
+            flex-direction: column;
+            align-items: center;
+        }
+        &__buy{
+            text-align: center;
+        }
+        &__cards{
+            text-align: center;
+        }
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -2801,7 +2831,18 @@ input[type=radio], input[type=checkbox] {
             width: 60%;
         }
     }
-    
+    .map{
+        &__frame{
+            height:300px;
+        }
+    }
+    .tickets{
+        &__sort{
+            &-title{
+                display: none;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 500px) {
