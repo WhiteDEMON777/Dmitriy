@@ -1013,7 +1013,7 @@ input[type=radio], input[type=checkbox] {
                 float:left;
                 @include fluid(margin-right,20px,60px);
                 @include fluid(margin-bottom,20px,60px);
-                width: 50%;
+                width: 57%;
             }
         }
     }
@@ -1030,7 +1030,7 @@ input[type=radio], input[type=checkbox] {
             @include fluid(border-radius,10px,20px);
             @include fluid(margin-bottom,10px,25px);
             object-fit: contain;
-            width: 50%;
+            width: 57%;
         }
     }
 
@@ -1689,7 +1689,7 @@ input[type=radio], input[type=checkbox] {
     #1E1B36 50%);
     }
     &__content {
-        @include fluid(padding-top, 30px, 100px);
+        @include fluid(padding-top, 30px, 80px);
         @include fluid(padding-bottom, 30px, 100px);
         @include fluid(border-top-left-radius, 0px, 260px);
         @include fluid(border-bottom-right-radius, 0px, 260px);
@@ -2060,6 +2060,7 @@ input[type=radio], input[type=checkbox] {
             @include fluid(margin-bottom,15px,30px);
             font-weight: 700;
             color: #393185;
+            position:relative;
             &--icon{
                 content:"";
                 display:block;
@@ -2089,6 +2090,13 @@ input[type=radio], input[type=checkbox] {
     &__span {
         @include fluid(font-size,14px,16px);
         color: #a1a1a1;
+    }
+    &__icon{
+        &::before{
+            content:"";
+            position:absolute;
+            background-image:url("./../img/icon/");
+        }
     }
 }
 
@@ -2168,8 +2176,8 @@ input[type=radio], input[type=checkbox] {
         font-weight: 700;
         @include fluid(font-size, 14px, 16px);
         @include fluid(line-height, 28px, 32px);
-        @include fluid(padding-top,12px,25px);
-        @include fluid(padding-bottom,12px,25px);
+        @include fluid(padding-top,12px,15px);
+        @include fluid(padding-bottom,12px,15px);
         @include fluid(padding-left,15px,30px);
         @include fluid(padding-right,15px,30px);
         @include fluid(border-radius,15px,30px);
@@ -2251,6 +2259,9 @@ input[type=radio], input[type=checkbox] {
             position: absolute;
             left: 0;
         }
+    }
+    &__arrow{
+        font-size: 8px;
     }
 }
 
