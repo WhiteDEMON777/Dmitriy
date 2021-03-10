@@ -187,78 +187,13 @@ input[type=radio], input[type=checkbox] {
             @include fluid(margin-right,15px,30px);
         }
     }
-    &__Input-sortBy{
-        @include fluid(border-radius,10px, 20px);
-        background-color: #fff;
-        &--border {
-            border: 1px solid #cccccc;
-        }
-    }
-    &__Input-show{
-        @include fluid(border-radius,10px, 20px);
-        background-color: #fff;
-    }
     &__sortBy{
         display: flex;
         align-items:center;
-        .selected{
-            background-color: #fff;
-        }
-        .dropdown{
-            width: 100%;
-            z-index:11;
-        }
-        ul{
-            width:100%;
-            border-top-width: 0;
-            border-bottom-width: 1px;
-            border-left-width: 1px;
-            border-right-width: 1px;
-            border-style: solid;
-            border-color: #CCCCCC;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-           li{
-               padding-top:10px;
-               padding-bottom:10px;
-               padding-left:20px;
-               cursor:pointer;
-               &:hover{
-                   background-color: #efefef;
-               }
-           }
-            background-color: #fff;
-        }
     }
     &__show{
         display: flex;
         align-items:center;
-        .selected{
-            background-color: #fff;
-        }
-
-        ul{
-            width:100%;
-            border-top-width: 0;
-            border-bottom-width: 1px;
-            border-left-width: 1px;
-            border-right-width: 1px;
-            border-style: solid;
-            border-color: #CCCCCC;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-            scrollbar-width: none;
-           li{
-               padding-top:10px;
-               padding-bottom:10px;
-               padding-left:20px;
-               cursor:pointer;
-               &:hover{
-                   background-color: #efefef;
-               }
-           }
-            background-color: #fff;
-        }
     }
 }
 .select-js-main{
@@ -267,6 +202,8 @@ input[type=radio], input[type=checkbox] {
     }
 }
 .jq-selectbox{
+    @include fluid(border-radius,10px, 20px);
+    background-color: #fff;
     &__trigger{
         &-arrow{
             display:block;
@@ -288,6 +225,9 @@ input[type=radio], input[type=checkbox] {
         display:flex;
         align-items: center;
         z-index: 9;
+        &-text {
+            width: 100%;
+        }
     }
     &__styler{
         @include fluid(border-radius,10px,20px);
@@ -295,6 +235,27 @@ input[type=radio], input[type=checkbox] {
     &__dropdown{
         width: 100%;
         @include fluid(margin-top,-5px,-9px);
+        ul{
+            width:100%;
+            border-top-width: 0;
+            border-bottom-width: 1px;
+            border-left-width: 1px;
+            border-right-width: 1px;
+            border-style: solid;
+            border-color: #CCCCCC;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+           li{
+               padding-top:10px;
+               padding-bottom:10px;
+               @include fluid(padding-left,15px,30px);
+               cursor:pointer;
+               &:hover{
+                   background-color: #efefef;
+               }
+           }
+            background-color: #fff;
+        }
     }
 }
 .breadCrumbs {
@@ -1942,10 +1903,10 @@ input[type=radio], input[type=checkbox] {
         font-weight: 800;
     }
     &__line {
-        @include fluid(margin-top,20px,40px);
+        @include fluid(margin-top,15px,40px);
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: center;
     }
     &__item{
         @include fluid(margin-top,20px,40px);
@@ -1973,13 +1934,14 @@ input[type=radio], input[type=checkbox] {
         color: #999;
     }
     &__count {
+        display: flex;
         &Plus,
         &Minus {
             cursor: pointer;
         }
         &Inp {
             @include fluid(width,23px,47px);
-            @include fluid(font-size,20px,22px);
+            @include fluid(font-size,18px,22px);
             text-align: center;
         }
     }
@@ -1987,7 +1949,21 @@ input[type=radio], input[type=checkbox] {
         @include fluid(padding-top,25px,49px);
     }
     &__select {
-        @include fluid(margin-right,15px,31px);
+        border: 1px solid #ccc;
+        width: 70%;
+        .jq-selectbox {
+            &__select {
+                @include fluid(padding-top,9px,18px);
+                @include fluid(padding-bottom,9px,18px);
+                @include fluid(padding-left,10px,20px);
+                @include fluid(padding-right,10px,20px);
+            }
+            &__dropdown ul li {
+                @include fluid(padding-left,10px,20px);
+                @include fluid(padding-top,5px,10px);
+                @include fluid(padding-bottom,5px,10px);
+            }
+        }
     }
     &__checkbox {
         font-size: 14px;
@@ -2741,6 +2717,9 @@ input[type=radio], input[type=checkbox] {
             height: 50%;
             transform-origin: 54% 100%;
         }
+        &__tile {
+            transform: rotate(90deg);
+        }
     }
     .footer {
         &__container {
@@ -2774,5 +2753,29 @@ input[type=radio], input[type=checkbox] {
             }
         }
     }
+    .modal {
+        &__select {
+            width: 60%;
+        }
+    }
 }
+
+@media screen and (max-width: 500px) {
+    .chooseSit__passengersCount {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .chooseSit__passengersCount {
+        width: 100%;
+    }
+    .chooseSit__Total {
+        width: 100%;
+    }
+    .ticketOffer__buyDialogueBuy--route {
+        width: 100%;
+    }
+}
+
 

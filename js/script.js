@@ -40,7 +40,14 @@ $(document).ready(function() {
         datepicker.data('datepicker').selectDate(date);
     });
 
-    $('.modalbox').fancybox();
+    $('.modalbox').fancybox({
+        afterLoad: function() {
+            $('.modal__select').styler({
+                selectSmartPositioning:true,
+                selectVisibleOptions:3
+            });
+        }
+    });
 
 });
 $('.modalButton-js').click(function(){
@@ -106,7 +113,16 @@ select = $('.select-js-main').selectize({
     selectVisibleOptions:5
 });
 
+$('.header__where-img').on('click', function() {
+    var reverseLeft = select[0].selectize,
+        reverseRight = select[1].selectize,
+        tmp = reverseLeft.lastValidValue;
+        reverseLeft.clear();
+        reverseLeft.addItem(reverseRight.lastValidValue);
+        reverseRight.clear();
+        reverseRight.addItem(tmp);
 
+})
 select.each(function() {
     var selectize = this.selectize;
     selectize.on('focus', function() {
@@ -122,19 +138,9 @@ select.each(function() {
         this.blur();
     });
 });
-$('.tickets__Input-sortBy').styler({
+
+$('.tickets__select').styler({
     selectSmartPositioning:false,
-});
-$('#age').styler({
-    selectSmartPositioning:false,
-    selectVisibleOptions:3
-});
-$('.modal__select').styler({
-    selectSmartPositioning:false,
-});
-$('.tickets__Input-show').styler({
-    selectSmartPositioning:false,
-    selectVisibleOptions:3
 });
 $('.input--num').mask('9   9   9   9');
-$('.inputPhone-js').mask('+7(999)99-99-99');
+$('.input--phone').mask('+7(999)99-99-99');
