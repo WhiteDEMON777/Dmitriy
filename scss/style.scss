@@ -2032,8 +2032,9 @@ input[type=radio], input[type=checkbox] {
     &__tel {
         display: flex;
         flex-wrap: wrap;
-        width: 71%;
+        width: 75%;
         justify-content: space-between;
+        @include fluid(padding-left,22px,45px);
         &Number {
             @include fluid(font-size,20px,24px);
             @include fluid(line-height,28px,32px);
@@ -2042,9 +2043,17 @@ input[type=radio], input[type=checkbox] {
             color: #393185;
             position:relative;
             &--icon{
-                content:"";
-                display:block;
-                background-image: url(./../img/icon/);
+                &::before {
+                    content: " ";
+                    position: absolute;
+                    background: url('../img/icon/phone.svg') no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                    @include fluid(width,16px,24px);
+                    @include fluid(height,16px,24px);
+                    @include fluid(left,-22px,-43px);
+                    top: 6px;
+                }
             }
         }
     }
@@ -2069,7 +2078,8 @@ input[type=radio], input[type=checkbox] {
     }
     &__span {
         @include fluid(font-size,14px,16px);
-        color: #a1a1a1;
+        @include fluid(line-height,18px,32px);
+        color: #999;
     }
     &__icon{
         &::before{
@@ -2697,7 +2707,6 @@ input[type=radio], input[type=checkbox] {
         }
         &__tel{
             flex-direction:column;
-            align-items: center;
             width:100%;
         }
         &__col{
