@@ -328,7 +328,7 @@ input[type=radio], input[type=checkbox] {
     &--home {
         background-image: url("./../img/banner.png");
         @include fluid(border-bottom-left-radius, 0px, 260px);
-        @include fluid(padding-bottom, 0px, 225px);
+        @include fluid(padding-bottom, 50px, 225px);
         background-position: center;
         background-size: cover;
     }
@@ -339,6 +339,7 @@ input[type=radio], input[type=checkbox] {
         align-items: center;
         @include fluid(padding-top, 15px, 40px);
         @include fluid(padding-bottom, 15px, 30px);
+        position: relative;
         &-logo {
             img {
                 @include fluid(width, 180px, 285px);
@@ -452,7 +453,7 @@ input[type=radio], input[type=checkbox] {
         @include fluid(padding-top, 5px, 10px);
         @include fluid(padding-bottom, 5px, 10px);
         @include fluid(margin-top, 30px, 60px);
-        @include fluid(border-radius, 0px, 30px);
+        @include fluid(border-radius, 15px, 30px);
         width: 100%;
         background: #fff;
         box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
@@ -637,14 +638,12 @@ input[type=radio], input[type=checkbox] {
         &--mobile {
             display: none;
         }
-        a {
-            transition: 0.3s;
-            color: #fff;
-            &:hover {
-                color: #e5097f;
-                img {
-                    transform: translateX(15px);
-                }
+        transition: 0.3s;
+        color: #fff;
+        &:hover {
+            color: #e5097f;
+            img {
+                transform: translateX(15px);
             }
         }
         img {
@@ -750,7 +749,7 @@ input[type=radio], input[type=checkbox] {
     @include fluid(margin-top,10px,20px);
     &--marginLeft {
         @include fluid(margin-left,15px,40px);
-        @include fluid(line-height,28px,32px);
+        @include fluid(line-height,18px,32px);
     }
 }
 
@@ -1306,7 +1305,7 @@ input[type=radio], input[type=checkbox] {
     background-color: #EFEFEF;
     width: 100%;
     &__content {
-        @include fluid(padding-top, 30px, 100px);
+        @include fluid(padding-top, 10px, 100px);
         @include fluid(padding-bottom, 30px, 100px);
         width: 100%;
         background-color: #fff;
@@ -1332,7 +1331,7 @@ input[type=radio], input[type=checkbox] {
             display: flex;
             justify-content: space-between;
             padding-left: 10px;
-            @include fluid(padding-right, 12.5px, 25px);
+            @include fluid(padding-right, 20px, 25px);
             &Dot {
                 display: flex;
                 position: relative;
@@ -1355,12 +1354,10 @@ input[type=radio], input[type=checkbox] {
                     justify-content: space-between;
                 }
                 &Text {
+                    padding: 5px 0px;
                     img {
                         height: 12px;
                         width: 12px;
-                    }
-                    &--date {
-                        padding: 5px 0px;
                     }
                 }
                 &Title {
@@ -1369,7 +1366,7 @@ input[type=radio], input[type=checkbox] {
                     font-weight: 800;
                 }
                 &Block {
-                    @include fluid(margin-left, 30px, 35px);
+                    @include fluid(margin-left, 15px, 35px);
                     @include fluid(padding-bottom, 12px, 25px);
                 }
                 &Address{
@@ -1412,13 +1409,23 @@ input[type=radio], input[type=checkbox] {
                     display: flex;
                     flex-direction: column;
                     width: 57%;
-                    margin-left: 30px;
+                    @include fluid(margin-left, 15px, 30px);
                 }
             }
             span {
                 line-height: 1;
+                position: relative;
                 &::before {
                     @include fluid(font-size, 24px, 32px);
+                }
+                &::after {
+                    content: " ";
+                    position: absolute;
+                    border-right: 2px dotted #ddd;
+                    height: 65%;
+                    left: 13px;
+                    bottom: -5px;
+                    width: 2px;
                 }
             }
         }
@@ -1444,9 +1451,7 @@ input[type=radio], input[type=checkbox] {
         font-size: 24px;
         color: #999;
         @include fluid(margin-bottom, 20px, 40px);
-        &:nth-child(n+1) {
-            @include fluid(margin-top, 10px, 20px);
-        }
+        @include fluid(margin-top, 10px, 20px);
     }
     &__subtitle {
         font-weight: 800;
@@ -1549,8 +1554,8 @@ input[type=radio], input[type=checkbox] {
         justify-content: space-between;
     }
     &__panel {
-        @include fluid(margin-top, 30px, 60px);
-        @include fluid(margin-bottom, 40px, 80px);
+        @include fluid(margin-top, 20px, 60px);
+        @include fluid(margin-bottom, 30px, 80px);
         display: flex;
         justify-content: space-between;
     }
@@ -1580,10 +1585,11 @@ input[type=radio], input[type=checkbox] {
     width: 57%;
     @include fluid(height, 250px, 350px);
     display: flex;
+    background: url('../img/picture/bus.svg') no-repeat;
+    background-size: contain;
     &__Set {
         display: flex;
         flex-direction: row-reverse;
-        position: relative;
         @include fluid(padding-top, 10px, 20px);
         @include fluid(padding-bottom, 10px, 20px);
         @include fluid(padding-left, 15px, 20px);
@@ -1640,13 +1646,6 @@ input[type=radio], input[type=checkbox] {
         &:nth-child(n+2) {
             @include fluid(margin-right, 5px, 10px);
         }
-    }
-    &__img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-position: left;
-        object-fit: contain;
     }
 }
 
@@ -1716,9 +1715,8 @@ input[type=radio], input[type=checkbox] {
         @include fluid(margin-top, 10px, 20px);
         @include fluid(margin-bottom, 10px, 20px);
         @include fluid(font-size, 14px, 16px);
-        overflow: hidden;
-        text-overflow: ellipsis;
         height: 70px;
+        overflow: hidden;
     }
     &__date {
         @include fluid(margin-top, 5px, 10px);
@@ -1905,10 +1903,11 @@ input[type=radio], input[type=checkbox] {
         background-color: #fff;
         @include fluid(border-radius, 10px, 20px);
         @include fluid(padding, 20px, 40px);
-        @include fluid(width, 230px, 525px);
+        @include fluid(padding-top, 30px, 40px);
+        @include fluid(width, 400px, 525px);
     }
     &__title {
-        @include fluid(font-size, 16px, 20px);
+        @include fluid(font-size, 18px, 20px);
         font-weight: 800;
     }
     &__line {
@@ -1926,16 +1925,11 @@ input[type=radio], input[type=checkbox] {
     &__input{
         @include fluid(margin-bottom,5px,10px);
     }
-    &__link{
-        @include fluid(font-size, 12px, 14px);
-        @include fluid(margin-top,10px,20px);
-        color: #393185;
-        &:hover{
-            text-decoration: underline;
-        }
+    &__policy {
+        @include fluid(margin-top,5px,10px);
     }
     &__text {
-        @include fluid(font-size, 12px, 14px);
+        font-size: 14px;
         text-align: center;
         color: #666;
         &Wrap {
@@ -1944,7 +1938,7 @@ input[type=radio], input[type=checkbox] {
         }
     }
     &__subtext {
-        @include fluid(font-size,12px,14px);
+        font-size: 14px;
         color: #999;
     }
     &__count {
@@ -1965,14 +1959,14 @@ input[type=radio], input[type=checkbox] {
         @include fluid(margin-right,15px,31px);
     }
     &__checkbox {
-        @include fluid(font-size,12px,14px);
+        font-size: 14px;
         color: #999;
         display: flex;
         align-items: center;
         &::before {
-            @include fluid(width,12px,24px);
-            @include fluid(height,12px,24px);
-            @include fluid(margin-right,5px,10px);
+            @include fluid(width,20px,24px);
+            @include fluid(height,20px,24px);
+            margin-right: 10px;
             content: '';
             display: block;
             flex-shrink: 0;
@@ -2226,9 +2220,25 @@ input[type=radio], input[type=checkbox] {
 
 @media screen and (max-width: 1366px) {
     .header {
-        background-position-x: 105%;
+        background: none;
+        background-color: #EFEFEF;
+        position: relative;
+        &::before {
+            content: " ";
+            position: absolute;
+            right: 0;
+            top: 0;
+            background-color: #ffffff;
+            width: 100%;
+            height: 100%;
+            @include fluid(border-bottom-right-radius, 0px, 260px);
+        }
         &--home {
             background-position: center;
+            background-image: url("./../img/banner.png");
+            &::before {
+                content: none;
+            }
         }
     }
 }
@@ -2240,6 +2250,7 @@ input[type=radio], input[type=checkbox] {
     .header {
         background: none;
         margin-top: 70px;
+        padding-bottom: 0;
         background-color: #393185;
         &__navigation {
             width: 100%;
@@ -2358,6 +2369,7 @@ input[type=radio], input[type=checkbox] {
         &__ticket {
             background: transparent;
             box-shadow: none;
+            border-radius: 0;
             margin-top: 0;
             margin-bottom: 0;
             padding-top: 20px;
@@ -2450,6 +2462,52 @@ input[type=radio], input[type=checkbox] {
             width: 48%;
         }
     }
+    .waybill {
+        &__title {
+            margin-top: 20px;
+        }
+        &__row {
+            flex-direction: column;
+        }
+        &__col {
+            width: 100%;
+        }
+    }
+    .chooseSit {
+        &__panel {
+            flex-direction: column;
+        }
+        &__passengersCount {
+            margin-top: 20px;
+            width: 50%;
+        }
+        &__Total {
+            flex-direction: column;
+            width: fit-content;
+            &Price {
+                padding-top: 0;
+                &Num {
+                    margin-top: 5px;
+                }
+            }
+            &Block {
+                border-left: none;
+                border-top: 1px solid #DDDDDD;
+                padding-left: 0;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+            }
+        }
+    }
+    .ticketOffer {
+        &__buyDialogueBuy {
+            margin-top: 20px;
+        }
+    }
+    .scheme {
+        width: 100%;
+    }
     .footer {
         &__list {
             display: none;
@@ -2505,6 +2563,39 @@ input[type=radio], input[type=checkbox] {
     .news {
         &__card {
             width: 100%;
+        }
+    }
+    .waybill {
+        &__route {
+            &Title {
+                font-size: 16px;
+            }
+            &Time {
+                font-size: 18px;
+            }
+            &Date {
+                width: 55%;
+                display: block;
+            }
+            &Point {
+                padding-right: 0;
+                &NameText {
+                    width: 45%;
+                }
+                &NameBlock {
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+    .scheme {
+        background: url('../img/picture/bus_mobile.svg') no-repeat;
+        background-size: contain;
+        height: 503px;
+        &__Set {
+            transform: rotate(-90deg);
+            height: 50%;
+            transform-origin: 54% 100%;
         }
     }
     .footer {
