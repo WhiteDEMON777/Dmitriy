@@ -2584,11 +2584,6 @@ input[type=radio], input[type=checkbox] {
             }
         }
     }
-    .ticketOffer {
-        &__buyDialogueBuy {
-            margin-top: 20px;
-        }
-    }
     .scheme {
         width: 100%;
     }
@@ -2638,6 +2633,7 @@ input[type=radio], input[type=checkbox] {
         }
     }
     .ticketOffer{
+        
         &__substrate{
             flex-direction:column;
             align-items:center;
@@ -2656,12 +2652,14 @@ input[type=radio], input[type=checkbox] {
                 margin:0;
                 margin-top:20px;
             }
-
         }
         &__buyDialogue{
             width:70%;
             margin:0;
             margin-top: 15px;
+            &Buy {
+                margin-top: 20px;
+            }
             &Points{
                 display: flex;
                 flex-direction: column;
@@ -2840,7 +2838,6 @@ input[type=radio], input[type=checkbox] {
     .chooseSit__passengersCount {
         width: 65%;
     }
-    
 }
 
 @media screen and (max-width: 400px) {
@@ -2854,4 +2851,3 @@ input[type=radio], input[type=checkbox] {
         width: 100%;
     }
 }
-
