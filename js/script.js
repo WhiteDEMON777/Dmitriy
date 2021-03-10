@@ -132,4 +132,4 @@ $('.tickets__Input-show').styler({
     selectVisibleOptions:3
 });
 $('.input--num').mask('9   9   9   9');
-$('.input--phone').mask('+7(999)99-99-99');
+$('.inputPhone-js').mask('+7(999)99-99-99');
