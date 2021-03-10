@@ -12,13 +12,14 @@ $(document).ready(function() {
     $('.header__navigation-link').on('click', function(){
         $('.header').removeClass('header--open');
     });
-    
+
     if ($(".dateRide").length) {
         var start = new Date();
         var mdate = new Date(start.getFullYear(), start.getMonth() + 1, 0);
         mdate.setDate(start.getDate() + mdate.getDate());
         var datepicker = $(".dateRide").datepicker({
             dateFormat: 'd.mm.yyyy',
+            autoClose:true,
             startDate: start,
             minDate: start,
             maxDate: mdate,
@@ -28,6 +29,7 @@ $(document).ready(function() {
 
     if ($(".birthDate").length) {
         $(".birthDate").datepicker({
+            autoClose:true,
             dateFormat: 'd.mm.yyyy',
         });
     }
@@ -39,7 +41,7 @@ $(document).ready(function() {
     });
 
     $('.modalbox').fancybox();
-    
+
 });
 $('.modalButton-js').click(function(){
     $.fancybox.close();
@@ -103,9 +105,12 @@ select = $('.select-js-main').selectize({
     selectSmartPositioning:false,
     selectVisibleOptions:5
 });
+
+
 select.each(function() {
     var selectize = this.selectize;
     selectize.on('focus', function() {
+    
         this.clear();
     });
     selectize.on('blur', function() {

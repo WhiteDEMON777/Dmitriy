@@ -29,7 +29,7 @@
                     <li><a class="header__navigation-link" href="">Новости</a></li>
                 </ul>
                 <div class="header__navigation-item">
-                    <a class="header__navigation-cabinet" href=""><span class="icon--147"></span></a>
+                    <a class="header__navigation-cabinet" href="">Войти <span class="icon--147"></span></a>
                     <div class="header__burger">
                         <span class="header__burger-icon"></span>
                     </div>
@@ -62,14 +62,17 @@
                                 </div>
                             </div>
                             <div class="header__where">
-                                <img src="./img/icon/arrows.svg" alt="">
-                                <div class="header__whereInputWrapper"><span class="icon-we"></span>
+                                <div class="header__where-img">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.828 32.828"><g transform="translate(-276.586 -31.086)"><g transform="translate(-1267 -1847)"><path d="M-10,0H20" transform="translate(1555 1884.5)" fill="none" stroke-width="2"/><line x1="5" y1="5" transform="translate(1570 1879.5)" fill="rgba(0,0,0,0)" stroke-linecap="square" stroke-width="2"/><line y1="5" x2="5" transform="translate(1570 1884.5)" fill="rgba(0,0,0,0)" stroke-linecap="square" stroke-width="2"/></g><g transform="translate(278 52.5)"><path d="M20,0H-10" transform="translate(10 5)" fill="none" stroke-width="2"/><line y1="5" x2="5" fill="rgba(0,0,0,0)" stroke-linecap="square" stroke-width="2"/><line x1="5" y1="5" transform="translate(0 5)" fill="rgba(0,0,0,0)" stroke-linecap="square" stroke-width="2"/></g></g></svg>
+                                </div>
+                                <div class="header__whereInputWrapper">
+                                    <span class="icon-we"></span>
                                     <div class="header__whereInputBlock">
                                         <div class="header__whereInputBlock-text">Куда</div>
                                         <select class="select-js-main" >
-                                            <option value="0">Мурманск</option>
-                                            <option value="1">Москва</option>
-                                            <option value="2">Алгонквик</option>
+                                            <option value="1">Саратов</option>
+                                            <option value="2">Москва</option>
+                                            <option value="3">Магнитогорск</option>
                                         </select>
                                     </div>
                                 </div>
@@ -77,12 +80,12 @@
                             <div class="header__date">
                                 <div class="header__dateInputWrapper"><span class="icon-Vector1"></span>
                                     <div class="header__dateInputBlock">Дата поездки
-                                    <input class="header__dateInput dateRide" type="text" name=" " id="dateRide"
-                                            placeholder="дд мм гггг">
+                                    <input class="header__dateInput dateRide" readonly type="text" name="date"
+                                            placeholder="дд мм гггг" autocomplete="off">
                                     </div>
                                 </div>
                             </div>
-                            <a href=" " class="button">Найти билеты</a>
+                            <a href=" " class="header__ticket-button button">Найти билеты</a>
                         </div>
                     </div>
                     <div class="header__tomorrow">
