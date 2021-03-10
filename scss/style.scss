@@ -1206,7 +1206,9 @@ input[type=radio], input[type=checkbox] {
             &Dot {
                 display: flex;
                 position: relative;
-                padding: 0 20px;
+                padding:0;
+                @include fluid(padding-left,10px,20px);
+                @include fluid(padding-right,10px,20px);
                 flex-direction: column;
                 align-items: center;
                 img {
@@ -2633,7 +2635,6 @@ input[type=radio], input[type=checkbox] {
         }
     }
     .ticketOffer{
-        
         &__substrate{
             flex-direction:column;
             align-items:center;
@@ -2677,7 +2678,10 @@ input[type=radio], input[type=checkbox] {
 @media screen and (max-width: 600px) {
     .ticketOffer{
         &__buyDialogue{
-            width:95%;
+            width:80%;
+        }
+        &__input{
+            width:80%;
         }
     }
     .header {
@@ -2833,11 +2837,24 @@ input[type=radio], input[type=checkbox] {
             width: 60%;
         }
     }
+    
 }
 
 @media screen and (max-width: 500px) {
     .chooseSit__passengersCount {
         width: 65%;
+    }
+    .ticketOffer{
+        &__buyDialogue{
+            width:90%;
+        }
+        &__passengerContainer{
+            flex-direction:column;
+            .input{
+                width:80%;
+                margin-bottom: 10px;
+            }
+        }
     }
 }
 
@@ -2848,8 +2865,14 @@ input[type=radio], input[type=checkbox] {
     .chooseSit__Total {
         width: 100%;
     }
-    .ticketOffer__buyDialogueBuy--route {
+    .ticketOffer{
+        &__buyDialogue {
         width: 100%;
+        &__passengerContainer{
+            .input{
+                width:100%;
+            }
+        }
     }
-    
+}
 }
