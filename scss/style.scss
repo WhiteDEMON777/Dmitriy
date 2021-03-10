@@ -61,6 +61,7 @@ input[type=radio], input[type=checkbox] {
                 background-image: url('../img/icon/checkbox__check.svg');
                 background-repeat: no-repeat;
                 background-position: 50% 55%;
+                flex-shrink: 0;
             }
         }
     }
@@ -1075,7 +1076,7 @@ input[type=radio], input[type=checkbox] {
     }
     &__buyDialogue {
         height: 100%;
-        @include fluid(padding, 15px, 30px);
+        @include fluid(padding, 10px, 30px);
         @include fluid(border-radius, 15px, 30px);
         background: #fff;
         box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
@@ -1201,6 +1202,7 @@ input[type=radio], input[type=checkbox] {
         background-position: center;
         background-size: 50%;
         background-repeat: no-repeat;
+        flex-shrink: 0;
     }
     &--border {
         &::before {
@@ -2641,14 +2643,7 @@ input[type=radio], input[type=checkbox] {
 }
 
 @media screen and (max-width: 600px) {
-    .ticketOffer{
-        &__buyDialogue{
-            width:80%;
-        }
-        &__input{
-            width:80%;
-        }
-    }
+    
     .header {
         &__navigation {
             &-logo {
@@ -2837,11 +2832,11 @@ input[type=radio], input[type=checkbox] {
     .ticketOffer{
         &__buyDialogue {
         width: 100%;
+        }
         &__passengerContainer{
             .input{
                 width:100%;
             }
         }
     }
-}
 }
