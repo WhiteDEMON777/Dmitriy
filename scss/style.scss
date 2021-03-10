@@ -227,6 +227,7 @@ input[type=radio], input[type=checkbox] {
         align-items: center;
         z-index: 9;
         &-text {
+            overflow: initial;
             width: 100%;
         }
     }
@@ -275,8 +276,8 @@ input[type=radio], input[type=checkbox] {
     display: block;
     @include fluid(margin-left,15px,30px);
     @include fluid(margin-right,15px,30px);
-    @include fluid(width,3px,6px);
-    @include fluid(height,3px,6px);
+    width: 6px;
+    height: 6px;
     display: block;
     border-radius: 50%;
 }
@@ -2037,8 +2038,7 @@ input[type=radio], input[type=checkbox] {
         @include fluid(padding-left,22px,45px);
         &Number {
             @include fluid(font-size,20px,24px);
-            @include fluid(line-height,28px,32px);
-            @include fluid(margin-bottom,15px,30px);
+            @include fluid(margin-bottom,11px,20px);
             font-weight: 700;
             color: #393185;
             position:relative;
@@ -2288,6 +2288,7 @@ input[type=radio], input[type=checkbox] {
     .contact{
         &__name{
             flex-direction: column;
+            margin-bottom: 0;
             input{
                 width:100%;
                 margin:0;
