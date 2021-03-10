@@ -350,6 +350,7 @@ input[type=radio], input[type=checkbox] {
         &-list {
             position: relative;
             display: flex;
+            @include fluid(margin-top, 10px,20px);
             li {
                 @include fluid(margin-right, 15px, 45px);
                 @include fluid(padding-bottom, 10px, 20px);
@@ -376,35 +377,46 @@ input[type=radio], input[type=checkbox] {
             }
         }
         &-cabinet {
+            color: #e5097f;
+            display: flex;
+            align-items: center;
+            transition:color 0.3s ease-in-out;
+            &:hover {
+                color: #393185;
+            }
+            &:hover span{
+                &::before {
+                    color: #393185;
+                }
+            }
             span {
+                margin-left: 10px;
                 position: relative;
-                @include fluid(top , -3px,-8px);
                 @include fluid(font-size, 20px,24px);
                 &::before {
-                    transition: 0.3s;
+                    transition:color 0.3s ease-in-out;
                     color: #e5097f;
-                }
-                &:hover {
-                    &::before {
-                        color: #bd0065;
-                    }
                 }
             }
             &--home {
+                color: #ffffff;
+                &:hover span{
+                    &::before {
+                        color: #e5097f;
+                    }
+                }
+                &:hover {
+                    color: #e5097f;
+                }
                 span {
                     &::before {
                         color: #ffffff;
-                    }
-                    &:hover {
-                        &::before {
-                            color: #e5097f;
-                        }
                     }
                 }
             }
         }
         &-link {
-            @include fluid(font-size, 14px,16px);
+            font-size: 16px;
             &--colorWhite {
                 color: #fff;
             }
@@ -536,6 +548,7 @@ input[type=radio], input[type=checkbox] {
             }
         }
         &Input {
+            cursor: pointer;
             width: 100%;
             color: #666666;
             font-family: "Open Sans";
@@ -554,10 +567,18 @@ input[type=radio], input[type=checkbox] {
         width: 25%;
         display: flex;
         align-items: center;
-        img {
-            @include fluid(width, 25px, 30px);
-            @include fluid(height, 25px, 30px);
+        &-img {
             @include fluid(margin-right, 15px, 30px);
+            cursor: pointer;
+            svg {
+                @include fluid(width, 25px, 30px);
+                @include fluid(height, 25px, 30px);
+                stroke: #CCCCCC;
+                transition: stroke .3s ease-in-out;
+            }
+            &:hover svg{
+                stroke: #4E45A4;
+            }
         }
         &InputWrapper {
             @include fluid(padding-left, 15px, 30px);
@@ -691,6 +712,7 @@ input[type=radio], input[type=checkbox] {
     &__outgo{
         display: flex;
         align-items:center;
+        width: 30%;
         .selectize-control{
             .selectize-input{
                 input:focus{
@@ -852,7 +874,7 @@ input[type=radio], input[type=checkbox] {
             margin-right: 0;
         }
         &:hover {
-            top: -20px;;
+            @include fluid(top, -10px, -20px);
             .goButton {
                 @include fluid(width, 100px, 150px);
                 @include fluid(border-radius, 15px, 18px);
@@ -1108,7 +1130,7 @@ input[type=radio], input[type=checkbox] {
                 font-weight: normal;
                 @include fluid(line-height, 20px, 24px);
                 color: #f4f4f4;
-                
+
             }
         }
         &Uptext {
@@ -1698,8 +1720,11 @@ input[type=radio], input[type=checkbox] {
         @include fluid(padding, 5px, 10px);
         @include fluid(padding-bottom, 15px, 30px);
         @include fluid(margin-right, 20px, 30px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         &:hover {
-            top: -20px;
+            @include fluid(top, -10px, -20px);
         }
         &:hover .news__readmore {
             text-decoration: underline;
@@ -1723,8 +1748,6 @@ input[type=radio], input[type=checkbox] {
         @include fluid(margin-top, 10px, 20px);
         @include fluid(margin-bottom, 10px, 20px);
         @include fluid(font-size, 14px, 16px);
-        height: 70px;
-        overflow: hidden;
     }
     &__date {
         @include fluid(margin-top, 5px, 10px);
@@ -2290,6 +2313,7 @@ input[type=radio], input[type=checkbox] {
             &-list {
                 display: block;
                 position: absolute;
+                margin-top: 0;
                 top: 70px;
                 background-color: #4F3D8E;
                 width: 70%;
@@ -2300,6 +2324,7 @@ input[type=radio], input[type=checkbox] {
                 transition: left .6s ease-in-out;
                 li {
                     width: fit-content;
+                    margin-bottom: 5px;
                     &::after {
                         left: 0;
                         transform: translate(0);
@@ -2310,19 +2335,20 @@ input[type=radio], input[type=checkbox] {
                 color: #ffffff;
             }
             &-cabinet {
-                span {
-                    top: 0;
-                }
                 &--home {
+                    color: #e5097f;
+                    &:hover {
+                        color: #393185;
+                    }
+                    &:hover span {
+                        &::before {
+                            color: #393185;
+                        }
+                    }
                     span {
                         &::before {
                             transition: 0.3s;
                             color: #e5097f;
-                        }
-                        &:hover {
-                            &::before {
-                                color: #bd0065;
-                            }
                         }
                     }
                 }
@@ -2414,7 +2440,7 @@ input[type=radio], input[type=checkbox] {
         &__where {
             width: 100%;
             margin-top: 10px;
-            img {
+            &-img {
                 display: none;
             }
             &InputWrapper {
@@ -2454,6 +2480,9 @@ input[type=radio], input[type=checkbox] {
                 display: flex;
             }
         }
+        &__outgo {
+            width: 45%;
+        }
     }
     .popDirections {
         &__cards {
@@ -2462,6 +2491,9 @@ input[type=radio], input[type=checkbox] {
         &__card {
             margin-right: 0;
             width: 48%;
+            &:hover {
+                top: 0;
+            }
         }
     }
     .market {
@@ -2483,6 +2515,9 @@ input[type=radio], input[type=checkbox] {
         &__card {
             margin-right: 0;
             width: 48%;
+            &:hover {
+                top: 0;
+            }
         }
     }
     .waybill {
@@ -2579,6 +2614,23 @@ input[type=radio], input[type=checkbox] {
 }
 
 @media screen and (max-width: 600px) {
+    .header {
+        &__navigation {
+            &-logo {
+                img {
+                    width: 150px;
+                }
+            }
+            &-cabinet {
+                span {
+                    margin-left: 5px;
+                }
+            }
+            &-list {
+                width: 75%;
+            }
+        }
+    }
     .contact{
         &__row{
             flex-direction:column;
@@ -2615,6 +2667,9 @@ input[type=radio], input[type=checkbox] {
                 flex-direction: column;
                 align-items: flex-start;
             }
+        }
+        &__outgo {
+            width: 100%;
         }
     }
     .market {
