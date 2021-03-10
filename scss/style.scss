@@ -2672,18 +2672,30 @@ input[type=radio], input[type=checkbox] {
         &__card{
             flex-direction: column;
             align-items: center;
+            width:65%;
+            margin-bottom:10px;
         }
         &__buy{
             text-align: center;
+            align-items: center;
         }
         &__cards{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
         }
     }
 }
 
 @media screen and (max-width: 600px) {
-    
+    .tickets{
+        &__card{
+            flex-direction: column;
+            align-items: center;
+            width:75%;
+        }
+    }
     .header {
         &__navigation {
             &-logo {
@@ -2855,6 +2867,13 @@ input[type=radio], input[type=checkbox] {
 }
 
 @media screen and (max-width: 500px) {
+    .tickets{
+        &__card{
+            flex-direction: column;
+            align-items: center;
+            width:85%;
+        }}
+
     .chooseSit__passengersCount {
         width: 65%;
     }
@@ -2873,6 +2892,12 @@ input[type=radio], input[type=checkbox] {
 }
 
 @media screen and (max-width: 400px) {
+    .tickets{
+        &__card{
+            flex-direction: column;
+            align-items: center;
+            width:95%;
+        }}
     .chooseSit__passengersCount {
         width: 100%;
     }
